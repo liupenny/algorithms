@@ -6,18 +6,7 @@ import java.util.List;
 
 /**
  * Created by PennyLiu on 2017/10/20.
- * 18. 4Sum
- Given an array S of n integers, are there elements a, b, c, and d in S such that a + b + c + d = target?
- Find all unique quadruplets in the array which gives the sum of target.
 
- Note: The solution set must not contain duplicate quadruplets.
- For example, given array S = [1, 0, -1, 0, -2, 2], and target = 0.
- A solution set is:
- [
- [-1,  0, 0, 1],
- [-2, -1, 1, 2],
- [-2,  0, 0, 2]
- ]
  * 实际上也是三轮循环，省去了很多没必要的判断，所以快很多
  */
 public class _4Sum {
@@ -102,7 +91,7 @@ public class _4Sum {
     public static void main(String[] algs)
     {
         int[] A = {1, 0, -1, 0, -2, 2};
-        B4Sum t = new B4Sum();
+        _4Sum t = new _4Sum();
         List<List<Integer>> ans = t.fourSum(A,0);
         System.out.println(ans);
     }
