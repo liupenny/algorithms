@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://F:/实验室/保留格式加密/Pretreatment/Pretreatment/Pretreatment.iml" filepath="F:/实验室/保留格式加密/Pretreatment/Pretreatment/Pretreatment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/erfen.iml" filepath="$PROJECT_DIR$/erfen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zuochengyun_class/zuochengyun_class.iml" filepath="$PROJECT_DIR$/zuochengyun_class/zuochengyun_class.iml" />
+    </modules>
+  </component>
+</project>
