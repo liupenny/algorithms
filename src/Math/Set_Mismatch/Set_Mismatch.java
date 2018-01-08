@@ -1,9 +1,10 @@
-package Math;
+package Math.Set_Mismatch;
 
 /**
  * Created by PennyLiu on 2017/10/22.
  * 645. Set Mismatch
- * Because numbers are from 1 to n, after we put number i to index i - 1 there's only 1 mis-matching which is the answer. Time complexity O(n). Space complexity O(1).
+ * Because numbers are from 1 to n, after we put number i to index i - 1 there's only 1 mis-matching which is the answer.
+ * Time complexity O(n). Space complexity O(1).
  */
 public class Set_Mismatch {
     public int[] findErrorNums(int[] nums) {

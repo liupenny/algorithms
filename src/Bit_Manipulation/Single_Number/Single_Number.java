@@ -1,4 +1,4 @@
-package Bit_Manipulation;
+package Bit_Manipulation.Single_Number;
 
 /**
  * Created by PennyLiu on 2017/10/22.

@@ -1,4 +1,4 @@
-package tree;
+package tree.Second_Minimum_Node_In_a_Binary_Tree;
 
 import tools.TreeNode;
 

@@ -1,4 +1,4 @@
-package Binary_Search;
+package Binary_Search.Find_Smallest_Letter_Greater_Than_Target;
 
 /**
  * Created by PennyLiu on 2018/1/3.

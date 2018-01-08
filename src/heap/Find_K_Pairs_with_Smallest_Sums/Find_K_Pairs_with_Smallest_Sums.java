@@ -1,4 +1,4 @@
-package heap;
+package heap.Find_K_Pairs_with_Smallest_Sums;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,13 +6,16 @@ import java.util.PriorityQueue;
 
 /**
  * Created by PennyLiu on 2017/10/22.
+ *
  */
 public class Find_K_Pairs_with_Smallest_Sums {
     public List<int[]> kSmallestPairs(int[] nums1, int[] nums2, int k) {
-        PriorityQueue<Pair> pq = new PriorityQueue<Pair>();
+        PriorityQueue<Pair> pq = new PriorityQueue<Pair>();  //优先队列自动重排
         List<int[]> ans = new ArrayList<int[]>();
-        if(nums1.length==0 || nums2.length==0 || k==0) return ans;
-        for (int i=0; i<nums2.length && i<k; i++) pq.add(new Pair(0, i, nums1[0]+nums2[i]));  //这里并不是说一次就把所有最小的数对添加进去，而是先添加一些，但这里面一定能添加全局最小（num1[0]+nums2[0]）,然后每次取出当前最小再添加进去，队列会重排
+        if(nums1.length==0 || nums2.length==0 || k==0) return ans;  //预处理
+
+        for (int i=0; i<nums2.length && i<k; i++)
+            pq.add(new Pair(0, i, nums1[0]+nums2[i]));  //这里并不是说一次就把所有最小的数对添加进去，而是先添加一些，但这里面一定能添加全局最小（num1[0]+nums2[0]）,然后每次取出当前最小再添加进去，队列会重排
         for (int i=0; i<Math.min(k,nums1.length*nums2.length);i++)
         {
             Pair p = pq.poll();
