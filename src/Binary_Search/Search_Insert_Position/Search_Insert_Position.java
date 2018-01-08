@@ -1,4 +1,4 @@
-package Binary_Search;
+package Binary_Search.Search_Insert_Position;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -7,6 +7,7 @@ import java.util.List;
 
 /**
  * Created by PennyLiu on 2017/10/25.
+
  * 35. Search Insert Position
  */
 public class Search_Insert_Position {

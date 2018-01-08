@@ -1,7 +1,10 @@
-package Binary_Search;
+package Binary_Search.Maximum_Length_of_Repeated_Subarray;
 
 /**
  * Created by PennyLiu on 2017/10/31.
+ *
+ * findLength：动态规划
+ * findLength1: 动态规划的进阶，左老师，根据表达式
  */
 public class Maximum_Length_of_Repeated_Subarray {
     public int findLength(int[] A, int[] B) {

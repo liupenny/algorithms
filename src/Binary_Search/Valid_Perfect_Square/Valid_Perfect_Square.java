@@ -1,9 +1,9 @@
-package Binary_Search;
+package Binary_Search.Valid_Perfect_Square;
 
 /**
  * Created by PennyLiu on 2017/10/27.
+
  * 367. Valid Perfect Square
- *
  */
 public class Valid_Perfect_Square {
     public boolean isPerfectSquare(int num) {  //二分法

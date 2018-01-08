@@ -1,8 +1,10 @@
-package Binary_Search;
+package Binary_Search.Search_a_2D_Matrix;
 
 /**
  * Created by PennyLiu on 2017/10/22.
+
  * 74. Search a 2D Matrix
+ * searchMatrix2: 从右上角开始找，target小于当前数就：列数-1，否则：行数+1
  */
 public class Search_a_2D_Matrix {
     public boolean searchMatrix1(int[][] matrix, int target) {

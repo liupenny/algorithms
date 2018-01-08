@@ -1,4 +1,4 @@
-package Binary_Search;
+package Binary_Search.Search_a_2D_Matrix_II;
 
 /**
  * Created by PennyLiu on 2017/10/22.

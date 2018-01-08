@@ -1,4 +1,4 @@
-package Binary_Search;
+package Binary_Search.Split_Array_Largest_Sum;
 
 import java.util.Arrays;
 
