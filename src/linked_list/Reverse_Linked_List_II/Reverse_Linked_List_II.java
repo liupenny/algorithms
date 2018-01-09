@@ -1,3 +1,4 @@
+package linked_list.Reverse_Linked_List_II;
 import tools.*;
 import tools.Sort_List;
 
@@ -9,7 +10,7 @@ import tools.Sort_List;
  * reverseBetween2:使用两个指针将m-n这一段的连接顺序逆序，然后将逆序好的结果接到原来的串上
  */
 public class Reverse_Linked_List_II {
-    public ListNode reverseBetween1(ListNode head, int m, int n) {
+    public ListNode reverseBetween1(ListNode head, int m, int n) { //第m-1个数的位置不变，使用尾插法，每次把后面的数字放在第m-1个数后面
         if(head==null)
             return head;
         ListNode newhead = new ListNode(0);
@@ -38,15 +39,15 @@ public class Reverse_Linked_List_II {
         newhead.next = head;
         ListNode cur = head,precur = newhead;
 
-        ListNode subhead = new ListNode(0);
+        ListNode subhead = new ListNode(0);  //作为中间要旋转的那段的辅助变量
         ListNode subtail = new ListNode(0);
 
         for (int i=1;i<=n;i++)
         {
-            ListNode tmp = cur.next;
-            if(i<m)
+            ListNode tmp = cur.next;  //先保存下一位
+            if(i<m)  //前面这段正常连接
                 precur = cur;
-            else if(i==m)
+            else if(i==m)   //
             {
                 subhead.next = cur;
                 subtail = cur;

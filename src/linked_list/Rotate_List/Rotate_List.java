@@ -1,3 +1,4 @@
+package linked_list.Rotate_List;
 import tools.ListNode;
 
 /**
@@ -10,9 +11,9 @@ public class Rotate_List {
         if(head == null || head.next == null) return head;
         ListNode fast = head, slow = head;
         int len = 1;
-        for(; fast.next != null ; len++)
+        for(; fast.next != null ; len++) //获取链表长度len
             fast = fast.next;
-        for(int j = len-k%len; j >1 ; j--)  //直接取模会得到负数，所以用减去的方法得知前面多少个应该向后移
+        for(int j = len-k%len; j >1 ; j--)  //k可能是负数，所以直接取模会得到负数，所以用减去的方法得知前面多少个应该向后移
             slow = slow.next;
 
         fast.next = head;  //不用多余的变量，直接移动

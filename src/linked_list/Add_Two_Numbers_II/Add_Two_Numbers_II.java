@@ -1,3 +1,5 @@
+package linked_list.Add_Two_Numbers_II;
+
 import edu.princeton.cs.algs4.In;
 import tools.ListNode;
 import tools.Sort_List;
@@ -79,17 +81,17 @@ public class Add_Two_Numbers_II {
 
     public ListNode addTwoNumbers3(ListNode l1, ListNode l2) {
         int n1 = 0, n2 = 0;
-        for (ListNode i = l1; i != null; i = i.next) n1++;
+        for (ListNode i = l1; i != null; i = i.next) n1++;  //统计出来l1,l2各有多少个数位，用n1,n2代表
         for (ListNode i = l2; i != null; i = i.next) n2++;
         int sum = 0;
         ListNode tmp_res = null;
         while (n1>0 && n2>0)   // 这里是从前往后加，所以看那个数剩余的位数多就加哪个数对应的值
         {
-            if(n1>=n2)   // 这两个>= 和 > 设计的比较巧妙
+            if(n1>=n2)   // 注意：>= 和 > 的设计， n1>=n2是l1数位》l2的数位，此时就只需要l1的数位的值即可
             {
                 sum += l1.val;
                 l1 = l1.next;
-                n1--;
+                n1--;   //当n1==n2,l1数位上的值加完以后 n1--,n1就会<n2,会进入下面n2>n1这个判断，此时sum += l2.val,sum=l1+l2了
             }
             if(n2>n1)
             {
@@ -97,7 +99,7 @@ public class Add_Two_Numbers_II {
                 l2 = l2.next;
                 n2--;
             }
-            tmp_res = addToFront(sum,tmp_res);
+            tmp_res = addToFront(sum,tmp_res);  //把当前结果加在上一个结果的前面
             sum = 0;
         }
         ListNode res = tmp_res;
@@ -106,8 +108,8 @@ public class Add_Two_Numbers_II {
         while (res!=null)
         {
             res.val += count;
-            count = res.val/10;
-            tmp_res = addToFront(res.val%10,tmp_res);
+            count = res.val/10; //保存进位
+            tmp_res = addToFront(res.val%10,tmp_res); //重复利用tmp_res，构造答案链表
             res = res.next;
         }
         if(count!=0)
@@ -115,7 +117,7 @@ public class Add_Two_Numbers_II {
         return tmp_res;
     }
 
-    public ListNode addToFront(int val, ListNode last)
+    public ListNode addToFront(int val, ListNode last)  //加在节点前面
     {
         ListNode now = new ListNode(val);
         now.next = last;
@@ -210,7 +212,7 @@ public class Add_Two_Numbers_II {
         citations2.addNode(6);
         citations2.addNode(4);
         citations2.addNode(5);
-        ListNode ans = t.addTwoNumbers5(citations1.first,citations2.first);
+        ListNode ans = t.addTwoNumbers3(citations1.first,citations2.first);
         while (ans!=null)
         {
             System.out.println(ans.val);

@@ -1,12 +1,15 @@
+package linked_list.Add_Two_Numbers;
 import tools.*;
 import tools.Sort_List;
 
 /**
  * Created by PennyLiu on 2017/10/17.
+ *
+ * 思路：要有进位、求和；有可能某个链表只有一个数字还要判断数位
  */
 public class Add_Two_Numbers {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        int carry = 0, sum = 0;
+        int carry = 0, sum = 0;   //进位、求和
         ListNode end = new ListNode(0), ans = end;
         while (l1!= null || l2!=null || carry!=0)
         {

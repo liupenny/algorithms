@@ -1,3 +1,4 @@
+package linked_list.Reverse_Nodes_in_kGroup;
 import tools.*;
 import tools.Sort_List;
 
@@ -90,6 +91,39 @@ public class Reverse_Nodes_in_kGroup {
         }
         return head;
     }
+
+    public ListNode reverseKGroup4(ListNode head, int k) {
+        if(head==null || head.next==null) return head;
+        ListNode cur = head, prehead = null;
+
+        int count = 0;
+        while (getSize(cur)>=k)
+        {
+            while (count<k && cur!=null)
+            {
+                ListNode precur = cur;
+                cur = cur.next;
+                precur.next = prehead;
+                prehead = precur;
+                count ++;
+            }
+            if(cur != null)
+                head.next = reverseKGroup4(cur,k);
+            return prehead;
+        }
+        return cur;
+    }
+
+    public static int getSize(ListNode head) {
+        int count = 0;
+        ListNode curNode = head;
+        while (curNode != null) {
+            count++;
+            curNode = curNode.next;
+        }
+        return count;
+    }
+
     public static void main(String[] algs)
     {
         ListNode a1 = new ListNode(2);
