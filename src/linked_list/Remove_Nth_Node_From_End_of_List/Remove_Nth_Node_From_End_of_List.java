@@ -1,3 +1,4 @@
+package linked_list.Remove_Nth_Node_From_End_of_List;
 import tools.*;
 
 /**
@@ -6,7 +7,7 @@ import tools.*;
  * 思路：让快指针先比慢指针多走n步，这样快指针到头时，慢指针正好在倒数第n个节点前面一个节点
  */
 public class Remove_Nth_Node_From_End_of_List {
-    public ListNode removeNthFromEnd(ListNode head, int n) {
+    public ListNode removeNthFromEnd(ListNode head, int n) {  //通过快慢指针确定要删除的元素，因为没法从后往前数
         if(head.next == null || head == null)
             return null;
         ListNode fast = head, slow = head;

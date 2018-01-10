@@ -4,6 +4,7 @@ import tools.ListNode;
 /**
  * Created by PennyLiu on 2017/8/18. 
  * leecode: Sort List
+ * 思路：归并排序
  */
 public class Sort_List {
     public static class ListNode {
@@ -42,7 +43,7 @@ public class Sort_List {
         }
     }
 
-    public ListNode sortList(ListNode head) {
+    public ListNode sortList(ListNode head) {  //归并排序
         if(head==null || head.next==null)
             return head;
         int sum = 0;

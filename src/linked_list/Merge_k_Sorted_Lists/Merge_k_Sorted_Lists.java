@@ -97,7 +97,7 @@ public class Merge_k_Sorted_Lists {
     public ListNode mergeKLists2(ListNode[] lists) {
         if (lists==null||lists.length==0) return null;
 
-        PriorityQueue<ListNode> queue= new PriorityQueue<ListNode>(lists.length,new Comparator<ListNode>(){
+        PriorityQueue<ListNode> queue= new PriorityQueue<ListNode>(lists.length,new Comparator<ListNode>(){ //优先队列
             @Override
             public int compare(ListNode o1,ListNode o2){
                 if (o1.val<o2.val)

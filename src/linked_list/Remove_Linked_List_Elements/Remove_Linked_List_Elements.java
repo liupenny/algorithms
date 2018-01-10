@@ -1,3 +1,4 @@
+package linked_list.Remove_Linked_List_Elements;
 import tools.*;
 import tools.Sort_List;
 
@@ -47,6 +48,7 @@ public class Remove_Linked_List_Elements {
         return head.val==val?head.next:head;
 
     }
+
     public static void main(String[] algs)
     {
         tools.Sort_List.Linklist citations2 = new Sort_List.Linklist();
