@@ -64,7 +64,6 @@ public class Max_Sum_of_Rectangle_No_Larger_Than_K {
             if(gap != null) max = Math.max(max, sum - gap);
             s.add(t);
         }
-
         return max;
     }
 
