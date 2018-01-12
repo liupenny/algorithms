@@ -2,6 +2,8 @@ package Binary_Search.Search_in_Rotated_Sorted_Array;
 
 /**
  * Created by PennyLiu on 2018/1/8.
+ * search1: 先分段再找
+ * search2:直接找
  */
 public class Search_in_Rotated_Sorted_Array {
     public int search(int[] nums, int target) {
@@ -44,6 +46,30 @@ public class Search_in_Rotated_Sorted_Array {
                 left = mid + 1;
         }
         return -1;
+    }
+
+    public int search2(int[] A, int target) {
+        int lo = 0;
+        int hi = A.length - 1;
+        while (lo < hi) {
+            int mid = (lo + hi) / 2;
+            if (A[mid] == target) return mid;
+
+            if (A[lo] <= A[mid]) { //左半部分一定是有序的 子集！
+                if (target >= A[lo] && target < A[mid]) {
+                    hi = mid - 1;
+                } else {
+                    lo = mid + 1;
+                }
+            } else {  //右半部分一定是有序的  子集！
+                if (target > A[mid] && target <= A[hi]) {
+                    lo = mid + 1;
+                } else {
+                    hi = mid - 1;
+                }
+            }
+        }
+        return A[lo] == target ? lo : -1; //出来的时候 lo 没考虑到，单独判断
     }
 
     public static void main(String[] algs)
