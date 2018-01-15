@@ -90,6 +90,39 @@ public class Longest_Increasing_Subsequence {
         return len;
     }
 
+        public int lengthOfLIS4(int[] nums) {
+            int n = nums.length;
+            if (n == 0) {
+                return 0;
+            }
+            int[] tails = new int[n];
+            int end = 0;
+            for (int i = 0; i < n; i++) {
+                int pos = lowerBound(tails, nums[i], end);
+                if (pos == end) {
+                    tails[end++] = nums[i];
+                } else {
+                    tails[pos] = nums[i];
+                }
+            }
+            return end;
+        }
+
+        private int lowerBound(int[] tails, int target, int end) {
+            int start = 0;
+            while (start < end) {
+                int mid = start + (end - start) / 2;
+                if (tails[mid] < target) {
+                    start = mid + 1;
+                } else {
+                    end = mid;
+                }
+            }
+
+            return start;
+        }
+
+
         public static void main(String[] algs)
     {
 
