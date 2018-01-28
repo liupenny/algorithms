@@ -5,13 +5,12 @@ import java.util.Map;
 
 /**
  * Created by PennyLiu on 2017/10/20.
-
  */
 public class Two_Sum {
     public int[] twoSum(int[] nums, int target) {
         Map<Integer,Integer> map = new HashMap<Integer,Integer>();
         int[] ans = new int[2];
-        for (int i=0; i < nums.length; i++)
+        for (int i=0; i < nums.length; i++)  //用target-当前值，不断判断
         {
             if(map.containsKey(target - nums[i]))  //这里只用一个循环完成，当不包含就添加，因为只有一个答案
             {
