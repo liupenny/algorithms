@@ -16,13 +16,13 @@ public class _3Sum {
             if (i == 0 || nums[i] != nums[i - 1]) {  //排除重复值
                 lo = i + 1;
                 hi = nums.length - 1;
-                target = 0 - nums[i];
+                target = 0 - nums[i];  //转换成寻找2sum的程序
                 while (lo < hi) {
                     if (nums[lo] + nums[hi] == target) {
                         ans.add(Arrays.asList(nums[i], nums[lo], nums[hi]));
-                        while (lo < hi && nums[lo] == nums[lo + 1]) lo++;
+                        while (lo < hi && nums[lo] == nums[lo + 1]) lo++; //找到符合条件的之后，将相等的数跳过,lo+到最后一个等于nums[lo]的地方
                         while (lo < hi && nums[hi] == nums[hi - 1]) hi--;
-                        lo++;
+                        lo++; //+1到第一个 != lo的数
                         hi--;
                     } else if (nums[lo] + nums[hi] < target) lo++;
                     else hi--;
@@ -33,7 +33,7 @@ public class _3Sum {
 
 
     public static void main(String[] algs) {
-        int[] A = {-1, 0, 1, 2, -1, -4};
+        int[] A = {-1, 0, 1, 2, -1, 2, 0, -2, -4};
         _3Sum t = new _3Sum();
         List<List<Integer>> ans = t.threeSum(A);
         System.out.println(ans);

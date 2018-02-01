@@ -20,7 +20,7 @@ public class _3Sum_Closest {
             hi = nums.length - 1;
             while (lo < hi)
             {
-                sum = nums[i] + nums[lo] + nums[hi];
+                sum = nums[i] + nums[lo] + nums[hi]; //直接求和算差的绝对值
                 if (sum > target)
                     hi--;
                 else if (sum < target)

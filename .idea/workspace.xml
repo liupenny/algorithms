@@ -2,8 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="310d3909-8690-4300-909b-30995372c46c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Array/Reshape_the_Matrix/Reshape_the_Matrix.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Array/Toeplitz_Matrix/Toeplitz_Matrix.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Bit_Manipulation/Maximum_XOR_of_Two_Numbers_in_an_Array/Maximum_XOR_of_Two_Numbers_in_an_Array.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Hash_Table/Distribute_Candies/Distribute_Candies.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Hash_Table/Encode_and_Decode_TinyURL/Encode_and_Decode_TinyURL.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Hash_Table/Jewels_and_Stones/Jewels_and_Stones.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Math/Self_Dividing_Numbers/Self_Dividing_Numbers.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Stack/Baseball_Game/Baseball_Game.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Stack/Next_Greater_Element_I/Next_Greater_Element_I.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/String/Judge_Route_Circle/Judge_Route_Circle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/erfen/Array/Majority_ElementII/Majority_ElementII.class" afterPath="$PROJECT_DIR$/out/production/erfen/Array/Majority_ElementII/Majority_ElementII.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/erfen/Array/Two_Sum/Two_Sum.class" afterPath="$PROJECT_DIR$/out/production/erfen/Array/Two_Sum/Two_Sum.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/erfen/Array/_3Sum/_3Sum.class" afterPath="$PROJECT_DIR$/out/production/erfen/Array/_3Sum/_3Sum.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Array/Two_Sum/Two_Sum.java" afterPath="$PROJECT_DIR$/src/Array/Two_Sum/Two_Sum.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Array/Two_Sum_II_Input_array_is_sorted/Two_Sum_II_Input_array_is_sorted.java" afterPath="$PROJECT_DIR$/src/Array/Two_Sum_II_Input_array_is_sorted/Two_Sum_II_Input_array_is_sorted.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Array/_3Sum/_3Sum.java" afterPath="$PROJECT_DIR$/src/Array/_3Sum/_3Sum.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Array/_3Sum_Closest/_3Sum_Closest.java" afterPath="$PROJECT_DIR$/src/Array/_3Sum_Closest/_3Sum_Closest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/../../保留格式加密/Pretreatment/Pretreatment/bin/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -27,43 +43,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Maximum_Length_of_Pair_Chain.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Dynamic_Programming/Maximum_Length_of_Pair_Chain/Maximum_Length_of_Pair_Chain.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="760">
-              <caret line="41" column="46" lean-forward="false" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Total_Hamming_Distance.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Bit_Manipulation/Total_Hamming_Distance/Total_Hamming_Distance.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="62" lean-forward="false" selection-start-line="10" selection-start-column="62" selection-end-line="10" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Majority_Element.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Bit_Manipulation/Majority_Element/Majority_Element.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="29" column="29" lean-forward="false" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Majority_ElementII.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Array/Majority_ElementII/Majority_ElementII.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="32" column="39" lean-forward="false" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
+            <state relative-caret-position="190">
+              <caret line="25" column="25" lean-forward="false" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -71,11 +55,65 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Two_Sum.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Array/Two_Sum/Two_Sum.java">
+      <file leaf-file-name="Maximum_XOR_of_Two_Numbers_in_an_Array.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Bit_Manipulation/Maximum_XOR_of_Two_Numbers_in_an_Array/Maximum_XOR_of_Two_Numbers_in_an_Array.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="12" column="63" lean-forward="false" selection-start-line="12" selection-start-column="63" selection-end-line="12" selection-end-column="63" />
+            <state relative-caret-position="217">
+              <caret line="15" column="27" lean-forward="true" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Next_Greater_Element_I.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Stack/Next_Greater_Element_I/Next_Greater_Element_I.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Baseball_Game.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Stack/Baseball_Game/Baseball_Game.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="355">
+              <caret line="34" column="5" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="34" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Reshape_the_Matrix.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Array/Reshape_the_Matrix/Reshape_the_Matrix.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="11" column="45" lean-forward="false" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Distribute_Candies.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Hash_Table/Distribute_Candies/Distribute_Candies.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Integer.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/lang/Integer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="130">
+              <caret line="51" column="19" lean-forward="false" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -102,18 +140,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Binary_Search/Smallest_Good_Base/Smallest_Good_Base.java" />
-        <option value="$PROJECT_DIR$/zuochengyun_class/src/Problem_01_SubMatrixMaxSum.java" />
-        <option value="$PROJECT_DIR$/src/Binary_Search/Max_Sum_of_Rectangle_No_Larger_Than_K/Max_Sum_of_Rectangle_No_Larger_Than_K.java" />
-        <option value="$PROJECT_DIR$/src/Binary_Search/Sqrtx/Sqrtx.java" />
-        <option value="$PROJECT_DIR$/src/Binary_Search/Powxn/Powxn.java" />
-        <option value="$PROJECT_DIR$/src/Binary_Search/Heaters/Heaters.java" />
-        <option value="$PROJECT_DIR$/src/Binary_Search/Kth_Smallest_Number_in_Multiplication_Table/Kth_Smallest_Number_in_Multiplication_Table.java" />
-        <option value="$PROJECT_DIR$/src/Binary_Search/Longest_Increasing_Subsequence/Longest_Increasing_Subsequence.java" />
-        <option value="$PROJECT_DIR$/src/Binary_Search/Russian_Doll_Envelopes/Russian_Doll_Envelopes.java" />
-        <option value="$PROJECT_DIR$/src/Binary_Search/Minimum_Size_Subarray_Sum/Minimum_Size_Subarray_Sum.java" />
-        <option value="$PROJECT_DIR$/src/Binary_Search/Search_for_a_Range/Search_for_a_Range.java" />
-        <option value="$PROJECT_DIR$/src/Binary_Search/Count_Complete_Tree_Nodes/Count_Complete_Tree_Nodes.java" />
         <option value="$PROJECT_DIR$/src/Binary_Search/Guess_Number_Higher_or_Lower/Guess_Number_Higher_or_Lower.java" />
         <option value="$PROJECT_DIR$/src/Binary_Search/First_Bad_Version/First_Bad_Version.java" />
         <option value="$PROJECT_DIR$/src/Binary_Search/Find_Kth_Smallest_Pair_Distance/Find_Kth_Smallest_Pair_Distance.java" />
@@ -153,12 +179,24 @@
         <option value="$PROJECT_DIR$/src/Bit_Manipulation/Majority_Element/Majority_Element.java" />
         <option value="$PROJECT_DIR$/src/Array/Majority_ElementII/Majority_ElementII.java" />
         <option value="$PROJECT_DIR$/src/Array/Two_Sum/Two_Sum.java" />
+        <option value="$PROJECT_DIR$/src/Array/Two_Sum_II_Input_array_is_sorted/Two_Sum_II_Input_array_is_sorted.java" />
+        <option value="$PROJECT_DIR$/src/Array/_3Sum/_3Sum.java" />
+        <option value="$PROJECT_DIR$/src/Array/_3Sum_Closest/_3Sum_Closest.java" />
+        <option value="$PROJECT_DIR$/src/Bit_Manipulation/Maximum_XOR_of_Two_Numbers_in_an_Array/Maximum_XOR_of_Two_Numbers_in_an_Array.java" />
+        <option value="$PROJECT_DIR$/src/Hash_Table/Jewels_and_Stones/Jewels_and_Stones.java" />
+        <option value="$PROJECT_DIR$/src/String/Judge_Route_Circle/Judge_Route_Circle.java" />
+        <option value="$PROJECT_DIR$/src/Math/Self_Dividing_Numbers/Self_Dividing_Numbers.java" />
+        <option value="$PROJECT_DIR$/src/Hash_Table/Encode_and_Decode_TinyURL/Encode_and_Decode_TinyURL.java" />
+        <option value="$PROJECT_DIR$/src/Array/Toeplitz_Matrix/Toeplitz_Matrix.java" />
+        <option value="$PROJECT_DIR$/src/Stack/Baseball_Game/Baseball_Game.java" />
+        <option value="$PROJECT_DIR$/src/Array/Reshape_the_Matrix/Reshape_the_Matrix.java" />
+        <option value="$PROJECT_DIR$/src/Hash_Table/Distribute_Candies/Distribute_Candies.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="-27" />
+    <option name="y" value="320" />
     <option name="width" value="1386" />
     <option name="height" value="788" />
   </component>
@@ -180,7 +218,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -197,63 +234,16 @@
               <item name="algorithms" type="b2602c69:ProjectViewProjectNode" />
               <item name="algorithms" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Array" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="algorithms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="algorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Array" type="462c0819:PsiDirectoryNode" />
-              <item name="_3Sum" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="algorithms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="algorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Array" type="462c0819:PsiDirectoryNode" />
-              <item name="_3Sum_Closest" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="algorithms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="algorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Array" type="462c0819:PsiDirectoryNode" />
-              <item name="_4Sum" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="algorithms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="algorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Array" type="462c0819:PsiDirectoryNode" />
-              <item name="Majority_ElementII" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="algorithms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="algorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Array" type="462c0819:PsiDirectoryNode" />
-              <item name="Two_Sum" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="algorithms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="algorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Array" type="462c0819:PsiDirectoryNode" />
-              <item name="Two_Sum_II_Input_array_is_sorted" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="algorithms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="algorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Bit_Manipulation" type="462c0819:PsiDirectoryNode" />
+              <item name="Hash_Table" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -287,15 +277,15 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Majority_ElementII">
-    <configuration name="Find_the_Difference" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Reshape_the_Matrix">
+    <configuration name="Baseball_Game" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="Bit_Manipulation.Find_the_Difference.*" />
+          <option name="PATTERN" value="Stack.Baseball_Game.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="Bit_Manipulation.Find_the_Difference.Find_the_Difference" />
+      <option name="MAIN_CLASS_NAME" value="Stack.Baseball_Game.Baseball_Game" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -307,14 +297,14 @@
       <module name="erfen" />
       <envs />
     </configuration>
-    <configuration name="Majority_Element" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Jewels_and_Stones" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="Bit_Manipulation.Majority_Element.*" />
+          <option name="PATTERN" value="Hash_Table.Jewels_and_Stones.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="Bit_Manipulation.Majority_Element.Majority_Element" />
+      <option name="MAIN_CLASS_NAME" value="Hash_Table.Jewels_and_Stones.Jewels_and_Stones" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -326,14 +316,14 @@
       <module name="erfen" />
       <envs />
     </configuration>
-    <configuration name="Majority_ElementII" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Maximum_XOR_of_Two_Numbers_in_an_Array" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="Array.Majority_ElementII.*" />
+          <option name="PATTERN" value="Bit_Manipulation.Maximum_XOR_of_Two_Numbers_in_an_Array.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="Array.Majority_ElementII.Majority_ElementII" />
+      <option name="MAIN_CLASS_NAME" value="Bit_Manipulation.Maximum_XOR_of_Two_Numbers_in_an_Array.Maximum_XOR_of_Two_Numbers_in_an_Array" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -345,14 +335,14 @@
       <module name="erfen" />
       <envs />
     </configuration>
-    <configuration name="Sum_of_Two_Integers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Reshape_the_Matrix" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="Bit_Manipulation.Sum_of_Two_Integers.*" />
+          <option name="PATTERN" value="Array.Reshape_the_Matrix.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="Bit_Manipulation.Sum_of_Two_Integers.Sum_of_Two_Integers" />
+      <option name="MAIN_CLASS_NAME" value="Array.Reshape_the_Matrix.Reshape_the_Matrix" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -364,14 +354,14 @@
       <module name="erfen" />
       <envs />
     </configuration>
-    <configuration name="Total_Hamming_Distance" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Toeplitz_Matrix" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="Bit_Manipulation.Total_Hamming_Distance.*" />
+          <option name="PATTERN" value="Array.Toeplitz_Matrix.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="Bit_Manipulation.Total_Hamming_Distance.Total_Hamming_Distance" />
+      <option name="MAIN_CLASS_NAME" value="Array.Toeplitz_Matrix.Toeplitz_Matrix" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -639,19 +629,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.Sum_of_Two_Integers" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Find_the_Difference" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Total_Hamming_Distance" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Majority_Element" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Majority_ElementII" />
+      <item index="0" class="java.lang.String" itemvalue="Application.Maximum_XOR_of_Two_Numbers_in_an_Array" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Jewels_and_Stones" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Toeplitz_Matrix" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Baseball_Game" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Reshape_the_Matrix" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.Majority_ElementII" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Majority_Element" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Total_Hamming_Distance" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Find_the_Difference" />
-        <item index="4" class="java.lang.String" itemvalue="Application.Sum_of_Two_Integers" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Reshape_the_Matrix" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Baseball_Game" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Toeplitz_Matrix" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Jewels_and_Stones" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Maximum_XOR_of_Two_Numbers_in_an_Array" />
       </list>
     </recent_temporary>
   </component>
@@ -693,10 +683,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2359736" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -704,10 +694,10 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23762377" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2359736" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2359736" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.193265" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17642753" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -720,7 +710,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2359736" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1006,6 +995,30 @@
           <properties class="Bit_Manipulation.Sum_of_Two_Integers.Sum_of_Two_Integers" method="getSum" />
           <option name="timeStamp" value="90" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Array/Two_Sum/Two_Sum.java</url>
+          <line>9</line>
+          <properties class="Array.Two_Sum.Two_Sum" method="twoSum">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Array/Two_Sum_II_Input_array_is_sorted/Two_Sum_II_Input_array_is_sorted.java</url>
+          <line>11</line>
+          <properties class="Array.Two_Sum_II_Input_array_is_sorted.Two_Sum_II_Input_array_is_sorted" method="twoSum">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="98" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Stack/Baseball_Game/Baseball_Game.java</url>
+          <line>3</line>
+          <properties class="Stack.Baseball_Game.Baseball_Game" method="calPoints">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="107" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Binary_Search/Longest_Increasing_Subsequence/Longest_Increasing_Subsequence.java</url>
           <line>131</line>
@@ -1270,8 +1283,62 @@
           <properties />
           <option name="timeStamp" value="95" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Array/Two_Sum/Two_Sum.java</url>
+          <line>29</line>
+          <properties />
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Array/Two_Sum_II_Input_array_is_sorted/Two_Sum_II_Input_array_is_sorted.java</url>
+          <line>30</line>
+          <properties />
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Array/_3Sum/_3Sum.java</url>
+          <line>37</line>
+          <properties />
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Array/_3Sum/_3Sum.java</url>
+          <line>19</line>
+          <properties />
+          <option name="timeStamp" value="101" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Bit_Manipulation/Maximum_XOR_of_Two_Numbers_in_an_Array/Maximum_XOR_of_Two_Numbers_in_an_Array.java</url>
+          <line>7</line>
+          <properties />
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Bit_Manipulation/Maximum_XOR_of_Two_Numbers_in_an_Array/Maximum_XOR_of_Two_Numbers_in_an_Array.java</url>
+          <line>27</line>
+          <properties />
+          <option name="timeStamp" value="103" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Hash_Table/Jewels_and_Stones/Jewels_and_Stones.java</url>
+          <line>6</line>
+          <properties />
+          <option name="timeStamp" value="104" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Hash_Table/Jewels_and_Stones/Jewels_and_Stones.java</url>
+          <line>17</line>
+          <properties />
+          <option name="timeStamp" value="105" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Stack/Baseball_Game/Baseball_Game.java</url>
+          <line>39</line>
+          <properties />
+          <option name="timeStamp" value="108" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="96" />
+      <option name="time" value="109" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1280,113 +1347,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Sort/Longest_Palindromic_Substring.java" />
-    <entry file="file://$PROJECT_DIR$/src/Binary_Search/Median_of_Two_Sorted_Arrays/Problem_01_FindKthMinNumber.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="81" column="5" lean-forward="false" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Binary_Search/Maximum_Length_of_Repeated_Subarray/Maximum_Length_of_Repeated_Subarray.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="24" column="17" lean-forward="false" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Dynamic_Programming/Counting_Bits/Counting_Bits.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="30" column="5" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="30" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Dynamic_Programming/Hanoi/Hanoi.java" />
-    <entry file="file://$PROJECT_DIR$/src/Dynamic_Programming/Hanoi/Code_02_Hanoi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="19" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Dynamic_Programming/Print_Subsequence/Print_All_Subsequence.java" />
-    <entry file="file://$PROJECT_DIR$/src/Dynamic_Programming/Print_Subsequence/Code_03_Print_All_Subsquences.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="56" column="20" lean-forward="true" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Dynamic_Programming/Print_Subsequence/Code_04_Print_All_Permutations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="37" lean-forward="false" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Dynamic_Programming/Cow/Code_05_Cow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Dynamic_Programming/Stack/Code_06_ReverseStackUsingRecursive.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Dynamic_Programming/Smallest_Matrix/Code_07_MinPath.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="33" column="39" lean-forward="true" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Dynamic_Programming/Money_Problem/Code_07_MinPath.java" />
-    <entry file="file://$PROJECT_DIR$/src/Dynamic_Programming/Facebook/Facebook.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Dynamic_Programming/backpack/Code_09_Knapsack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11">
-          <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/String/Longest_Palindromic_Substring/Shortest_Palindrome/Shortest_Palindrome.java" />
-    <entry file="file://$PROJECT_DIR$/src/String/Longest_Palindromic_Substring/Problem_05_ManacherAlgorithm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="5" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="12" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Dynamic_Programming/Longest_Palindromic_Subsequence/Longest_Palindromic_Subsequence.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Dynamic_Programming/Palindromic_Substrings/Palindromic_Substrings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="17" lean-forward="true" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Binary_Search/Median_of_Two_Sorted_Arrays/Median_of_Two_Sorted_Arrays.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -1560,45 +1520,205 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Dynamic_Programming/Maximum_Length_of_Pair_Chain/Maximum_Length_of_Pair_Chain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
+        <state relative-caret-position="0">
           <caret line="41" column="46" lean-forward="false" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bit_Manipulation/Total_Hamming_Distance/Total_Hamming_Distance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="62" lean-forward="false" selection-start-line="10" selection-start-column="62" selection-end-line="10" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bit_Manipulation/Majority_Element/Majority_Element.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="29" column="29" lean-forward="false" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Array/Majority_ElementII/Majority_ElementII.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="32" column="39" lean-forward="false" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Array/Two_Sum/Two_Sum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="12" column="63" lean-forward="false" selection-start-line="12" selection-start-column="63" selection-end-line="12" selection-end-column="63" />
+        <state relative-caret-position="274">
+          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+          <folding>
+            <element signature="e#238#255#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Array/Two_Sum_II_Input_array_is_sorted/Two_Sum_II_Input_array_is_sorted.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="21" column="34" lean-forward="false" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Array/_3Sum/_3Sum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-83">
+          <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Array/_3Sum_Closest/_3Sum_Closest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="23" column="23" lean-forward="false" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Binary_Search/Split_Array_Largest_Sum/Split_Array_Largest_Sum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1042">
+          <caret line="57" column="13" lean-forward="false" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Array/_4Sum/_4Sum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="90" column="41" lean-forward="true" selection-start-line="90" selection-start-column="41" selection-end-line="90" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bit_Manipulation/Total_Hamming_Distance/Total_Hamming_Distance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bit_Manipulation/Majority_Element/Majority_Element.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="29" column="29" lean-forward="false" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Binary_Search/Search_in_Rotated_Sorted_Array/Search_in_Rotated_Sorted_Array.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="62" column="17" lean-forward="false" selection-start-line="62" selection-start-column="17" selection-end-line="62" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Math/Self_Dividing_Numbers/Self_Dividing_Numbers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Array/Toeplitz_Matrix/Toeplitz_Matrix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Binary_Search/Search_Insert_Position/Search_Insert_Position.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="31" column="27" lean-forward="false" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/String/Judge_Route_Circle/Judge_Route_Circle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="3" lean-forward="false" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Hash_Table/Encode_and_Decode_TinyURL/Encode_and_Decode_TinyURL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="45" lean-forward="true" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Hash_Table/Jewels_and_Stones/Jewels_and_Stones.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="29" lean-forward="false" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Binary_Search/Search_in_Rotated_Sorted_Array_II/Search_in_Rotated_Sorted_Array_II.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="21" column="35" lean-forward="false" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Array/Majority_ElementII/Majority_ElementII.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="25" column="25" lean-forward="false" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Stack/Next_Greater_Element_I/Next_Greater_Element_I.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="51" column="19" lean-forward="false" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Stack/Baseball_Game/Baseball_Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="34" column="5" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="34" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Array/Reshape_the_Matrix/Reshape_the_Matrix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="45" lean-forward="false" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Hash_Table/Distribute_Candies/Distribute_Candies.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bit_Manipulation/Maximum_XOR_of_Two_Numbers_in_an_Array/Maximum_XOR_of_Two_Numbers_in_an_Array.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="15" column="27" lean-forward="true" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
