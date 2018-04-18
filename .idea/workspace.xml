@@ -2,18 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="310d3909-8690-4300-909b-30995372c46c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Bit_Manipulation/Binary_Number_with_Alternating_Bits/Binary_Number_with_Alternating_Bits.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Bit_Manipulation/Find_the_Difference/Find_the_Difference.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Bit_Manipulation/Single_Number_II/Single_Number_II.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Bit_Manipulation/Single_Number_III/Single_Number_III.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Bit_Manipulation/Sum_of_Two_Integers/Sum_of_Two_Integers.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Bit_Manipulation/Total_Hamming_Distance/Total_Hamming_Distance.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Dynamic_Programming/Maximum_Length_of_Pair_Chain/Maximum_Length_of_Pair_Chain.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Dynamic_Programming/Minimum_ASCII_Delete_Sum_for_Two_Strings/Minimum_ASCII_Delete_Sum_for_Two_Strings.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/String/Delete_Operation_for_Two_Strings/Delete_Operation_for_Two_Strings.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/erfen/Dynamic_Programming/Arithmetic_Slices/Arithmetic_Slices.class" afterPath="$PROJECT_DIR$/out/production/erfen/Dynamic_Programming/Arithmetic_Slices/Arithmetic_Slices.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Array/Array_Partition_I/Array_Partition_I.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Array/Max_Area_of_Island/Max_Area_of_Island.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Array/Max_Consecutive_Ones/Max_Consecutive_Ones.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Depth_first_Search/Find_Bottom_Left_Tree_Value/Find_Bottom_Left_Tree_Value.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Depth_first_Search/Flood_Fill/Flood_Fill.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Depth_first_Search/Number_of_Islands/Number_of_Islands.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Depth_first_Search/Surrounded_Regions/Surrounded_Regions.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Dynamic_Programming/Decode_Ways/Decode_Ways.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Dynamic_Programming/Wildcard_Matching/Problem_03_RegularExpressionMatch.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Dynamic_Programming/Wildcard_Matching/Wildcard_Matching.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Hash_table/Island_Perimeter/Island_Perimeter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Dynamic_Programming/Arithmetic_SlicesII_Subsequence/Arithmetic_SlicesII_Subsequence.java" afterPath="$PROJECT_DIR$/src/Dynamic_Programming/Arithmetic_SlicesII_Subsequence/Arithmetic_SlicesII_Subsequence.java" />
     </list>
     <ignored path="$PROJECT_DIR$/../../保留格式加密/Pretreatment/Pretreatment/bin/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -38,11 +38,65 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Maximum_Length_of_Pair_Chain.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Dynamic_Programming/Maximum_Length_of_Pair_Chain/Maximum_Length_of_Pair_Chain.java">
+      <file leaf-file-name="Wildcard_Matching.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Dynamic_Programming/Wildcard_Matching/Wildcard_Matching.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="41" column="46" lean-forward="false" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
+            <state relative-caret-position="594">
+              <caret line="33" column="5" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="33" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="720">
+              <caret line="45" column="27" lean-forward="false" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#249#250#0" expanded="false" />
+                <element signature="e#273#274#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Array_Partition_I.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Array/Array_Partition_I/Array_Partition_I.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Max_Consecutive_Ones.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Array/Max_Consecutive_Ones/Max_Consecutive_Ones.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="594">
+              <caret line="33" column="5" lean-forward="false" selection-start-line="28" selection-start-column="4" selection-end-line="33" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Max_Area_of_Island.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Array/Max_Area_of_Island/Max_Area_of_Island.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="468">
+              <caret line="26" column="17" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="26" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Number_of_Islands.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Depth_first_Search/Number_of_Islands/Number_of_Islands.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="35" column="38" lean-forward="false" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -50,11 +104,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Total_Hamming_Distance.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Bit_Manipulation/Total_Hamming_Distance/Total_Hamming_Distance.java">
+      <file leaf-file-name="Surrounded_Regions.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Depth_first_Search/Surrounded_Regions/Surrounded_Regions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state relative-caret-position="297">
+              <caret line="41" column="9" lean-forward="true" selection-start-line="34" selection-start-column="8" selection-end-line="41" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Island_Perimeter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Hash_table/Island_Perimeter/Island_Perimeter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Flood_Fill.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Depth_first_Search/Flood_Fill/Flood_Fill.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="16" column="44" lean-forward="true" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Find_Bottom_Left_Tree_Value.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Depth_first_Search/Find_Bottom_Left_Tree_Value/Find_Bottom_Left_Tree_Value.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -70,6 +154,14 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>board</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>image</replace>
+    </replaceStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -81,19 +173,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Binary_Search/HIndex_II/HIndex_II.java" />
-        <option value="$PROJECT_DIR$/src/Binary_Search/Search_in_Rotated_Sorted_Array/Search_in_Rotated_Sorted_Array.java" />
-        <option value="$PROJECT_DIR$/src/Binary_Search/Search_in_Rotated_Sorted_Array_II/Search_in_Rotated_Sorted_Array_II.java" />
-        <option value="$PROJECT_DIR$/src/Binary_Search/Smallest_Good_Base/Smallest_Good_Base.java" />
-        <option value="$PROJECT_DIR$/zuochengyun_class/src/Problem_01_SubMatrixMaxSum.java" />
-        <option value="$PROJECT_DIR$/src/Binary_Search/Max_Sum_of_Rectangle_No_Larger_Than_K/Max_Sum_of_Rectangle_No_Larger_Than_K.java" />
-        <option value="$PROJECT_DIR$/src/Binary_Search/Sqrtx/Sqrtx.java" />
-        <option value="$PROJECT_DIR$/src/Binary_Search/Powxn/Powxn.java" />
-        <option value="$PROJECT_DIR$/src/Binary_Search/Heaters/Heaters.java" />
-        <option value="$PROJECT_DIR$/src/Binary_Search/Kth_Smallest_Number_in_Multiplication_Table/Kth_Smallest_Number_in_Multiplication_Table.java" />
-        <option value="$PROJECT_DIR$/src/Binary_Search/Longest_Increasing_Subsequence/Longest_Increasing_Subsequence.java" />
-        <option value="$PROJECT_DIR$/src/Binary_Search/Russian_Doll_Envelopes/Russian_Doll_Envelopes.java" />
-        <option value="$PROJECT_DIR$/src/Binary_Search/Minimum_Size_Subarray_Sum/Minimum_Size_Subarray_Sum.java" />
         <option value="$PROJECT_DIR$/src/Binary_Search/Search_for_a_Range/Search_for_a_Range.java" />
         <option value="$PROJECT_DIR$/src/Binary_Search/Count_Complete_Tree_Nodes/Count_Complete_Tree_Nodes.java" />
         <option value="$PROJECT_DIR$/src/Binary_Search/Guess_Number_Higher_or_Lower/Guess_Number_Higher_or_Lower.java" />
@@ -132,6 +211,19 @@
         <option value="$PROJECT_DIR$/src/Bit_Manipulation/Sum_of_Two_Integers/Sum_of_Two_Integers.java" />
         <option value="$PROJECT_DIR$/src/Bit_Manipulation/Find_the_Difference/Find_the_Difference.java" />
         <option value="$PROJECT_DIR$/src/Bit_Manipulation/Total_Hamming_Distance/Total_Hamming_Distance.java" />
+        <option value="$PROJECT_DIR$/src/Dynamic_Programming/Decode_Ways/Decode_Ways.java" />
+        <option value="$PROJECT_DIR$/src/Dynamic_Programming/Wildcard_Matching/Problem_03_RegularExpressionMatch.java" />
+        <option value="$PROJECT_DIR$/src/Dynamic_Programming/Wildcard_Matching/Wildcard_Matching.java" />
+        <option value="$PROJECT_DIR$/src/Array/Two_Sum/test.java" />
+        <option value="$PROJECT_DIR$/src/Array/Array_Partition_I/Array_Partition_I.java" />
+        <option value="$PROJECT_DIR$/src/Array/Max_Consecutive_Ones/Max_Consecutive_Ones.java" />
+        <option value="$PROJECT_DIR$/src/Array/Max_Area_of_Island/Max_Area_of_Island.java" />
+        <option value="$PROJECT_DIR$/src/Depth_first_Search/Number_of_Islands.java" />
+        <option value="$PROJECT_DIR$/src/Array/Max_Area_of_Island/README.md" />
+        <option value="$PROJECT_DIR$/src/Depth_first_Search/Number_of_Islands/Number_of_Islands.java" />
+        <option value="$PROJECT_DIR$/src/Depth_first_Search/Surrounded_Regions/Surrounded_Regions.java" />
+        <option value="$PROJECT_DIR$/src/Hash_table/Island_Perimeter/Island_Perimeter.java" />
+        <option value="$PROJECT_DIR$/src/Depth_first_Search/Flood_Fill/Flood_Fill.java" />
       </list>
     </option>
   </component>
@@ -140,6 +232,9 @@
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -157,6 +252,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -211,6 +307,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="algorithms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="algorithms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -229,11 +339,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Bit_Manipulation" />
+              <option name="myItemId" value="Hash_table" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Total_Hamming_Distance" />
+              <option name="myItemId" value="Island_Perimeter" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -251,13 +361,140 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Bit_Manipulation" />
+              <option name="myItemId" value="Hash_table" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="algorithms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="algorithms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Depth_first_Search" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Surrounded_Regions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="algorithms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="algorithms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Depth_first_Search" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Number_of_Islands" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="algorithms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="algorithms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Depth_first_Search" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Flood_Fill" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="algorithms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="algorithms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Depth_first_Search" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Find_Bottom_Left_Tree_Value" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="algorithms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="algorithms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Array" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="algorithms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="algorithms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Array" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Max_Area_of_Island" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -266,29 +503,29 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\实验室\leetcode\algorithms\src\Dynamic_Programming\Wildcard_Matching" />
       <recent name="F:\实验室\leetcode\algorithms\src\Dynamic_Programming\backpack" />
       <recent name="F:\实验室\leetcode\algorithms\src\Dynamic_Programming\Money_Problem" />
       <recent name="F:\实验室\leetcode\algorithms\src\Dynamic_Programming\Smallest_Matrix" />
       <recent name="F:\实验室\leetcode\algorithms\src\Dynamic_Programming\Stack" />
-      <recent name="F:\实验室\leetcode\algorithms\src\Dynamic_Programming\Cow" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\实验室\leetcode\algorithms\test" />
       <recent name="F:\实验室\leetcode\algorithms\src\Dynamic_Programming\Money_Problem" />
       <recent name="F:\实验室\leetcode\algorithms\src\Dynamic_Programming\Hanoi" />
       <recent name="F:\实验室\leetcode\algorithms\src\Binary_Search\Count_Complete_Tree_Nodes" />
       <recent name="F:\实验室\leetcode\algorithms\src\Binary_Search\Russian_Doll_Envelopes" />
-      <recent name="F:\实验室\leetcode\algorithms\zuochengyun_class\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Total_Hamming_Distance">
-    <configuration default="false" name="Single_Number_II" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Flood_Fill">
+    <configuration default="false" name="Max_Area_of_Island" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="Bit_Manipulation.Single_Number_II.*" />
+          <option name="PATTERN" value="Array.Max_Area_of_Island.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="Bit_Manipulation.Single_Number_II.Single_Number_II" />
+      <option name="MAIN_CLASS_NAME" value="Array.Max_Area_of_Island.Max_Area_of_Island" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -301,14 +538,14 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="Single_Number_III" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Number_of_Islands" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="Bit_Manipulation.Single_Number_III.*" />
+          <option name="PATTERN" value="Depth_first_Search.Number_of_Islands.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="Bit_Manipulation.Single_Number_III.Single_Number_III" />
+      <option name="MAIN_CLASS_NAME" value="Depth_first_Search.Number_of_Islands.Number_of_Islands" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -321,14 +558,14 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="Sum_of_Two_Integers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Surrounded_Regions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="Bit_Manipulation.Sum_of_Two_Integers.*" />
+          <option name="PATTERN" value="Depth_first_Search.Surrounded_Regions.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="Bit_Manipulation.Sum_of_Two_Integers.Sum_of_Two_Integers" />
+      <option name="MAIN_CLASS_NAME" value="Depth_first_Search.Surrounded_Regions.Surrounded_Regions" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -341,14 +578,14 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="Find_the_Difference" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Island_Perimeter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="Bit_Manipulation.Find_the_Difference.*" />
+          <option name="PATTERN" value="Hash_table.Island_Perimeter.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="Bit_Manipulation.Find_the_Difference.Find_the_Difference" />
+      <option name="MAIN_CLASS_NAME" value="Hash_table.Island_Perimeter.Island_Perimeter" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -361,14 +598,14 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="Total_Hamming_Distance" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Flood_Fill" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="Bit_Manipulation.Total_Hamming_Distance.*" />
+          <option name="PATTERN" value="Depth_first_Search.Flood_Fill.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="Bit_Manipulation.Total_Hamming_Distance.Total_Hamming_Distance" />
+      <option name="MAIN_CLASS_NAME" value="Depth_first_Search.Flood_Fill.Flood_Fill" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -644,19 +881,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.Single_Number_II" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Single_Number_III" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Sum_of_Two_Integers" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Find_the_Difference" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Total_Hamming_Distance" />
+      <item index="0" class="java.lang.String" itemvalue="Application.Max_Area_of_Island" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Number_of_Islands" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Surrounded_Regions" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Island_Perimeter" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Flood_Fill" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.Total_Hamming_Distance" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Find_the_Difference" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Sum_of_Two_Integers" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Single_Number_III" />
-        <item index="4" class="java.lang.String" itemvalue="Application.Single_Number_II" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Flood_Fill" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Island_Perimeter" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Surrounded_Regions" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Number_of_Islands" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Max_Area_of_Island" />
       </list>
     </recent_temporary>
   </component>
@@ -710,24 +947,24 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23910615" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24469274" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22122905" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19296375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21215352" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31173185" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31173185" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -1011,6 +1248,42 @@
           <properties class="Bit_Manipulation.Sum_of_Two_Integers.Sum_of_Two_Integers" method="getSum" />
           <option name="timeStamp" value="90" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Dynamic_Programming/Decode_Ways/Decode_Ways.java</url>
+          <line>6</line>
+          <properties class="Dynamic_Programming.Decode_Ways.Decode_Ways" method="numDecodings" />
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Dynamic_Programming/Wildcard_Matching/Wildcard_Matching.java</url>
+          <line>6</line>
+          <properties class="Dynamic_Programming.Wildcard_Matching.Wildcard_Matching" method="isMatch" />
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Dynamic_Programming/Wildcard_Matching/Wildcard_Matching.java</url>
+          <line>11</line>
+          <properties class="Dynamic_Programming.Wildcard_Matching.Wildcard_Matching" method="match" />
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Array/Max_Area_of_Island/Max_Area_of_Island.java</url>
+          <line>6</line>
+          <properties class="Array.Max_Area_of_Island.Max_Area_of_Island" method="maxAreaOfIsland" />
+          <option name="timeStamp" value="101" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Array/Max_Area_of_Island/Max_Area_of_Island.java</url>
+          <line>19</line>
+          <properties class="Array.Max_Area_of_Island.Max_Area_of_Island" method="AreaOfIsland" />
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Depth_first_Search/Flood_Fill/Flood_Fill.java</url>
+          <line>8</line>
+          <properties class="Depth_first_Search.Flood_Fill.Flood_Fill" method="floodFill" />
+          <option name="timeStamp" value="103" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Binary_Search/Longest_Increasing_Subsequence/Longest_Increasing_Subsequence.java</url>
           <line>131</line>
@@ -1275,8 +1548,20 @@
           <properties />
           <option name="timeStamp" value="95" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Dynamic_Programming/Decode_Ways/Decode_Ways.java</url>
+          <line>93</line>
+          <properties />
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Depth_first_Search/Flood_Fill/Flood_Fill.java</url>
+          <line>67</line>
+          <properties />
+          <option name="timeStamp" value="104" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="96" />
+      <option name="time" value="105" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1285,119 +1570,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Dynamic_Programming/Counting_Bits/Palindromic_Substrings/Palindromic_Substrings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sort/Palindromic_Substrings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/String/Palindromic Substrings/Palindromic_Substrings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sort/Longest_Palindromic_Substring.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Binary_Search/Median_of_Two_Sorted_Arrays/Problem_01_FindKthMinNumber.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="81" column="5" lean-forward="false" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Binary_Search/Maximum_Length_of_Repeated_Subarray/Maximum_Length_of_Repeated_Subarray.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="24" column="17" lean-forward="false" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Dynamic_Programming/Counting_Bits/Counting_Bits.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="30" column="5" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="30" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Dynamic_Programming/Hanoi/Hanoi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Dynamic_Programming/Hanoi/Code_02_Hanoi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="19" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Dynamic_Programming/Print_Subsequence/Print_All_Subsequence.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Dynamic_Programming/Print_Subsequence/Code_03_Print_All_Subsquences.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="56" column="20" lean-forward="true" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1274#1275#0" expanded="false" />
-            <element signature="e#1292#1293#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Dynamic_Programming/Print_Subsequence/Code_04_Print_All_Permutations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="37" lean-forward="false" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Dynamic_Programming/Cow/Code_05_Cow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Dynamic_Programming/Stack/Code_06_ReverseStackUsingRecursive.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1405,23 +1581,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
           <caret line="33" column="39" lean-forward="true" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Dynamic_Programming/Money_Problem/Code_07_MinPath.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Dynamic_Programming/Money_Problem/Code_07_MinPath.java" />
     <entry file="file://$PROJECT_DIR$/src/Dynamic_Programming/Facebook/Facebook.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1429,23 +1596,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11">
           <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/String/Longest_Palindromic_Substring/Shortest_Palindrome/Shortest_Palindrome.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/String/Longest_Palindromic_Substring/Shortest_Palindrome/Shortest_Palindrome.java" />
     <entry file="file://$PROJECT_DIR$/src/String/Longest_Palindromic_Substring/Problem_05_ManacherAlgorithm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" column="5" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="12" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1493,10 +1651,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="105" column="24" lean-forward="false" selection-start-line="105" selection-start-column="24" selection-end-line="105" selection-end-column="24" />
-          <folding>
-            <element signature="e#6252#6253#0" expanded="false" />
-            <element signature="e#6320#6321#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1504,7 +1658,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
           <caret line="110" column="23" lean-forward="false" selection-start-line="110" selection-start-column="22" selection-end-line="110" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1512,7 +1665,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="132" column="45" lean-forward="true" selection-start-line="132" selection-start-column="45" selection-end-line="132" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1520,9 +1672,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="465" column="41" lean-forward="true" selection-start-line="465" selection-start-column="41" selection-end-line="465" selection-end-column="41" />
-          <folding>
-            <element signature="e#19130#19131#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1531,7 +1680,7 @@
         <state relative-caret-position="301">
           <caret line="28" column="58" lean-forward="true" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="58" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1540,7 +1689,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="21" column="75" lean-forward="false" selection-start-line="21" selection-start-column="75" selection-end-line="21" selection-end-column="75" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1548,7 +1696,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="558">
           <caret line="31" column="5" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="31" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1556,9 +1703,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="25" column="5" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="25" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1575,11 +1719,11 @@
         <state relative-caret-position="540">
           <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#537#552#0" expanded="true" />
-            <element signature="e#2374#2391#0" expanded="true" />
-            <element signature="e#3022#3031#0" expanded="true" />
-            <element signature="e#3713#3722#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#537#552#0" expanded="false" />
+            <element signature="e#2374#2391#0" expanded="false" />
+            <element signature="e#3022#3031#0" expanded="false" />
+            <element signature="e#3713#3722#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1588,7 +1732,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-486">
           <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1604,7 +1747,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="33" column="40" lean-forward="true" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1612,7 +1754,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1620,7 +1761,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1628,7 +1768,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="427">
           <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1644,7 +1783,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="301">
           <caret line="23" column="43" lean-forward="true" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1652,7 +1790,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1660,7 +1797,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="20" column="23" lean-forward="false" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1668,7 +1804,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
           <caret line="1430" column="27" lean-forward="false" selection-start-line="1430" selection-start-column="27" selection-end-line="1430" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1676,7 +1811,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1260">
           <caret line="108" column="17" lean-forward="false" selection-start-line="108" selection-start-column="17" selection-end-line="108" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1698,18 +1832,128 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Dynamic_Programming/Maximum_Length_of_Pair_Chain/Maximum_Length_of_Pair_Chain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
+        <state relative-caret-position="666">
           <caret line="41" column="46" lean-forward="false" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Bit_Manipulation/Total_Hamming_Distance/Total_Hamming_Distance.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Dynamic_Programming/Decode_Ways/Decode_Ways.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="26" column="36" lean-forward="false" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Dynamic_Programming/Wildcard_Matching/Problem_03_RegularExpressionMatch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="37" lean-forward="false" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Dynamic_Programming/Wildcard_Matching/Wildcard_Matching.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="33" column="5" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="33" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Array/Array_Partition_I/Array_Partition_I.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Array/Max_Consecutive_Ones/Max_Consecutive_Ones.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="33" column="5" lean-forward="false" selection-start-line="28" selection-start-column="4" selection-end-line="33" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="45" column="27" lean-forward="false" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#249#250#0" expanded="false" />
+            <element signature="e#273#274#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Array/Max_Area_of_Island/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Depth_first_Search/Find_Bottom_Left_Tree_Value/Find_Bottom_Left_Tree_Value.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Array/Max_Area_of_Island/Max_Area_of_Island.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="26" column="17" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="26" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Depth_first_Search/Number_of_Islands/Number_of_Islands.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="35" column="38" lean-forward="false" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Depth_first_Search/Surrounded_Regions/Surrounded_Regions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="41" column="9" lean-forward="true" selection-start-line="34" selection-start-column="8" selection-end-line="41" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Hash_table/Island_Perimeter/Island_Perimeter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Depth_first_Search/Flood_Fill/Flood_Fill.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="44" lean-forward="true" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
           <folding />
         </state>
       </provider>
