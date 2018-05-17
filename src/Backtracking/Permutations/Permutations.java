@@ -81,6 +81,6 @@ public class Permutations {
     public static void main(String[] args) {
         Permutations t = new Permutations();
         int[] nums = {1,2,3};
-        System.out.println(t.permute(nums));
+        System.out.println(t.permute1(nums));
     }
 }
