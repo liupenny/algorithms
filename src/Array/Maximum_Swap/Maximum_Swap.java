@@ -1,7 +1,4 @@
-package Array.Maximum_Swap;
-
-import java.util.ArrayList;
-import java.util.Arrays;
+package Maximum_Swap;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -13,60 +10,29 @@ public class Maximum_Swap {
         if(num <= 10)
             return num;
 
-        int[] nums = new int[9];
-        Arrays.fill(nums, -1);
-        int index = 1;
-        // LinkedList<Integer> ans = new LinkedList<>();  // 这里如果写 List<Integer> ans = new LinkedList<>(); 是没有addFirst方法的
-        while (num > 0)
-        {
-            int left = num % 10;
-            nums[index++] = left;
-            num /= 10;
+        char[] digits = Integer.toString(num).toCharArray(); //记录num中的每一位
+        int[] buckets = new int[10];
+
+        for (int i = 0; i < digits.length; i++) { 
+            buckets[digits[i] - '0'] = i;  //从最高位开始，记录num中每个数最后出现的index
         }
 
-        int bigIndex = 2;
-        for (int i = 2; i < nums.length; i++) {
-            //biggest = Math.max(biggest, nums[i]);
-            if(nums[i] == -1)
-                break;
-            if(nums[bigIndex] < nums[i])
-                bigIndex = i;
+        for (int i = 0; i < digits.length; i++) {   //从num的最高位开始，从9依次往下，找到num中后面的某一位比当前位大，进行交换
+            for (int d = 9; d > digits[i] - '0'; d--) {  //d需要比数字digits[i]大
+                if (buckets[d] > i) {  //如果d的位置在i后面,则交换
+                    char tmp = digits[i];
+                    digits[i] = digits[buckets[d]];
+                    digits[buckets[d]] = tmp;
+                    return Integer.valueOf(new String(digits));
+                }
+            }
         }
-
-        if(bigIndex == 2 && nums[1] >= nums[bigIndex])
-        {
-           return num;
-        }
-        else if(bigIndex != 2 && nums[1] >= nums[bigIndex])
-        {
-
-            swap(nums, 2, bigIndex);
-        }
-        else// if(bigIndex == 2 && nums[1] < nums[2])
-        {
-            swap(nums, 1, bigIndex);
-        }
-
-        StringBuilder sb = new StringBuilder();
-        for (int i = 1; i < nums.length; i++) {
-            if(nums[i] == -1)
-                break;
-            sb.append(nums[i]);
-        }
-        int ret = Integer.valueOf(sb.toString());
-        return ret;
-    }
-
-    public void swap(int[] nums, int a, int b)
-    {
-        int temp = nums[a];
-        nums[a] = nums[b];
-        nums[b] = temp;
+        return num;
     }
 
     public static void main(String[] args) {
         Maximum_Swap t = new Maximum_Swap();
-        int num = 9730;
+        int num = 222;
         System.out.println(t.maximumSwap(num));
     }
 }

@@ -13,13 +13,18 @@ public class Main {
     static void case4()
     {
         Scanner in = new Scanner(System.in);
-        int n = in.nextInt(), m = in.nextInt(), k = in.nextInt();
+        int n = in.nextInt(), m = in.nextInt(), k = in.nextInt();  //m是小美要喝的可乐数
         int[][] happy = new int[k][2];
         for (int i = 0; i < k; i++) {
             happy[i][0] = in.nextInt();
             happy[i][1] = in.nextInt();
         }
 
+        int t = n - m; //小团要喝的可乐数目
+        int[] score = new int[k];
+        for (int i = 0; i < k; i++) {
+
+        }
 
     }
 
