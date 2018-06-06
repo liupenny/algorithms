@@ -74,7 +74,8 @@ public class Shortest_Unsorted_Continuous_Subarray {
 
     public static void main(String[] args) {
         Shortest_Unsorted_Continuous_Subarray t = new Shortest_Unsorted_Continuous_Subarray();
-        int[] nums = {2, 6, 4, 8, 10, 9, 15};
+        // int[] nums = {2, 6, 4, 8, 10, 9, 15};
+        int[] nums = {1,2,3,2,3,4,3,4,5};
         System.out.println(t.findUnsortedSubarray1(nums));
     }
 }

@@ -1,31 +1,132 @@
 package test;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
-import java.util.TreeMap;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        case3();
+         caseM4();
     }
 
-    static void case4()
+    static void caseM4()
     {
         Scanner in = new Scanner(System.in);
-        int n = in.nextInt(), m = in.nextInt(), k = in.nextInt();  //m是小美要喝的可乐数
+        int n = in.nextInt(), m = in.nextInt(), k = in.nextInt(), C = in.nextInt();
+
+        int[] weight = new int[m]; //m轮比赛的权重
+        int weightSum = 0;  //m轮比赛的权重和
+        for (int i = 0; i < m; i++) {
+            weight[i] = in.nextInt();
+            weightSum += weight[i];
+        }
+
+        int[][] score = new int[n][m];
+        int[] maxScore = new int[m]; //m轮比赛中，每轮比赛中的最高分
+        int lostN = 0, lostM = 0;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                score[i][j] = in.nextInt();
+                if(score[i][j] == -1)
+                {
+                    lostN = i;  //缺失的数据是第i个人的
+                    lostM = j;  //缺失的数据是第j轮比赛的
+                }
+                if(score[i][j] > maxScore[j])
+                    maxScore[j] = score[i][j];
+            }
+        }
+
+        HashMap<Integer, Double> weighted_score = new HashMap<>(); //存放权重分数的map
+        // int[] weighted_score = new int[n];
+        for (int i = 0; i < n; i++) {
+            if(i != lostN) {
+                for (int j = 0; j < m; j++) {
+                    double tmpScore = 0;
+                    if(j != lostM && maxScore[j] != 0)
+                    {
+                        tmpScore += (double)score[i][j] / (double)maxScore[j] * (double) weight[j] / (double) weightSum;
+                    }
+                    weighted_score.put(i, tmpScore);
+                }
+            }
+        }
+
+        class ValueComparator implements Comparator<Map.Entry<Integer, Double>>
+        {
+            public int compare(Map.Entry<Integer, Double> map1, Map.Entry<Integer, Double> map2)
+            {
+                double ret = map2.getValue() - map1.getValue();
+                if (ret > 0.0)
+                    return 1;
+                else if(ret == 0.0)
+                    return 0;
+                else
+                    return -1;
+            }
+        }
+
+        if(C <= maxScore[lostM]) {
+            double tmpScore = 0.0;
+            for (int i = 0; i < n; i++) {
+                if (maxScore[lostM] != 0 && i != lostN) {
+                    tmpScore = (double) score[i][lostM] / (double) maxScore[lostM] * (double) weight[lostM] / (double) weightSum;
+                }
+                weighted_score.put(i, tmpScore);
+            }
+            double tmplostNScore = (double) C / (double) maxScore[lostM] * (double) weight[lostM] / (double) weightSum;
+            weighted_score.put(lostN, tmplostNScore);
+        }
+
+        else
+        {
+            double tmpScore = 0.0;
+            for (int i = 0; i < n; i++) {
+                if (maxScore[lostM] != 0 && i != lostN) {
+                    tmpScore = (double) score[i][lostM] / (double) C * (double) weight[lostM] / (double) weightSum;
+                }
+                weighted_score.put(i, tmpScore);
+            }
+            double tmplostNScore = 1.0 * (double) weight[lostM] / (double) weightSum;
+            weighted_score.put(lostN, tmplostNScore);
+        }
+
+        List<Map.Entry<Integer, Double>> list = new ArrayList<>();
+        list.addAll(weighted_score.entrySet());
+        ValueComparator vc = new ValueComparator();
+        Collections.sort(list,vc);
+    }
+
+
+
+
+    static void caseM2()
+    {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt(), m = in.nextInt(), k = in.nextInt(), t = n - m;  //m是小美要喝的可乐数,t是小团要喝的可乐数
         int[][] happy = new int[k][2];
+        int ansIndex = 0;
         for (int i = 0; i < k; i++) {
-            happy[i][0] = in.nextInt();
-            happy[i][1] = in.nextInt();
+            happy[i][0] = in.nextInt(); //小美的快乐
+            happy[i][1] = in.nextInt(); //小团的快乐
         }
 
-        int t = n - m; //小团要喝的可乐数目
-        int[] score = new int[k];
+        int expectTemp = 0, expectMax = 0;
         for (int i = 0; i < k; i++) {
-
+            expectTemp = happy[i][0] * m + happy[i][1] * t;
+            if(expectTemp > expectMax)
+                ansIndex = i;
         }
 
+        for (int i = 0; i < k - 1; i++) {
+            if(i == ansIndex)
+                System.out.print(n);
+            else
+                System.out.print(0);
+            System.out.print(" ");
+        }
+        if(ansIndex == k - 1)
+            System.out.print(n);
+        else
+            System.out.print(0);
     }
 
     static void case3()
