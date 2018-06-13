@@ -93,19 +93,19 @@ public class Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal {
 
     }
 
-    public static void printTree() {
-        TreeNode root = new TreeNode(10);
-        TreeNode a1 = new TreeNode(5);
-        TreeNode a2 = new TreeNode(3);
-        root.left = null; root.right = a1;
-        a1.left = a2;
-        int[] tree = root.printTreeIncludeNull(root);
-        int index = 0;
-        while (index <= tree.length)
-        {
-
-        }
-    }
+//    public static void printTree() {
+//        TreeNode root = new TreeNode(10);
+//        TreeNode a1 = new TreeNode(5);
+//        TreeNode a2 = new TreeNode(3);
+//        root.left = null; root.right = a1;
+//        a1.left = a2;
+//        int[] tree = root.printTreeIncludeNull(root);
+//        int index = 0;
+//        while (index <= tree.length)
+//        {
+//
+//        }
+//    }
 
         public static void main(String[] args) {
         Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal t = new Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal();

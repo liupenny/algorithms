@@ -61,53 +61,53 @@ public class TreeNode {
           return result;
       }
 
-    public int[] printTreeIncludeNull(TreeNode root)
-    {
-        ArrayList<Integer> tree = new ArrayList<>();
-        tree.add(0,root.val);
-        addNode(tree,0 * 2 + 1, root.left);
-        addNode(tree,0 * 2 + 2, root.right);
-
-        int level = getLevel(root), num = 0;
-        char[][] result = new char[level][];
-        for (int i = 0; i < level; i++) {
-            int len = (int) Math.pow(2.0, (double)i);
-            result[i] = new char[len];
-            for (int j = 0; j < len; j++) {
-                result[i][j] = tree.get()
-            }
-        }
-
-        int[] res = new int[tree.size()];
-        for (int i = 0; i < tree.size(); i++) {
-            res[i] = tree.get(i);
-        }
-        return res;
-    }
-
-    private int getLevel(TreeNode root)
-    {
-        int leftLevel, rightLevel;
-        if(root == null)
-            return 0;
-        else
-        {
-            leftLevel = getLevel(root.left);
-            rightLevel = getLevel(root.right);
-            return (leftLevel > rightLevel) ? (leftLevel + 1) : rightLevel + 1;
-        }
-    }
-
-    private void addNode(ArrayList<Integer> tree, int index, TreeNode node)
-    {
-        if(node == null) {
-            tree.add(index, -1);
-            return;
-        }
-        tree.add(index, node.val);
-        while (node.left != null)
-            addNode(tree, 2 * index + 1, node.left);
-        while (node.right != null)
-            addNode(tree, 2 * index + 2, node.right);
-    }
+//    public int[] printTreeIncludeNull(TreeNode root)
+//    {
+//        ArrayList<Integer> tree = new ArrayList<>();
+//        tree.add(0,root.val);
+//        addNode(tree,0 * 2 + 1, root.left);
+//        addNode(tree,0 * 2 + 2, root.right);
+//
+//        int level = getLevel(root), num = 0;
+//        char[][] result = new char[level][];
+//        for (int i = 0; i < level; i++) {
+//            int len = (int) Math.pow(2.0, (double)i);
+//            result[i] = new char[len];
+//            for (int j = 0; j < len; j++) {
+//                result[i][j] = tree.get()
+//            }
+//        }
+//
+//        int[] res = new int[tree.size()];
+//        for (int i = 0; i < tree.size(); i++) {
+//            res[i] = tree.get(i);
+//        }
+//        return res;
+//    }
+//
+//    private int getLevel(TreeNode root)
+//    {
+//        int leftLevel, rightLevel;
+//        if(root == null)
+//            return 0;
+//        else
+//        {
+//            leftLevel = getLevel(root.left);
+//            rightLevel = getLevel(root.right);
+//            return (leftLevel > rightLevel) ? (leftLevel + 1) : rightLevel + 1;
+//        }
+//    }
+//
+//    private void addNode(ArrayList<Integer> tree, int index, TreeNode node)
+//    {
+//        if(node == null) {
+//            tree.add(index, -1);
+//            return;
+//        }
+//        tree.add(index, node.val);
+//        while (node.left != null)
+//            addNode(tree, 2 * index + 1, node.left);
+//        while (node.right != null)
+//            addNode(tree, 2 * index + 2, node.right);
+//    }
 }
