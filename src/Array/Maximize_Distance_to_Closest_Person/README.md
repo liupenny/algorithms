@@ -40,4 +40,8 @@ This is the maximum distance possible, so the answer is 3.
 1. `1 <= seats.length <= 20000`
 2. `seats` contains only 0s or 1s, at least one `0`, and at least one `1`.
 
- 
+####  思路：
+
+1：首尾如果都是0，此时最大距离是离首尾最近的1的位置 到  首尾的距离
+
+2：中间两个相邻的1，此时最大距离是两个相邻的1的位置差/2

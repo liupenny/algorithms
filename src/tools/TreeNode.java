@@ -1,9 +1,6 @@
 package tools;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Map;
-import java.util.Queue;
+import java.util.*;
 import java.util.concurrent.ArrayBlockingQueue;
 
 /**
@@ -61,53 +58,47 @@ public class TreeNode {
           return result;
       }
 
-//    public int[] printTreeIncludeNull(TreeNode root)
-//    {
-//        ArrayList<Integer> tree = new ArrayList<>();
-//        tree.add(0,root.val);
-//        addNode(tree,0 * 2 + 1, root.left);
-//        addNode(tree,0 * 2 + 2, root.right);
-//
-//        int level = getLevel(root), num = 0;
-//        char[][] result = new char[level][];
-//        for (int i = 0; i < level; i++) {
-//            int len = (int) Math.pow(2.0, (double)i);
-//            result[i] = new char[len];
-//            for (int j = 0; j < len; j++) {
-//                result[i][j] = tree.get()
-//            }
-//        }
-//
-//        int[] res = new int[tree.size()];
-//        for (int i = 0; i < tree.size(); i++) {
-//            res[i] = tree.get(i);
-//        }
-//        return res;
-//    }
-//
-//    private int getLevel(TreeNode root)
-//    {
-//        int leftLevel, rightLevel;
-//        if(root == null)
-//            return 0;
-//        else
-//        {
-//            leftLevel = getLevel(root.left);
-//            rightLevel = getLevel(root.right);
-//            return (leftLevel > rightLevel) ? (leftLevel + 1) : rightLevel + 1;
-//        }
-//    }
-//
-//    private void addNode(ArrayList<Integer> tree, int index, TreeNode node)
-//    {
-//        if(node == null) {
-//            tree.add(index, -1);
-//            return;
-//        }
-//        tree.add(index, node.val);
-//        while (node.left != null)
-//            addNode(tree, 2 * index + 1, node.left);
-//        while (node.right != null)
-//            addNode(tree, 2 * index + 2, node.right);
-//    }
+    // 将一棵树转换成数组保存，打印的时候要先获取树的深度，再根据深度每行打印2^i个
+    public Object[] treeNodeToIntegerArray(TreeNode root) {
+        if(root == null)
+            return new Object[0];
+
+        int depth = this.getDepth(root);
+        double num = Math.pow(2.0, depth + 0.0);
+        int number = (int)num - 1;
+        Object[] output = new Object[number];
+        Arrays.fill(output, null);
+
+        output[0] = root.val;
+        insert(root.left, output, 1);
+        insert(root.right, output, 2);
+
+        return output;
+    }
+
+    public static void insert(TreeNode root, Object[] output, int index)
+    {
+        if(root == null)
+            return;
+
+        output[index] = root.val;
+        insert(root.left, output, 2 * index + 1);
+        insert(root.right, output, 2 * index + 2);
+    }
+
+    // 不能通过这样二维数组的形式保存二叉树，因为一到null就停止了，不能继续下去
+//    public static ArrayList<Object[]> treeNodeToIntegerArray(TreeNode root) {
+
+    // 获取树的深度
+    public int getDepth(TreeNode root) {
+        if(root == null)
+            return 0;
+
+        int left = getDepth(root.left);
+        int right = getDepth(root.right);
+
+        return left >= right ? left + 1: right + 1;
+    }
+
+
 }
