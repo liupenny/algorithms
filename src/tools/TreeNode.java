@@ -1,7 +1,9 @@
 package tools;
 
-import java.util.*;
-import java.util.concurrent.ArrayBlockingQueue;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
 
 /**
  * Created by PennyLiu on 2017/10/14.
@@ -13,7 +15,7 @@ public class TreeNode {
       public TreeNode right;
       public TreeNode(int x) { val = x; }
 
-      public int[][] printTree(TreeNode root)
+      public static int[][] printTree(TreeNode root)
       {
           // 用双端链表实现队列
           LinkedList<TreeNode> queue = new LinkedList<>();
@@ -59,11 +61,11 @@ public class TreeNode {
       }
 
     // 将一棵树转换成数组保存，打印的时候要先获取树的深度，再根据深度每行打印2^i个
-    public Object[] treeNodeToIntegerArray(TreeNode root) {
+    public static Object[] treeNodeToIntegerArray(TreeNode root) {
         if(root == null)
             return new Object[0];
 
-        int depth = this.getDepth(root);
+        int depth = getDepth(root);
         double num = Math.pow(2.0, depth + 0.0);
         int number = (int)num - 1;
         Object[] output = new Object[number];
@@ -76,7 +78,7 @@ public class TreeNode {
         return output;
     }
 
-    public static void insert(TreeNode root, Object[] output, int index)
+    private static void insert(TreeNode root, Object[] output, int index)
     {
         if(root == null)
             return;
@@ -90,7 +92,7 @@ public class TreeNode {
 //    public static ArrayList<Object[]> treeNodeToIntegerArray(TreeNode root) {
 
     // 获取树的深度
-    public int getDepth(TreeNode root) {
+    public static int getDepth(TreeNode root) {
         if(root == null)
             return 0;
 
@@ -100,5 +102,89 @@ public class TreeNode {
         return left >= right ? left + 1: right + 1;
     }
 
+    // 字符串转换成数组
+    public static int[] stringToIntegerArray(String input) {
+        input = input.trim();
+        input = input.substring(1, input.length() - 1);
+        if (input.length() == 0) {
+            return new int[0];
+        }
 
+        String[] parts = input.split(",");
+        int[] output = new int[parts.length];
+        for(int index = 0; index < parts.length; index++) {
+            String part = parts[index].trim();
+            output[index] = Integer.parseInt(part);
+        }
+        return output;
+    }
+
+    // TreeNode ---> string
+    public static String treeNodeToString(TreeNode root) {
+        if (root == null) {
+            return "[]";
+        }
+
+        String output = "";
+        Queue<TreeNode> nodeQueue = new LinkedList<>();
+        nodeQueue.add(root);
+        while(!nodeQueue.isEmpty()) {
+            TreeNode node = nodeQueue.remove();
+
+            if (node == null) {
+                output += "null, ";
+                continue;
+            }
+
+            output += String.valueOf(node.val) + ", ";
+            nodeQueue.add(node.left);
+            nodeQueue.add(node.right);
+        }
+        return "[" + output.substring(0, output.length() - 2) + "]";
+    }
+
+    // string ---> TreeNode
+    public static TreeNode stringToTreeNode(String input) {
+        input = input.trim();
+        input = input.substring(1, input.length() - 1);
+        if (input.length() == 0) {
+            return null;
+        }
+
+        String[] parts = input.split(",");
+        String item = parts[0];
+        TreeNode root = new TreeNode(Integer.parseInt(item));
+        Queue<TreeNode> nodeQueue = new LinkedList<>();
+        nodeQueue.add(root);
+
+        int index = 1;
+        while(!nodeQueue.isEmpty()) {
+            TreeNode node = nodeQueue.remove();
+
+            if (index == parts.length) {
+                break;
+            }
+
+            item = parts[index++];
+            item = item.trim();
+            if (!item.equals("null")) {
+                int leftNumber = Integer.parseInt(item);
+                node.left = new TreeNode(leftNumber);
+                nodeQueue.add(node.left);
+            }
+
+            if (index == parts.length) {
+                break;
+            }
+
+            item = parts[index++];
+            item = item.trim();
+            if (!item.equals("null")) {
+                int rightNumber = Integer.parseInt(item);
+                node.right = new TreeNode(rightNumber);
+                nodeQueue.add(node.right);
+            }
+        }
+        return root;
+    }
 }
