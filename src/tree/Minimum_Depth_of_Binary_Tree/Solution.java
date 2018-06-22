@@ -11,7 +11,13 @@ public class Solution{
         if(root == null)
             return 0;
 
-        return Math.min(minDepth(root.left),minDepth(root.right)) + 1;
+        int left = minDepth(root.left);
+        int right = minDepth(root.right);
+
+        if(left == 0 || right == 0)
+            return left + right + 1; //反正有一个是0，所以加起来也无所谓
+        else
+            return Math.min(left,right) + 1;
     }
 
     public static void main(String[] args) {
