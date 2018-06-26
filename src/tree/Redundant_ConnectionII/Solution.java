@@ -1,4 +1,8 @@
-package tree.Redundant_ConnectionII;/**
+package tree.Redundant_ConnectionII;
+
+import java.util.Arrays;
+
+/**
  * Created by PennyLiu on 2018/6/26.
  */
 
@@ -14,6 +18,13 @@ public class Solution{
                 return arr;
         }
         throw new AssertionError();
+    }
+
+    public static void main(String[] args) {
+        Solution s = new Solution();
+        int[][] edges = {{1,2},{2,3},{3,4},{1,4},{1,5}};
+        int[] ans = s.findRedundantDirectedConnection(edges);
+        System.out.println(ans);
     }
 
     class DSU
@@ -43,14 +54,15 @@ public class Solution{
             // 找到v的父亲节点
             int vp = find(v);
 
-            //
-            if(vp == v)
+            // 一个节点有两个父亲
+            if(parent[v] != v)
+                return false;
+            // 形成环，两个节点有同一个父亲
+            else if (up == vp)
+                return false;
+            else
             {
-               parent[v] = u;
-               return true;
-            }
-            else {
-
+                parent[v] = u;
                 return false;
             }
         }
