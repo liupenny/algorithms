@@ -28,9 +28,9 @@ Output:
  ["", "2", "", "", "", "3", ""],
  ["", "", "4", "", "", "", ""]]
      */
-    public List<List<String>> printTree_format(TreeNode root) {
+    public void printTree_format(TreeNode root) {
         if (root == null)
-            return new ArrayList<List<String>>();
+            return;
 
         // 获取树的深度和宽度
         int depth = getDepth(root);
@@ -45,7 +45,16 @@ Output:
             ret.add(Arrays.asList(arr));
         }
 
-        return ret;
+        String[][] result = new String[ret.size()][];
+        for (int i = 0; i < ret.size(); i++) {
+            result[i] = new String[ret.get(i).size()];
+            for (int j = 0; j < result[i].length; j++) {
+                result[i][j] = ret.get(i).get(j);
+                System.out.print(result[i][j] + " ");
+            }
+            System.out.println();
+        }
+        //return ret;
     }
 
     public void fill(TreeNode root, String[][] ans, int level, int begin, int end) {
