@@ -7,31 +7,65 @@ public class Solution{
         if(S == null || T == null)
             return T;
 
+        // s和t共有的字符串
         StringBuilder common = new StringBuilder();
+        // t中删除和s共有的之后剩下的
+        StringBuilder builderT = new StringBuilder(T);
         for (int i = 0; i < S.length(); i++) {
-            if(T.contains(S.substring(i,i+1)))
+            int commonIndex = builderT.indexOf(S.substring(i,i+1));
+            if(commonIndex != -1)
+            {
                 common.append(S.charAt(i));
+                builderT.deleteCharAt(commonIndex);
+            }
         }
-        String before = common.toString();
+        String leftT = builderT.toString();
 
         StringBuilder uncommon = new StringBuilder();
-        for (int i = 0; i < T.length(); i++) {
-            int index = common.indexOf(T.substring(i,i+1));
+        for (int i = 0; i < leftT.length(); i++) {
+            int index = common.indexOf(leftT.substring(i,i+1));
             if(index != -1)
             {
-                common.deleteCharAt(index);
+                common.insert(index, leftT.charAt(i));
             }
             else
-                uncommon.append(T.charAt(i));
+                uncommon.append(leftT.charAt(i));
         }
 
-        return before + uncommon.toString();
+        return common.toString() + uncommon.toString();
+    }
+
+    // 用数组，直接记录一下字符串中每个字符出现的次数
+    public String customSortString_array(String S, String T) {
+        int[] count = new int[26];
+        for (char c: T.toCharArray()) {
+            count[c - 'a']++;
+        }
+        
+        StringBuilder sb = new StringBuilder();
+        for (char c: S.toCharArray()) {
+            while (count[c - 'a'] > 0)
+            {
+                sb.append(c);
+                count[c - 'a']--;
+            }
+        }
+
+        for (int i = 0; i < 26; i++) {
+            while (count[i] > 0)
+            {
+                sb.append((char)('a' + i));
+                count[i]--;
+            }
+        }
+
+        return sb.toString();
     }
 
     public static void main(String[] args)
     {
-        // String S = "cba" , T = "abcd";
-        String S = "kqep", T = "pekeq";
+        String S = "cba" , T = "abcd";
+        //String S = "kqep", T = "pekeq";
         Solution solution = new Solution();
         System.out.println(solution.customSortString(S, T));
     }
