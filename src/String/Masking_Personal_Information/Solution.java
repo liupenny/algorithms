@@ -16,8 +16,9 @@ public class Solution{
         }
         else
         {
-            S = S.replace(" ","");
-            S = S.replaceAll("[\\pP\\p{Punct}]","");//完全清除标点
+            // S = S.replace(" ","");
+            // S = S.replaceAll("[\\pP\\p{Punct}]","");//完全清除标点
+            S = S.replaceAll("\\D+", "");
             int length = S.length();
             if(length == 10)
             {
