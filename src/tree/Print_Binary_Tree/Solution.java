@@ -12,15 +12,17 @@ import java.util.List;
 
 public class Solution{
     public List<List<String>> printTree(TreeNode root) {
-        if(root == null)
+        if(root == null) {
             return new ArrayList<List<String>>();
+        }
 
         // 获取树的深度和宽度
         int depth = getDepth(root);
         int width = (int) Math.pow(2, depth) - 1;
         String[][] ans = new String[depth][width];
-        for(String[] arr : ans)
+        for(String[] arr : ans) {
             Arrays.fill(arr, "");
+        }
 
         fill(root, ans, 0,0, width - 1);
         List<List<String>> ret = new ArrayList<>();
@@ -33,8 +35,9 @@ public class Solution{
 
     public void fill(TreeNode root, String[][] ans, int level, int begin, int end)
     {
-        if(begin > end || root == null)
+        if(begin > end || root == null) {
             return;
+        }
 
         ans[level][(begin + end)/2] = "" + root.val;
         fill(root.left, ans, level + 1, begin, (begin +end)/2 - 1);
@@ -43,8 +46,9 @@ public class Solution{
 
     public int getDepth(TreeNode root)
     {
-        if(root == null)
+        if(root == null) {
             return 0;
+        }
 
         return Math.max(getDepth(root.left), getDepth(root.right)) + 1;
     }

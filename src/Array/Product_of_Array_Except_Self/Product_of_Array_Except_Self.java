@@ -7,8 +7,9 @@ public class Product_of_Array_Except_Self
 {
     public int[] productExceptSelf(int[] nums)
     {
-        if (nums == null || nums.length == 0)
+        if (nums == null || nums.length == 0) {
             return new int[0];
+        }
 
         int[] res = new int[nums.length];
         res[0] = 1;

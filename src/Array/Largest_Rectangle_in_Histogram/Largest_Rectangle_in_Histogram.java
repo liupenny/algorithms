@@ -7,8 +7,9 @@ import java.util.Stack;
  */
 public class Largest_Rectangle_in_Histogram {
     public int largestRectangleArea(int[] heights) {
-        if(heights == null || heights.length == 0)
+        if(heights == null || heights.length == 0) {
             return 0;
+        }
 
         int[] len = new int[heights.length];
         for (int i = 0; i < heights.length; i++) {
@@ -34,8 +35,9 @@ public class Largest_Rectangle_in_Histogram {
 
     // 单调栈
     public int largestRectangleArea_stack(int[] heights) {
-        if (heights == null || heights.length == 0)
+        if (heights == null || heights.length == 0) {
             return 0;
+        }
 
         int maxArea = 0;
         Stack<Integer> stack = new Stack<>();

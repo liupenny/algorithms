@@ -7,18 +7,21 @@ import java.util.*;
  */
 public class Task_Scheduler {
     public int leastInterval(char[] tasks, int n) {
-        if(tasks == null || tasks.length == 0)
+        if(tasks == null || tasks.length == 0) {
             return 0;
+        }
 
         // 用0-25表示A-Z26个字母，map角标表示字母，Map的值表示字母出现次数
         int[] map = new int[26];
-        for (char c: tasks)
+        for (char c: tasks) {
             map[c - 'A']++;
+        }
         // 优先队列，使用逆序排序，大顶堆把每个任务的个数加进去
         PriorityQueue<Integer> queue = new PriorityQueue<>(26, Collections.reverseOrder());
         for (int task: map) {
-            if(task > 0)
+            if(task > 0) {
                 queue.add(task);
+            }
         }
 
         int time = 0;
@@ -31,14 +34,16 @@ public class Task_Scheduler {
             {
                 if(!queue.isEmpty())
                 {
-                    if(queue.peek() > 1)
-                        temp.add(queue.poll()-1);
-                    else
+                    if(queue.peek() > 1) {
+                        temp.add(queue.poll() - 1);
+                    } else {
                         queue.poll();
+                    }
                 }
                 time++;
-                if(queue.isEmpty() && temp.size()==0)
+                if(queue.isEmpty() && temp.size()==0) {
                     break;
+                }
                 i++;
             }
             for (int m:temp) {

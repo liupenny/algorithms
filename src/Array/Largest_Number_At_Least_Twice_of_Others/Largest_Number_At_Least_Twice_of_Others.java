@@ -5,17 +5,20 @@ package Array.Largest_Number_At_Least_Twice_of_Others;
  */
 public class Largest_Number_At_Least_Twice_of_Others {
     public int dominantIndex(int[] nums) {
-        if(nums == null || nums.length == 0)
+        if(nums == null || nums.length == 0) {
             return 0;
+        }
         int maxIndex = 0;
         for (int i = 1; i < nums.length; i++) {
             maxIndex = nums[i] > nums[maxIndex] ? i : maxIndex;
         }
         for (int i = 0; i < nums.length; i++) {
-            if(i == maxIndex)
+            if(i == maxIndex) {
                 continue;
-            if(nums[maxIndex] < nums[i] * 2)
+            }
+            if(nums[maxIndex] < nums[i] * 2) {
                 return -1;
+            }
         }
         return maxIndex;
     }

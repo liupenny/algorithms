@@ -6,8 +6,9 @@ package Array.Best_Time_to_Buy_and_Sell_Stock_with_Transaction_Fee;
 public class Best_Time_to_Buy_and_Sell_Stock_with_Transaction_Fee {
     public int maxProfit(int[] prices, int fee)
     {
-        if(prices == null || prices.length == 0)
+        if(prices == null || prices.length == 0) {
             return 0;
+        }
 
         int cash = 0; //the maxPro you have if you don't have a stock that day
         int hold = -prices[0];  //the maxPro you have if you have a stock that day, if you have a stock the first day,hold=-prices[0]
@@ -23,8 +24,9 @@ public class Best_Time_to_Buy_and_Sell_Stock_with_Transaction_Fee {
 
     public int maxProfit2(int[] prices, int fee)
     {
-        if (prices.length <= 1)
+        if (prices.length <= 1) {
             return 0;
+        }
         int maxProfit = 0, maxPrice = prices[0], res = 0, start = 0;
         for (int i = 1; i < prices.length; i++) {
             if (prices[i] - prices[start] - fee > maxProfit) {
@@ -37,8 +39,9 @@ public class Best_Time_to_Buy_and_Sell_Stock_with_Transaction_Fee {
                 maxPrice = prices[i];
             }
         }
-        if (maxProfit != 0)
+        if (maxProfit != 0) {
             res += Math.max(maxProfit, prices[prices.length - 1] - prices[start] - fee);
+        }
         return res;
     }
 

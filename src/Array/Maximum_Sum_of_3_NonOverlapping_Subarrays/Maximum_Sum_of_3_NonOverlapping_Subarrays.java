@@ -11,8 +11,9 @@ public class Maximum_Sum_of_3_NonOverlapping_Subarrays
     public int[] maxSumOfThreeSubarrays(int[] nums, int k)
     {
         int[] ans = new int[3];
-        if(nums == null || nums.length == 0)
+        if(nums == null || nums.length == 0) {
             return ans;
+        }
 
         // 目前找到的最大的长度为1/2/3的序列的起始位置
         int bestSeq = 0;
@@ -88,8 +89,9 @@ public class Maximum_Sum_of_3_NonOverlapping_Subarrays
     public int[] maxSumOfThreeSubarrays1(int[] nums, int K)
     {
         int[] ans = {-1,-1,-1};  //记录答案位置
-        if(nums == null || nums.length == 0)
+        if(nums == null || nums.length == 0) {
             return ans;
+        }
 
         int n = nums.length, maxsum = 0;
         int[] sum = new int[n - K + 1]; //用来计算区间和的数组
@@ -97,18 +99,21 @@ public class Maximum_Sum_of_3_NonOverlapping_Subarrays
         for (int i = 0; i < nums.length; i++) //从前往后计算(i-k+1) -- i的累积和，坐标按照i-k+1即区间的起始位置算
         {
             maxsum += nums[i];
-            if(i >= K)
-                maxsum -= nums[i-K];
-            if(i >= K-1)
-                sum[i-K+1] = maxsum;
+            if(i >= K) {
+                maxsum -= nums[i - K];
+            }
+            if(i >= K-1) {
+                sum[i - K + 1] = maxsum;
+            }
         }
 
         int[] posLeft = new int[sum.length];
         int best = 0;
         for (int i = 0; i < sum.length; i++)  //从前往后比较到当前位置，左半部分累积和最大的角标是哪个，有更大的就更新，没有就还是原来的
         {
-            if (sum[i] > sum[best])
+            if (sum[i] > sum[best]) {
                 best = i;
+            }
             posLeft[i] = best;
         }
 
@@ -116,8 +121,9 @@ public class Maximum_Sum_of_3_NonOverlapping_Subarrays
         best = sum.length - 1;
         for (int i = sum.length - 1; i >= 0 ; i--) //从后往前比较到当前位置，右半部分累积和最大的角标是哪个，有更大的就更新，没有就还是原来的
         {
-            if (sum[i] >= sum[best])
+            if (sum[i] >= sum[best]) {
                 best = i;
+            }
             posRight[i] = best;
         }
 

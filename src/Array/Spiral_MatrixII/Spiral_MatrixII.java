@@ -6,8 +6,9 @@ package Array.Spiral_MatrixII;
 public class Spiral_MatrixII {
     public int[][] generateMatrix(int n) {
         int[][] ans = new int[n][n];
-        if(n == 0)
+        if(n == 0) {
             return ans;
+        }
 
         int r1 = 0, r2 = ans.length - 1;
         int c1 = 0, c2 = ans[0].length - 1;

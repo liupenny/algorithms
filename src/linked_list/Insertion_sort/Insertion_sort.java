@@ -13,8 +13,9 @@ public class Insertion_sort {
         int length = array.length;
         for (int i = 1; i < length; i++)
         {
-            for(int j = i; j>0 && less(array[j],array[j-1]); j--)
-                exch(array,j,j-1);
+            for(int j = i; j>0 && less(array[j],array[j-1]); j--) {
+                exch(array, j, j - 1);
+            }
         }
     }
 
@@ -26,8 +27,9 @@ public class Insertion_sort {
         for (int i = 1; i < length; i++)
         {
             Comparable tmp = array[i];
-            for (j = i; j>0 && less(array[j],array[j-1]); j--)
-                array[j] = array[j-1];
+            for (j = i; j>0 && less(array[j],array[j-1]); j--) {
+                array[j] = array[j - 1];
+            }
             array[j] = tmp;
         }
     }
@@ -39,13 +41,15 @@ public class Insertion_sort {
         int j;
         //下面开始用新的数组装载原数组
         Comparable[] tmp_array = new Comparable[length+1];
-        for(int i = 0; i < length; i++)
-            tmp_array[i+1] = array[i];
+        for(int i = 0; i < length; i++) {
+            tmp_array[i + 1] = array[i];
+        }
         for (int i = 2; i < length + 1; i++)
         {
             tmp_array[0] = tmp_array[i];
-            for(j = i -1 ; less(tmp_array[0], tmp_array[j]); j--)
-                tmp_array[j] = tmp_array[j-1];
+            for(j = i -1 ; less(tmp_array[0], tmp_array[j]); j--) {
+                tmp_array[j] = tmp_array[j - 1];
+            }
             tmp_array[j] = tmp_array[0];
         }
     }
@@ -65,8 +69,9 @@ public class Insertion_sort {
 
     public static void show(Comparable[] array)
     {
-        for(int i = 0; i < array.length; i++)
+        for(int i = 0; i < array.length; i++) {
             StdOut.print(array[i] + " ");
+        }
         StdOut.println();
     }
 
@@ -74,8 +79,9 @@ public class Insertion_sort {
     {
         for(int i = 1; i < array.length; i++)
         {
-            if(less(array[i],array[i-1]))
+            if(less(array[i],array[i-1])) {
                 return false;
+            }
         }
         return true;
     }

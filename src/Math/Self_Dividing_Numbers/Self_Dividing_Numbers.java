@@ -11,9 +11,13 @@ public class Self_Dividing_Numbers {
             int j = i;
             for (; j > 0; j /= 10)
             {
-                if((j%10)==0 || (i%(j%10)) !=0) break;
+                if((j%10)==0 || (i%(j%10)) !=0) {
+                    break;
+                }
             }
-            if (j == 0) ans.add(i);
+            if (j == 0) {
+                ans.add(i);
+            }
         }
         return ans;
     }

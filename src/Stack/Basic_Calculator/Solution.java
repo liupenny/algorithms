@@ -8,8 +8,9 @@ import java.util.Stack;
 
 public class Solution{
     public int calculate(String s) {
-        if (s == null || s.length() == 0)
+        if (s == null || s.length() == 0) {
             return 0;
+        }
 
         //栈用来存一个括号内的结果，没有括号就一次算完
         Stack<Integer> stack = new Stack<>();
@@ -20,10 +21,9 @@ public class Solution{
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
             //用来算这个用字符串表示的数字本身值，高位乘以10的次数就是他所在的位-1，e.g. 756中7乘以10，2次
-            if(Character.isDigit(c))
-                number = 10 * number + (int)(c - '0');
-
-                // 判断c只是为了确定后面那个数的符号
+            if(Character.isDigit(c)) {
+                number = 10 * number + (int) (c - '0');
+            }// 判断c只是为了确定后面那个数的符号
             else if(c == '+')
             {
                 result += sign * number;
@@ -54,23 +54,25 @@ public class Solution{
             }
         }
         // 如果只有一个数，要判断是否为0
-        if(number != 0)
+        if(number != 0) {
             result += sign * number;
+        }
         return result;
     }
 
     public int calculatea(String s) {
-        if (s == null || s.length() == 0)
+        if (s == null || s.length() == 0) {
             return 0;
+        }
 
         s = s.replace(" ","");
         Stack<Integer> stack = new Stack<>();
         int result = 0, sign = 1, number = 0;
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
-            if(Character.isDigit(c))
+            if(Character.isDigit(c)) {
                 number = number * 10 + c - '0';
-            else
+            } else
             {
                 if(c == '(')
                 {

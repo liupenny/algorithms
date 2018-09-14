@@ -8,8 +8,9 @@ import java.util.Map;
  */
 public class Subarray_Sum_Equals_K {
     public int subarraySum(int[] nums, int k) {
-        if(nums == null || nums.length == 0)
+        if(nums == null || nums.length == 0) {
             return 0;
+        }
 
         int sum = 0, res = 0;
         Map<Integer, Integer> arrSum = new HashMap<>();
@@ -18,12 +19,15 @@ public class Subarray_Sum_Equals_K {
         for (int i = 0; i < nums.length; i++)
         {
             sum += nums[i];
-            if(arrSum.containsKey(sum - k))
+            if(arrSum.containsKey(sum - k)) {
                 res += arrSum.get(sum - k);
+            }
             if(arrSum.containsKey(sum)) //之前sum出现过，把出现过的次数加一
+            {
                 arrSum.put(sum, arrSum.get(sum) + 1);
-            else
-                arrSum.put(sum,1);
+            } else {
+                arrSum.put(sum, 1);
+            }
         }
         return res;
     }

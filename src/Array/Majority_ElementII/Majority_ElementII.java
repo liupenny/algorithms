@@ -6,7 +6,9 @@ import java.util.List;
 public class Majority_ElementII {
     public List<Integer> majorityElement(int[] nums) {
         List<Integer> ans = new ArrayList<>(2);
-        if(nums == null || nums.length <2) return ans;
+        if(nums == null || nums.length <2) {
+            return ans;
+        }
 
         int cnt1 = 0, cnt2 = 0;
         int ans1 = 0, ans2 = 0;

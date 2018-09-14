@@ -74,7 +74,9 @@ public class Problem_01_PreInPosTraversal {
 	 * 这种方式具备扩展性，它模拟递归的过程，将左子树点不断的压入栈，直到null，然后处理栈顶节点的右子树
 	 */
 	public static void preOrderUnRecur_2(Node root){
-		if(root==null)return;
+		if(root==null) {
+            return;
+        }
 		Stack<Node> s=new Stack<Node>();
 		while(root!=null||!s.isEmpty()){ //要对栈进行处理分两种情况：可以一直压栈 or 可以一直弹出
 			while(root!=null){ //先压栈

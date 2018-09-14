@@ -11,8 +11,9 @@ public class Solution{
     List<String> ans = new ArrayList<>();
     int[] times = new int[10];
     public List<String> readBinaryWatch(int num) {
-        if(num < 0 || num > 8)
+        if(num < 0 || num > 8) {
             return ans;
+        }
 
         compute(ans, num, 0, times, 0);
         return ans;
@@ -28,15 +29,17 @@ public class Solution{
             for (int i = 4; i < times.length; i++) {
                 minute += times[i] != 0 ? Math.pow(2.0, i - 4) : 0;
             }
-            if(hour > 11 || minute > 59)
+            if(hour > 11 || minute > 59) {
                 return;
+            }
             String min = minute < 10 ? "0" + minute : String.valueOf(minute);
             ans.add(hour + ":" + min);
             return;
         }
 
-        if(timeIndex == times.length)
+        if(timeIndex == times.length) {
             return;
+        }
         times[timeIndex] = 1;
         compute(ans, num, tmpNum + 1,times, timeIndex + 1);
         times[timeIndex] = 0;

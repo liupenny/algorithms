@@ -12,17 +12,21 @@ import java.util.List;
  */
 public class Search_Insert_Position {
     public int searchInsert(int[] nums, int target) {
-        if(nums.length==1) return nums[0]>=target ? 0 : 1;
+        if(nums.length==1) {
+            return nums[0] >= target ? 0 : 1;
+        }
         int lo = 0, hi = nums.length-1, mid;
         while (lo<=hi)
         {
             mid = lo + (hi-lo)/2;
-            if(target > nums[mid])
-                lo = mid +1;
-            else if(target < nums[mid]) //如果严格小，就hi = mid -1，因为返回值不会是mid或比mid大的
-                hi = mid-1;
-            else if(target == nums[mid])
+            if(target > nums[mid]) {
+                lo = mid + 1;
+            } else if(target < nums[mid]) //如果严格小，就hi = mid -1，因为返回值不会是mid或比mid大的
+            {
+                hi = mid - 1;
+            } else if(target == nums[mid]) {
                 return mid;
+            }
         }
         return lo;
     }
@@ -31,10 +35,11 @@ public class Search_Insert_Position {
         int low = 0, high = nums.length;
         while(low < high) {
             int mid = low + (high - low) / 2;
-            if(nums[mid] < target)
+            if(nums[mid] < target) {
                 low = mid + 1;
-            else
+            } else {
                 high = mid;
+            }
         }
         return low;
     }

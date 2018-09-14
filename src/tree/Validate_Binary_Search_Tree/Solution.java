@@ -12,22 +12,25 @@ import java.util.List;
 public class Solution{
     List<Integer> ans;
     public boolean isValidBST(TreeNode root) {
-        if(root == null)
+        if(root == null) {
             return true;
+        }
 
         ans = new ArrayList<>();
         inOrder(root);
         for (int i = 1; i < ans.size(); i++) {
-            if(ans.get(i) <= ans.get(i-1))
+            if(ans.get(i) <= ans.get(i-1)) {
                 return false;
+            }
         }
         return true;
     }
 
     public void inOrder(TreeNode treeNode)
     {
-        if(treeNode == null)
+        if(treeNode == null) {
             return;
+        }
 
         inOrder(treeNode.left);
         ans.add(treeNode.val);
@@ -39,11 +42,13 @@ public class Solution{
     }
 
     public boolean helper(TreeNode root, long min, long max){
-        if(root == null)
+        if(root == null) {
             return true;
+        }
 
-        if(root.val >= max || root.val <= min)
+        if(root.val >= max || root.val <= min) {
             return false;
+        }
 
         return helper(root.left, min, root.val) && helper(root.right, root.val, max);
     }

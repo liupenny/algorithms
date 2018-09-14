@@ -5,22 +5,26 @@ package Array.Move_Zeroes;
  */
 public class Move_Zeroes {
     public void moveZeroes(int[] nums) {
-        if(nums == null || nums.length == 0 || nums.length == 1)
+        if(nums == null || nums.length == 0 || nums.length == 1) {
             return;
+        }
         //通过数组中元素个数，一起判断数组全部为0或全部非0
         int totalNum = 0;
         for (int i = 0; i < nums.length; i++)
         {
-            if(nums[i] == 0)
+            if(nums[i] == 0) {
                 totalNum++;
+            }
         }
-        if(totalNum == 0 || totalNum == nums.length)
+        if(totalNum == 0 || totalNum == nums.length) {
             return;
+        }
 
         for (int i = 0, lastNonezeropos = 0; i < nums.length; i++)
         {
-            if(nums[i] != 0)
-                swap(nums, lastNonezeropos++ , i);
+            if(nums[i] != 0) {
+                swap(nums, lastNonezeropos++, i);
+            }
         }
         for (int t:nums)
         {

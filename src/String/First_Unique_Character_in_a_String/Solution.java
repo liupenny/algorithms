@@ -9,8 +9,9 @@ import java.util.Map;
 
 public class Solution{
     public int firstUniqChar(String s) {
-        if(s == null || s.length() == 0)
+        if(s == null || s.length() == 0) {
             return -1;
+        }
 
         // boolean isFirst = false;
         Map<Character, Integer> map = new HashMap<>();
@@ -18,8 +19,9 @@ public class Solution{
             map.put(s.charAt(i), map.getOrDefault(s.charAt(i), 0) + 1);
         }
         for (int i = 0; i < s.length(); i++) {
-            if(map.get(s.charAt(i)) == 1)
+            if(map.get(s.charAt(i)) == 1) {
                 return i;
+            }
         }
         return -1;
     }

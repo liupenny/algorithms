@@ -11,14 +11,16 @@ public class Word_Search {
     int[] dy = {0, 0, 1, -1};
 
     public boolean exist_4dir(char[][] board, String word) {
-        if(board == null || board.length == 0)
+        if(board == null || board.length == 0) {
             return false;
+        }
 
         int[][] visited = new int[board.length][board[0].length];
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[0].length; j++) {
-                    if (find1(board, i, j, word, 0, visited) == true)
+                    if (find1(board, i, j, word, 0, visited) == true) {
                         return true;
+                    }
                 }
             }
         return false;
@@ -27,11 +29,15 @@ public class Word_Search {
     public boolean find1(char[][] board, int row, int col, String word, int index, int[][] visited)
     {
         if(index == word.length())  //这几个判断条件的顺序也很重要，当数组只有一个数的时候，就直接返回true
+        {
             return true;
-        if(row < 0 || row >= board.length || col < 0 || col >= board[0].length)
+        }
+        if(row < 0 || row >= board.length || col < 0 || col >= board[0].length) {
             return false;
-        if(board[row][col] != word.charAt(index) || visited[row][col] == 1)
+        }
+        if(board[row][col] != word.charAt(index) || visited[row][col] == 1) {
             return false;
+        }
 
         visited[row][col] = 1;
         boolean exit = find1(board, row, col - 1, word, index + 1, visited)
@@ -43,14 +49,16 @@ public class Word_Search {
     }
 
     public boolean exist(char[][] board, String word) {
-        if(board == null || board.length == 0 || word == null)
+        if(board == null || board.length == 0 || word == null) {
             return false;
+        }
 
         int[][] visited = new int[board.length][board[0].length];
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[0].length; j++) {
-                if (board[i][j] == word.charAt(0) && find(board, i, j, word, 0, visited) == true)
+                if (board[i][j] == word.charAt(0) && find(board, i, j, word, 0, visited) == true) {
                     return true;
+                }
             }
         }
         return false;
@@ -58,8 +66,9 @@ public class Word_Search {
 
     public boolean find(char[][] board, int i, int j, String word, int index, int[][] visited)
     {
-        if(index >= word.length())
+        if(index >= word.length()) {
             return true;
+        }
 
         //这样子循环是八个方向，但是题目里只有四个方向,所以不能用这样的循环
 //        for (int i = Math.max(0, row - 1); i <= Math.min(board.length - 1, row + 1); i++) {
@@ -76,8 +85,9 @@ public class Word_Search {
 //        }
 //        return false;
 
-        if(index == word.length())
+        if(index == word.length()) {
             return true;
+        }
         if(i>=0 && i<board.length && j>=0 && j<board[0].length && visited[i][j] != 1 && word.charAt(index) == board[i][j]){
             visited[i][j]=1;
             for(int diff =0; diff<dx.length ; diff++){
@@ -95,16 +105,24 @@ public class Word_Search {
         char[] w = word.toCharArray();
         for (int y=0; y<board.length; y++) {
             for (int x=0; x<board[y].length; x++) {
-                if (exist(board, y, x, w, 0)) return true;
+                if (exist(board, y, x, w, 0)) {
+                    return true;
+                }
             }
         }
         return false;
     }
 
     private boolean exist(char[][] board, int y, int x, char[] word, int i) {
-        if (i == word.length) return true;
-        if (y<0 || x<0 || y == board.length || x == board[y].length) return false;
-        if (board[y][x] != word[i]) return false;
+        if (i == word.length) {
+            return true;
+        }
+        if (y<0 || x<0 || y == board.length || x == board[y].length) {
+            return false;
+        }
+        if (board[y][x] != word[i]) {
+            return false;
+        }
         board[y][x] ^= 256;
         boolean exist = exist(board, y, x+1, word, i+1)
                 || exist(board, y, x-1, word, i+1)

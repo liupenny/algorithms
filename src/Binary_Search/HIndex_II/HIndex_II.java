@@ -22,8 +22,9 @@ public class HIndex_II {
                 left = mid + 1;
                 count -= (step + 1);
             }
-            else
+            else {
                 count = step;
+            }
         }
         return size - left;
     }
@@ -35,9 +36,13 @@ public class HIndex_II {
         int middle;
         while (start <= end){
             middle = (end-start)/2 + start;
-            if (citations[middle] == n-middle) return citations[middle];  //左边不可能有，右边值更小
-            else if(citations[middle] < n-middle) start = middle + 1;
-            else end = middle - 1;
+            if (citations[middle] == n-middle) {
+                return citations[middle];  //左边不可能有，右边值更小
+            } else if(citations[middle] < n-middle) {
+                start = middle + 1;
+            } else {
+                end = middle - 1;
+            }
         }
         return n - end - 1;
     }

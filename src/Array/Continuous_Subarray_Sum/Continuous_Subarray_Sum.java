@@ -9,8 +9,9 @@ import java.util.Map;
 public class Continuous_Subarray_Sum {
     public boolean checkSubarraySum(int[] nums, int k)
     {
-        if(nums == null || nums.length == 0)
+        if(nums == null || nums.length == 0) {
             return false;
+        }
 
         int sum = 0;
         Map<Integer, Integer> arrSum = new HashMap<>();
@@ -25,8 +26,9 @@ public class Continuous_Subarray_Sum {
             Integer pos = arrSum.get(sum);
             if (pos != null)   //不等于null的时候判断一下pos跟i的差距是否有2
             {
-                if(i -pos > 1)
-                return true;
+                if(i -pos > 1) {
+                    return true;
+                }
             }
             else  //等于Null的时候，才加入数据。否则出现就加，会导致相同元素更新了两次位置
             {
@@ -38,8 +40,9 @@ public class Continuous_Subarray_Sum {
 
     public boolean checkSubarraySum1(int[] nums, int k)
     {
-        if(nums == null || nums.length == 0)
+        if(nums == null || nums.length == 0) {
             return false;
+        }
 
         int sum = 0;
         Map<Integer, Integer> arrSum = new HashMap<>();
@@ -47,13 +50,16 @@ public class Continuous_Subarray_Sum {
         for (int i = 0; i < nums.length; i++)
         {
             sum += nums[i];
-            if(k != 0)
+            if(k != 0) {
                 sum %= k;
+            }
             Integer pos = arrSum.get(sum);
             if (pos != null && (i -pos) > 1)  //这里逻辑有问题
+            {
                 return true;
-            else
-                arrSum.put(sum,i);
+            } else {
+                arrSum.put(sum, i);
+            }
         }
         return false;
     }

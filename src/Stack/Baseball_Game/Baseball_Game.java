@@ -2,7 +2,9 @@ package Stack.Baseball_Game;
 
 public class Baseball_Game {
     public int calPoints(String[] ops) {
-        if(ops == null || ops.length == 0) return 0;
+        if(ops == null || ops.length == 0) {
+            return 0;
+        }
 
         int[] res = new int[ops.length];
         int sum = 0, turn = 0;

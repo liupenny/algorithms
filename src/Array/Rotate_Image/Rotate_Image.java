@@ -5,8 +5,9 @@ package Array.Rotate_Image;
  */
 public class Rotate_Image {
     public void rotate(int[][] matrix) {
-        if (matrix == null || matrix.length == 0)
+        if (matrix == null || matrix.length == 0) {
             return;
+        }
 
         int n = matrix.length;
         for (int x = 0; x < (n+1)/2; x++) //走几圈
@@ -23,8 +24,9 @@ public class Rotate_Image {
 
     public void rotate1(int[][] matrix)
     {
-        if (matrix == null || matrix.length == 0)
+        if (matrix == null || matrix.length == 0) {
             return;
+        }
 
         for (int i = 0; i < matrix.length; i++) //先沿着对角线交换
         {

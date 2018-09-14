@@ -9,8 +9,9 @@ import tools.TreeNode;
 public class Solution{
     int sum = 0;
     public int sumNumbers(TreeNode root) {
-        if(root == null)
+        if(root == null) {
             return 0;
+        }
 
         StringBuilder sb = new StringBuilder();
         addSum(root, sb);
@@ -19,8 +20,9 @@ public class Solution{
 
     public void addSum(TreeNode root, StringBuilder sb)
     {
-        if(root == null)
+        if(root == null) {
             return;
+        }
 
         sb.append(root.val);
         if(root.left == null && root.right == null)

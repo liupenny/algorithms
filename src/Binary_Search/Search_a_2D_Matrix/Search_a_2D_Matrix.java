@@ -8,15 +8,19 @@ package Binary_Search.Search_a_2D_Matrix;
  */
 public class Search_a_2D_Matrix {
     public boolean searchMatrix1(int[][] matrix, int target) {
-        if (matrix.length==0) return false;
+        if (matrix.length==0) {
+            return false;
+        }
         int column = matrix.length-1,row = matrix[0].length-1;  //列数
         int lo = 0, hi = column, mid, tmprow;
         while (lo<hi)
         {
             mid = lo + (hi-lo)/2;
-            if (target > matrix[mid][row]) lo = mid + 1;
-            else if (target < matrix[mid][0]) hi = mid - 1;
-            else if (target >= matrix[mid][0] && target <= matrix[mid][row])  //找到指定的那一行
+            if (target > matrix[mid][row]) {
+                lo = mid + 1;
+            } else if (target < matrix[mid][0]) {
+                hi = mid - 1;
+            } else if (target >= matrix[mid][0] && target <= matrix[mid][row])  //找到指定的那一行
             {
                 lo = mid;
                 break;
@@ -26,9 +30,13 @@ public class Search_a_2D_Matrix {
         while (lo <= hi)
         {
             mid = lo + (hi-lo)/2;
-            if (target > matrix[tmprow][mid]) lo = mid + 1;
-            else if (target < matrix[tmprow][mid]) hi = mid - 1;
-            else if (target == matrix[tmprow][mid]) return true;
+            if (target > matrix[tmprow][mid]) {
+                lo = mid + 1;
+            } else if (target < matrix[tmprow][mid]) {
+                hi = mid - 1;
+            } else if (target == matrix[tmprow][mid]) {
+                return true;
+            }
         }
         return false;
     }
@@ -49,7 +57,9 @@ public class Search_a_2D_Matrix {
     }
 
     public boolean searchMatrix3(int[][] matrix, int target) {  //直接把二维数组当做一维数组做
-        if (matrix.length==0) return false;
+        if (matrix.length==0) {
+            return false;
+        }
         int row_num = matrix.length;
         int col_num = matrix[0].length;
 

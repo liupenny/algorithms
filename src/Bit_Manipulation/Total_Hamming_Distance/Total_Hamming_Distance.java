@@ -5,7 +5,9 @@ package Bit_Manipulation.Total_Hamming_Distance;
  */
 public class Total_Hamming_Distance {
     public int totalHammingDistance(int[] nums) {
-        if(nums == null || nums.length == 0) return 0;
+        if(nums == null || nums.length == 0) {
+            return 0;
+        }
 
         int res , cnt = 0;
         for (int i = 0; i < 32; i++)  //这里必须是从0开始，不能从1.因为是进位的数

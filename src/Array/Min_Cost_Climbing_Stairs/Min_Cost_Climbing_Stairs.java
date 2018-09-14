@@ -5,8 +5,9 @@ package Array.Min_Cost_Climbing_Stairs;
  */
 public class Min_Cost_Climbing_Stairs {
     public int minCostClimbingStairs(int[] cost) {
-        if(cost == null || cost.length == 0)
+        if(cost == null || cost.length == 0) {
             return 0;
+        }
 
         int[] dp = new int[cost.length + 1];
         dp[0] = 0;

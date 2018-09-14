@@ -11,11 +11,15 @@ public class Kth_Smallest_Element_in_a_Sorted_Matrix {
     public int kthSmallest1(int[][] matrix, int k) {
         int num = matrix.length;
         PriorityQueue<Tuple> ans = new PriorityQueue<Tuple>();
-        for (int i=0; i<num; i++)  ans.add(new Tuple(0,i,matrix[0][i]));
+        for (int i=0; i<num; i++) {
+            ans.add(new Tuple(0, i, matrix[0][i]));
+        }
         for (int i=0; i<k-1; i++)
         {
             Tuple t = ans.poll();
-            if(t.x == num-1) continue;
+            if(t.x == num-1) {
+                continue;
+            }
             ans.add(new Tuple(t.x+1,t.y,matrix[t.x+1][t.y])); //在这一步添加全局最小
         }
         return ans.poll().val;

@@ -28,18 +28,21 @@ public class Solution{
                         for (m = 0; m < nums.size(); m++) {
                             for (n = 0; n < nums.get(m).size(); n++) {
                                 // 有一个满足条件
-                                if(nums.get(m).get(n) >= min && nums.get(m).get(n) <= max)
+                                if(nums.get(m).get(n) >= min && nums.get(m).get(n) <= max) {
                                     break;
+                                }
                             }
                             // 如果这一行没有满足条件的就证明这个range不符合条件，直接跳出
-                            if(n == nums.get(m).size())
+                            if(n == nums.get(m).size()) {
                                 break;
+                            }
                         }
                         // 到最后一行都满足条件
                         if(m == nums.size())
                         {
-                            if(miny - minx > max - min || (miny - minx == max - min && minx > min))
+                            if(miny - minx > max - min || (miny - minx == max - min && minx > min)) {
                                 minx = min;
+                            }
                                 miny = max;
                         }
                     }
@@ -72,16 +75,19 @@ public class Solution{
                             // 所有数都小于min -- (-a.length-1)
                             // 所有数都大于min -- (-0-1) = -1
                             n = Collections.binarySearch(nums.get(m), min);
-                            if(n < 0)
+                            if(n < 0) {
                                 n = -1 - n;
-                            if(n == nums.get(m).size() || nums.get(m).get(n) < min || nums.get(m).get(n) > max)
+                            }
+                            if(n == nums.get(m).size() || nums.get(m).get(n) < min || nums.get(m).get(n) > max) {
                                 break;
+                            }
                         }
                         // 到最后一行都满足条件
                         if(m == nums.size())
                         {
-                            if(miny - minx > max - min || (miny - minx == max - min && minx > min))
+                            if(miny - minx > max - min || (miny - minx == max - min && minx > min)) {
                                 minx = min;
+                            }
                             miny = max;
                         }
                     }
@@ -105,10 +111,12 @@ public class Solution{
                 int min_i = 0, max_i = 0;
                 // 遍历k行，找出当前的最小值和最大值
                 for (int k = 0; k < nums.size(); k++) {
-                    if(nums.get(min_i).get(next[min_i]) > nums.get(k).get(next[k]))
+                    if(nums.get(min_i).get(next[min_i]) > nums.get(k).get(next[k])) {
                         min_i = k;
-                    if(nums.get(max_i).get(next[max_i]) < nums.get(k).get(next[k]))
+                    }
+                    if(nums.get(max_i).get(next[max_i]) < nums.get(k).get(next[k])) {
                         max_i = k;
+                    }
                 }
                 //更新答案,这时候就没有minx = min_i,miny=max_i的情况了，因为即使有，前面也保存过了
                 if(miny - minx > nums.get(max_i).get(next[max_i]) - nums.get(min_i).get(next[min_i])){
@@ -118,8 +126,9 @@ public class Solution{
 
                 // 最小值后移，判断是否到结尾
                 next[min_i]++;
-                if(next[min_i] == nums.get(min_i).size())
+                if(next[min_i] == nums.get(min_i).size()) {
                     nolistOver = false;
+                }
             }
         //}
         return new int[]{minx, miny};
@@ -167,8 +176,9 @@ public class Solution{
     }
 
     public int[] smallestRange_try(List<List<Integer>> nums) {
-        if(nums == null || nums.size() == 0)
-            return new int[]{0,0};
+        if(nums == null || nums.size() == 0) {
+            return new int[]{0, 0};
+        }
 
         // 这里不要写minx=Integer.MIN_VALUE,因为miny-minx的时候会超出范围
         int minx = 0, miny = Integer.MAX_VALUE;

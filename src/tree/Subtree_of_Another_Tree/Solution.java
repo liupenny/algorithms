@@ -8,35 +8,41 @@ import tools.TreeNode;
 
 public class Solution{
     public boolean isSubtree(TreeNode s, TreeNode t) {
-        if(s == null)
+        if(s == null) {
             return false;
-        if(t == null)
+        }
+        if(t == null) {
             return true;
+        }
 
-        if (isSame(s,t))
+        if (isSame(s,t)) {
             return true;
+        }
         return isSubtree(s.left, t) || isSubtree(s.right, t);
     }
 
     // isSame那道题，判断两棵树完全相同的那个题
     public boolean isSame(TreeNode s, TreeNode t)
     {
-        if(s == null && t == null)
+        if(s == null && t == null) {
             return true;
-        else if(s == null || t == null)
+        } else if(s == null || t == null) {
             return false;
-        else if(s.val != t.val)
+        } else if(s.val != t.val) {
             return false;
+        }
 
         return isSame(s.left,t.left) && isSame(s.right,t.right);
     }
 
     // 将树用序列化的形式表示出来，判断是不是子串
     public boolean isSubtree_serialize(TreeNode s, TreeNode t) {
-        if(s == null)
+        if(s == null) {
             return false;
-        if(t == null)
+        }
+        if(t == null) {
             return true;
+        }
 
         StringBuilder ss = new StringBuilder();
         StringBuilder st = new StringBuilder();
@@ -53,10 +59,9 @@ public class Solution{
     // 传递stringbuilder是因为这是可变的，string是不可变的
     public void serialize(TreeNode s, StringBuilder ss)
     {
-        if(s == null)
+        if(s == null) {
             ss.append(",#");
-
-        else {
+        } else {
             ss.append("," + s.val);
             serialize(s.left, ss);
             serialize(s.right, ss);

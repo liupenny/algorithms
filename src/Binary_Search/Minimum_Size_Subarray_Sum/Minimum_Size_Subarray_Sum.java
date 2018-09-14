@@ -10,23 +10,30 @@ import java.util.EventListener;
  */
 public class Minimum_Size_Subarray_Sum {
     public int minSubArrayLen1(int s, int[] nums) {
-        if(nums == null || nums.length == 0) return 0;   //nums=[]的特殊情况一开始没考虑到
+        if(nums == null || nums.length == 0) {
+            return 0;   //nums=[]的特殊情况一开始没考虑到
+        }
         int[] sum = new int[nums.length + 1];
         int index, ans = Integer.MAX_VALUE;
         sum[0] = 0;
-        for (int i=0; i<nums.length; i++)
-            sum[i+1] = sum[i] + nums[i];
-        if(sum[sum.length-1] < s)
+        for (int i=0; i<nums.length; i++) {
+            sum[i + 1] = sum[i] + nums[i];
+        }
+        if(sum[sum.length-1] < s) {
             return 0;
-        if(sum[sum.length-1] == s)
+        }
+        if(sum[sum.length-1] == s) {
             return nums.length;
+        }
         for (int i=0; i<sum.length; i++)
         {
-            if (sum[i]-s<0)
+            if (sum[i]-s<0) {
                 continue;
+            }
             index = Arrays.binarySearch(sum, 0, sum.length, sum[i] - s);
-            if(index<0)
-                index = -(index+1) - 1;
+            if(index<0) {
+                index = -(index + 1) - 1;
+            }
             ans = Math.min(ans, i - index);
         }
         return ans;

@@ -188,28 +188,43 @@ class Solution {
         @Override
         public String toString()
         {
-            if (para==0) return "";
+            if (para==0) {
+                return "";
+            }
             String ans="";
-            for (String s:var) ans+="*"+s;
+            for (String s:var) {
+                ans += "*" + s;
+            }
             return para+ans;
         }
         // 判断两个val是否相等
         boolean equals(Term that)
         {
-            if (this.var.size()!=that.var.size()) return false;
-            for (int i=0;i<this.var.size();i++)
-                if (!this.var.get(i).equals(that.var.get(i))) return false;
+            if (this.var.size()!=that.var.size()) {
+                return false;
+            }
+            for (int i=0;i<this.var.size();i++) {
+                if (!this.var.get(i).equals(that.var.get(i))) {
+                    return false;
+                }
+            }
             return true;
         }
         // 比较两个val大小，谁长度小，谁在前面；长度相等就比较每个字符
         int compareTo(Term that)
         {
-            if (this.var.size()>that.var.size()) return -1;
-            if (this.var.size()<that.var.size()) return 1;
+            if (this.var.size()>that.var.size()) {
+                return -1;
+            }
+            if (this.var.size()<that.var.size()) {
+                return 1;
+            }
             for (int i=0;i<this.var.size();i++)
             {
                 int x=this.var.get(i).compareTo(that.var.get(i));
-                if (x!=0) return x;
+                if (x!=0) {
+                    return x;
+                }
             }
             return 0;
         }
@@ -217,14 +232,23 @@ class Solution {
         Term times(Term that)
         {
             Term pro=new Term(this.para*that.para);
-            for (String s:this.var) pro.var.add(new String(s));
-            for (String s:that.var) pro.var.add(new String(s));
+            for (String s:this.var) {
+                pro.var.add(new String(s));
+            }
+            for (String s:that.var) {
+                pro.var.add(new String(s));
+            }
             Collections.sort(pro.var);
             return pro;
         }
         // 初始化这个term的长度
         Term(int x) { para=x; }
-        Term(String s) { if (map.containsKey(s)) para=map.get(s); else var.add(s); }
+        Term(String s) { if (map.containsKey(s)) {
+            para = map.get(s);
+        } else {
+            var.add(s);
+        }
+        }
         Term(Term that) { this.para=that.para; this.var=new ArrayList<>(that.var); }
     }
 
@@ -238,16 +262,20 @@ class Solution {
         Expression times(Expression that)
         {
             List<Term> c=new ArrayList<>();
-            for (Term t1:this.list)
-                for (Term t2:that.list)
+            for (Term t1:this.list) {
+                for (Term t2 : that.list) {
                     c.add(t1.times(t2));
+                }
+            }
             c=combine(c);
             return new Expression(c);
         }
         Expression plus(Expression that,int sgn)
         {
             List<Term> c=new ArrayList<>();
-            for (Term t:this.list) c.add(new Term(t));
+            for (Term t:this.list) {
+                c.add(new Term(t));
+            }
             for (Term t:that.list)
             {
                 Term t2=new Term(t);
@@ -259,8 +287,12 @@ class Solution {
         }
         Expression cal(Expression that)
         {
-            if (oper=='+') return plus(that,1);
-            if (oper=='-') return plus(that,-1);
+            if (oper=='+') {
+                return plus(that, 1);
+            }
+            if (oper=='-') {
+                return plus(that, -1);
+            }
             return times(that);
         }
         List<String> toList()
@@ -269,7 +301,9 @@ class Solution {
             for (Term t:list)
             {
                 String s=t.toString();
-                if (s.length()>0) ans.add(s);
+                if (s.length()>0) {
+                    ans.add(s);
+                }
             }
             return ans;
         }
@@ -281,15 +315,19 @@ class Solution {
         List<Term> c=new ArrayList<>();
         for (Term t:a)
         {
-            if (c.size()!=0 && t.equals(c.get(c.size()-1))) c.get(c.size()-1).para+=t.para;
-            else c.add(new Term(t));
+            if (c.size()!=0 && t.equals(c.get(c.size()-1))) {
+                c.get(c.size() - 1).para += t.para;
+            } else {
+                c.add(new Term(t));
+            }
         }
         return c;
     }
 
     public List<String> basicCalculatorIV(String expression, String[] evalvars, int[] evalints) {
-        for (int i=0;i<evalvars.length;i++)
-            map.put(evalvars[i],evalints[i]);
+        for (int i=0;i<evalvars.length;i++) {
+            map.put(evalvars[i], evalints[i]);
+        }
 
         int i=0,l=expression.length();
         //表达式和其优先级
@@ -325,12 +363,18 @@ class Solution {
                 stack.add(new Expression(s));
                 continue;
             }
-            if (ch=='(') pri+=2;
-            if (ch==')') pri-=2;
+            if (ch=='(') {
+                pri += 2;
+            }
+            if (ch==')') {
+                pri -= 2;
+            }
             if (ch=='+' || ch=='-' || ch=='*')
             {
                 int nowPri=pri;
-                if (ch=='*') nowPri++;
+                if (ch=='*') {
+                    nowPri++;
+                }
                 while (!priStack.isEmpty() && nowPri<=priStack.peek())
                 {
                     Expression now=stack.pop(),last=stack.pop();

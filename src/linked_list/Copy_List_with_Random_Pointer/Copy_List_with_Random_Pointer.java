@@ -1,5 +1,4 @@
 package linked_list.Copy_List_with_Random_Pointer;
-import tools.ListNode;
 import tools.RandomListNode;
 
 import java.util.HashMap;
@@ -60,7 +59,9 @@ public class Copy_List_with_Random_Pointer {
     }
 
     public RandomListNode copyRandomList2(RandomListNode head) {
-        if (head == null) return null;
+        if (head == null) {
+            return null;
+        }
 
         Map<RandomListNode, RandomListNode> map = new HashMap<RandomListNode, RandomListNode>();
 

@@ -9,8 +9,9 @@ import java.util.Arrays;
 public class Solution{
     public int ans = 0;
     public int findTargetSumWays_brute(int[] nums, int S) {
-        if(nums == null || nums.length == 0 && S != 0)
+        if(nums == null || nums.length == 0 && S != 0) {
             return 0;
+        }
 
         isSum(nums, 0, 0, S);
         return ans;
@@ -20,8 +21,9 @@ public class Solution{
     {
         if(index == nums.length)
         {
-            if(sum == S)
+            if(sum == S) {
                 ans++;
+            }
             return;
         }
 
@@ -32,14 +34,16 @@ public class Solution{
 
 
     public int findTargetSumWays_mem(int[] nums, int S) {
-        if (nums == null || nums.length == 0 && S != 0)
+        if (nums == null || nums.length == 0 && S != 0) {
             return 0;
+        }
         // memo[i][j]表示计算到第i个数字，目前的和为j时：后面的数字加减起来，符合条件要求的S有多少种。
         // 和最高设定为2001是因为，题目中给出所有数字的和不超过1000，但有可能要求的S是-1000
         // 为了保证所有数字的和都能有合法的下标，所以加上1000这个offset
         int[][] memo = new int[nums.length][2001];
-        for (int[] row: memo)
+        for (int[] row: memo) {
             Arrays.fill(row, Integer.MIN_VALUE);
+        }
         return calaulate(nums, 0, 0, S, memo);
     }
 
@@ -47,15 +51,17 @@ public class Solution{
     {
         if(index == num.length)
         {
-            if(sum == S)
+            if(sum == S) {
                 return 1;
-            else
+            } else {
                 return 0;
+            }
         }
         else {
             //计算到Index,且和为sum+1000时的答案已经算了
-            if(memo[index][sum+1000] != Integer.MIN_VALUE)
-                return memo[index][sum+1000];
+            if(memo[index][sum+1000] != Integer.MIN_VALUE) {
+                return memo[index][sum + 1000];
+            }
             int add = calaulate(num, index + 1, sum + num[index], S, memo);
             int substract = calaulate(num, index + 1, sum - num[index], S, memo);
             // 计算到index时得到的和为sum+1000，
@@ -65,15 +71,17 @@ public class Solution{
     }
 
     public int findTargetSumWays_dp(int[] nums, int S) {
-        if (nums == null || nums.length == 0 && S != 0)
+        if (nums == null || nums.length == 0 && S != 0) {
             return 0;
+        }
 
         int sum = 0;
         for (int num: nums) {
             sum += num;
         }
-        if(sum < S)
+        if(sum < S) {
             return 0;
+        }
 
         int[][] ways = new int[nums.length][2001];
         ways[0][nums[0] + 1000] = 1;
@@ -94,8 +102,9 @@ public class Solution{
 
     //只用一维数组
     public int findTargetSumWays_onearray(int[] nums, int S) {
-        if (nums == null || nums.length == 0 && S != 0)
+        if (nums == null || nums.length == 0 && S != 0) {
             return 0;
+        }
 
         int[] ways = new int[2001];
         ways[nums[0] + 1000] = 1;

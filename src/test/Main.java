@@ -1,295 +1,339 @@
 package test;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-public class Main {
-    public static void main(String[] args) {
-        Main t = new Main();
-        t.caseM4_Answer();
+class Stu
+{
+    int num;
+    boolean out; //是否淘汰
+
+    public Stu(int n){
+        num = n;
     }
 
-    // 对着正确的思路改
-    class Person implements Comparable<Person>{  //因为最后要对所有人分数进行排序，所以定义一个结构体比较方便
-        int index;
-        double score;
+    public void count(int n, int k){
+        if(n%k == 0 || n%10==k)
+            out = true;
+    }
+}
 
-        @Override
-        public int compareTo(Person p)
-        {
-            if (Double.doubleToLongBits(this.score) > Double.doubleToLongBits(p.score))
+class ccf2017122 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt(), k = sc.nextInt();
+        Queue<Stu> queue = new LinkedList<>();
+        for (int i = 0; i < n; i++) {
+            Stu s = new Stu(i+1);
+            queue.offer(s);
+        }
+
+        int number = 1, left = n;
+        while (!queue.isEmpty()){
+            Stu stu = queue.poll();
+            stu.count(number++,k);
+
+            if(stu.out){
+                queue.remove(stu);
+                left--;
+            }
+            else
+                queue.offer(stu);
+
+            if(left == 1){
+                System.out.println(queue.poll().num);
+                return;
+            }
+        }
+    }
+}
+
+//class ccf31 {
+//    private static List<String> ans = new ArrayList<>();
+//
+//    public static void main(String[] args) {
+//        Scanner in = new Scanner(System.in);
+//        int n, m;
+//
+//        while (in.hasNext()) {
+//            n = in.nextInt();
+//            m = in.nextInt();
+//            String[] p = new String[n];
+//            String[] r = new String[n];
+//            in.nextLine();
+//            for (int i = 0; i < n; i++) {
+//                String[] split = in.nextLine().split(" ");
+//                p[i] = split[0];
+//                r[i] = split[1];
+//            }
+//
+//            for (int i = 0; i < m; i++) {
+//                String string = in.nextLine();
+//                String[] cmd = string.split("/");
+//                String[] ans = deal(cmd,p);
+//                }
+//            }
+//        }
+
+
+//    public static String[] deal(String[] input, String[] p) {
+//        List<String> ans = new ArrayList<>();
+//        for (int i = 0; i < p.length; i++) {
+//            String[] pattern = p[i].split("/");
+//            if (pattern.length >= input.length)
+//                return new String[0];
+//            for (int j = 1; j < pattern.length; j++) {
+//                if(pattern[i].equals(input[i]))
+//                    continue;
+//                else {
+//                    if(pattern[i].equals("<int>") && input[i].matches("[0-9]+"))
+//                        ans.add(input[i]);
+//                    if(pattern[i].equals("<str>") && )
+//                }
+//            }
+//
+//        }
+//    }
+
+
+// }
+
+
+public class Main{
+
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n,m;
+        n = sc.nextInt();
+        m = sc.nextInt();
+        sc.nextLine();
+        Map<String, String> rules = new HashMap<>();
+        String[] urls = new String[m];
+        for (int i = 0; i < n; i++) {
+            String string = sc.nextLine();
+            String[] sp = string.split(" ");
+            rules.put(sp[1],sp[0]);
+        }
+        for (int i = 0; i < m; i++) {
+            urls[i] = sc.nextLine();
+        }
+
+        Map<String,String> reg = new HashMap<>();
+        reg.put("<int>","([0-9]+)");
+        reg.put("<str>","([\\\\w\\\\-\\\\.]+)");
+        reg.put("<path>","(?<path>([\\\\w\\\\-\\\\.]+/)+[\\\\w\\\\-\\\\.]+)");
+
+        for (Map.Entry<String,String> entry: rules.entrySet()){
+            String rule = entry.getValue();
+            rule = rule.replaceAll("<int>",reg.get("<int>"));
+            rule = rule.replaceAll("<str>",reg.get("<str>"));
+            rule = rule.replaceAll("<path>",reg.get("<path>"));
+            rules.put(entry.getKey(),rule);
+        }
+
+        List<List<String>> ans = new ArrayList<>();
+        for (String str: urls) {
+            boolean find = false;
+            List<String> row = new ArrayList<>();
+            for (Map.Entry<String,String> entry: rules.entrySet()) {
+                Pattern pattern = Pattern.compile(entry.getValue());
+                Matcher matcher = pattern.matcher(str);
+                if (matcher.find()){
+                    find = true;
+                    //System.out.println(matcher.group(1));
+                    row.add(entry.getKey());
+                    for (int i = 0; i < matcher.groupCount(); i++) {
+                        String a = matcher.group(i+1);
+                        row.add(a);
+                        if(a.contains("/"))
+                            break;
+                    }
+                    ans.add(row);
+                }
+                if(find == true)
+                    break;
+            }
+            if(find == false) {
+                row.add("404");
+                ans.add(row);
+            }
+        }
+
+        for (List<String> row: ans) {
+            for (String term:row) {
+                System.out.print(term + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+class ccf1 {
+    public static void main1(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int sum = 0, contin = 0, score = 0;
+        while ((score = sc.nextInt()) != 0) {
+            if (score == 1) {
+                sum += 1;
+                contin = 0;
+            } else {
+                contin++;
+                sum += contin * 2;
+            }
+        }
+        System.out.println(sum);
+    }
+}
+
+class ccf2{
+    public static void stuck(int count, int length, int second, ball[] balls){
+        for (int i = 1; i <= second; i++) {
+            balls[0].pos += balls[0].dir;
+            if(balls[0].pos == 0)
+                balls[0].dir = -balls[0].dir;
+
+            for (int j = 1; j < count; j++) {
+                balls[j].pos += balls[j].dir;
+                if(balls[j-1].pos == balls[j].pos){
+                    balls[j-1].dir = -balls[j-1].dir;
+                    balls[j].dir = -balls[j].dir;
+                }
+                if(balls[j].pos == length)
+                    balls[j].dir = -balls[j].dir;
+            }
+        }
+        Arrays.sort(balls,new orderComp());
+        for (int i = 0; i < balls.length; i++) {
+            System.out.print(balls[i].pos + " ");
+        }
+    }
+
+    public static class ball{
+        int pos;
+        // 1是正向向右，-1是负向向左
+        int dir;
+        int order;
+    }
+
+    public static class ballComp implements Comparator<ball>{
+        public int compare(ball a, ball b){
+            if (a.pos - b.pos < 0)
                 return -1;
-            else if (Double.doubleToLongBits(this.score) == Double.doubleToLongBits(p.score))
-                return 0;
             else
                 return 1;
         }
     }
 
-    public void caseM4_Answer()
-    {
-        Scanner in = new Scanner(System.in);
-        int n = in.nextInt(), m = in.nextInt(), k = in.nextInt(), C = in.nextInt();
-
-        int[] weight = new int[m]; //m轮比赛的权重
-        long  weightSum = 0;  //m轮比赛的权重和
-        for (int i = 0; i < m; i++) {
-            weight[i] = in.nextInt();
-            weightSum += weight[i];
-        }
-
-        int[][] score = new int[n][m];
-        int lostN = 0, lostM = 0;
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                score[i][j] = in.nextInt();
-                if(score[i][j] == -1)
-                {
-                    lostN = i;  //缺失的数据是第i个人的
-                    lostM = j;  //缺失的数据是第j轮比赛的
-                }
-            }
-        }
-
-        Person[] people = new Person[n];  //对象数组中每个对象也要初始化
-        for (int i = 0; i < people.length; i++) {
-            people[i] = new Person();
-        }
-
-        int[] ans = new int[n];  //每一轮比赛算完的结果
-        Arrays.fill(ans, -1);
-
-        for (int c = 0; c <= C; c++) {  //从0到C模拟缺失的分数
-            for (int i = 0; i < n; i++) { //重新给当前的人赋值
-                people[i].index = i;
-                people[i].score = 0.0;
-            }
-
-            score[lostN][lostM] = c;
-
-            for (int j = 0; j < m; j++) { // 当前C下每个人的总分
-                int max = -1;
-                for (int i = 0; i < n; i++) {
-                    max = Math.max(max, score[i][j]); //每一轮的最高分
-                }
-                for (int i = 0; i < n; i++) {
-                    if(max > 0) //当max>0的时候计算
-                    {
-                        people[i].score += 1.0 * score[i][j] / max * (1.0 * weight[j] / weightSum);
-                    }
-                }
-            }
-
-            Arrays.sort(people);  //按照这一个C的情况进行分数排序
-
-            for (int i = 0; i < n; i++) {
-                if(i < k)
-                {
-                    if(ans[people[i].index] == -1)
-                    {
-                        ans[people[i].index] = 1;
-                    }
-                    else if(ans[people[i].index] == 1)
-                    {
-                        ans[people[i].index] = 1;
-                    }
-                    else
-                    {
-                        ans[people[i].index] = 3;
-                    }
-                }
-                else
-                {
-                    if(ans[people[i].index] == -1)
-                    {
-                        ans[people[i].index] = 2;
-                    }
-                    else if(ans[people[i].index] == 1)
-                    {
-                        ans[people[i].index] = 3;
-                    }
-                }
-            }
-
-            // 只对成绩在k周围
-            if(k < n && people[k-1].score == people[k].score)
-            {
-                for (int i = 0; i < n; i++) {
-                    if (people[i].score == people[k-1].score)
-                        ans[people[i].index] = 3;
-                }
-            }
-        }
-        // 打印结果
-        for (int i = 0; i < n; i++) {
-            System.out.println(ans[i]);
-        }
-    }
-
-    // 对着官方答案改的
-    static void caseM2_Answer() {
-        Scanner in = new Scanner(System.in);
-        int n = in.nextInt(), m = in.nextInt(), k = in.nextInt();
-
-        long maxE = Long.MIN_VALUE;
-        int pos = 0;
-
-        for (int i = 1; i <= k; i++) {
-            int a = in.nextInt(), b = in.nextInt();
-            long E = 1L * m * a + 1L * (n - m) * b;
-            if(E >= maxE)
-            {
-                maxE = E;
-                pos = i;
-            }
-        }
-
-        // 格式化输出，解决空格问题
-        for (int i = 1; i <= k; i++) {
-            System.out.printf("%d%c", i == pos ? n : 0, i == k ? '\n' : ' ');
-        }
-    }
-
-    // 自己写的
-        static void caseM2()
-    {
-        Scanner in = new Scanner(System.in);
-        int n = in.nextInt(), m = in.nextInt(), k = in.nextInt(), t = n - m;  //m是小美要喝的可乐数,t是小团要喝的可乐数
-        int[][] happy = new int[k][2];
-        int ansIndex = 0;
-        for (int i = 0; i < k; i++) {
-            happy[i][0] = in.nextInt(); //小美的快乐
-            happy[i][1] = in.nextInt(); //小团的快乐
-        }
-
-        int expectTemp = 0, expectMax = 0;
-        for (int i = 0; i < k; i++) {
-            expectTemp = happy[i][0] * m + happy[i][1] * t;
-            if(expectTemp > expectMax)
-                ansIndex = i;
-        }
-
-        // 输出的问题
-        for (int i = 0; i < k - 1; i++) {
-            if(i == ansIndex)
-                System.out.print(n);
+    public static class orderComp implements Comparator<ball>{
+        public int compare(ball a, ball b){
+            if (a.order - b.order < 0)
+                return -1;
             else
-                System.out.print(0);
-            System.out.print(" ");
-        }
-        if(ansIndex == k - 1)
-            System.out.print(n);
-        else
-            System.out.print(0);
-    }
-
-    static void case3()
-    {
-        Scanner in = new Scanner(System.in);
-        int n = in.nextInt(), m = in.nextInt();
-
-        Map<Integer, Integer> prices = new HashMap<>();
-        int sum = 0;
-        for (int i = 0; i < n; i++) {
-            int price = in.nextInt(), coupon = in.nextInt();
-            prices.put(price, coupon);
-            if(coupon == 1)
-                sum += price;
-        }
-
-        Map<Integer, Integer> reduc = new TreeMap<>();
-        for (int i = 0; i < m; i++) {
-            int full = in.nextInt(), reduction = in.nextInt();
-            reduc.put(full, reduction);
-        }
-
-        double discount = (double)sum * 0.8;
-        // int dis = reduc.
-    }
-
-    class codeM1 {
-        public void main(String[] args) {
-            Scanner in = new Scanner(System.in);
-            int n = in.nextInt();
-            int m = in.nextInt();
-            double[][] prices = new double[n][2];
-            for (int i = 0; i < n; i++) {
-                prices[i][0] = in.nextDouble();
-                prices[i][1] = in.nextDouble();
-            }
-            double[][] sales = new double[m][2];
-            for (int i = 0; i < m; i++) {
-                sales[i][0] = in.nextDouble();
-                sales[i][1] = in.nextDouble();
-            }
-//        System.out.println(Arrays.deepToString(prices));
-//        System.out.println(Arrays.deepToString(sales));
-            double res = 0, sum = 0;
-            for (int i = 0; i < n; i++) {
-                sum += prices[i][0];
-                res += prices[i][1] == 1 ? prices[i][0] * 0.8 : prices[i][0];
-            }
-
-            for (int i = 0; i < m; i++) {
-                if (sum >= sales[i][0]) {
-                    res = Double.min(res, sum - sales[i][1]);
-                }
-            }
-
-            System.out.printf("%.2f", res);
+                return 1;
         }
     }
 
-    static void case2() {
-        Scanner in = new Scanner(System.in);
-        int t = in.nextInt();
-        while (t-- > 0) {
-            int n = in.nextInt();
-            int k = in.nextInt();
-            int[] nums = new int[n];
-            for (int i = 0; i < n; i++) {
-                nums[i] = in.nextInt();
-            }
 
-            System.out.println(case2(nums, k));
+    public static void main2(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int count = sc.nextInt(), length = sc.nextInt(), second = sc.nextInt();
+        ball[] balls = new ball[count];
+        for (int i = 0; i < count; i++) {
+            balls[i] = new ball();
+            balls[i].pos = sc.nextInt();
+            balls[i].dir = 1;
+            balls[i].order = i;
         }
+        Arrays.sort(balls,new ballComp());
+        stuck(count,length,second,balls);
+
+    }
+}
+
+
+class mmmain {
+
+    /**
+     * @param args
+     * @throws ParseException
+     */
+    public static void main(String[] args) throws ParseException {
+
+        methodDemo_2();
+
+
     }
 
-    static int case2(int[] nums, int target) {
-        int[] dp = new int[target + 1];
-        dp[0] = 1;
-        for (int coin : nums) {
-            for (int i = coin; i <= target; i++) {
-                dp[i] = (dp[i] + dp[i-coin]) % 100000007;
-            }
-        }
-        return dp[target];
+
+    /**
+     * 将日期格式的字符串-->日期对象。
+     * 	使用的是DateFormat类中的parse()方法。
+     *
+     * @throws ParseException
+     */
+    public  static void methodDemo_3() throws ParseException {
+        String str_date = "2012年4月19日";
+        DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.LONG); //Thu Apr 19 00:00:00 CST 2012
+
+        str_date = "2011---8---17";
+        dateFormat = new SimpleDateFormat("yyyy---MM---dd");   // Wed Aug 17 00:00:00 CST 2011
+
+        Date date = dateFormat.parse(str_date);
+        System.out.println(date);
     }
 
-    static void case1() {
-        Scanner in = new Scanner(System.in);
-        int t = in.nextInt();
-        while (t-- > 0) {
-            int n = in.nextInt();
-            int[] nums = new int[n];
-            for (int i = 0; i < n; i++) {
-                nums[i] = in.nextInt();
-            }
-            System.out.println(sell(nums));
-        }
+
+    /**
+     * 对日期对象进行格式化。
+     * 将日期对象-->日期格式的字符串。
+     * 	使用的是DateFormat类中的format方法。
+     */
+    public static void methodDemo_2() {
+        Date date = new Date();
+
+        //获取日期格式对象。具体着默认的风格。 FULL LONG等可以指定风格。
+        DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.LONG);  //2018年8月7日
+        dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG,DateFormat.LONG); //2018年8月7日 下午05时02分04秒
+
+        //如果风格是自定义的如何解决呢？
+        dateFormat = new SimpleDateFormat("yyyy--MM--dd"); //2018--08--07
+        String str_date = dateFormat.format(date);
+
+        System.out.println(str_date);
     }
 
-    static int sell(int[] nums) {
-        if (nums.length == 1) return nums[0];
-        return Math.max(sell(nums, 0, nums.length - 2), sell(nums, 1, nums.length - 1));
+
+
+    /**
+     * 日期对象和毫秒值之间的转换。
+     *
+     * 毫秒值-->日期对象 ：
+     * 	1，通过Date对象的构造方法  new Date(timeMillis);
+     *  2，还可以通过setTime设置。
+     *  因为可以通过Date对象的方法对该日期中的各个字段(年月日等)进行操作。
+     *
+     *
+     * 日期对象-->毫秒值：
+     * 	2，getTime方法。
+     * 因为可以通过具体的数值进行运算。
+     *
+     *
+     */
+    public static void methodDemo_1() {
+        long time = System.currentTimeMillis();//
+//		System.out.println(time);//1335671230671
+
+        Date date = new Date();//将当前日期和时间封装成Date对象。
+        System.out.println(date);//Sun Apr 29 11:48:02 CST 2012
+
+        Date date2 = new Date(1335664696656l);//将指定毫秒值封装成Date对象。
+        System.out.println(date2);
     }
 
-    static int sell(int[] num, int lo, int hi) {
-        int include = 0, exclude = 0;
-        for (int j = lo; j <= hi; j++) {
-            int i = include, e = exclude;
-            include = e + num[j];
-            exclude = Math.max(e, i);
-        }
-        return Math.max(include, exclude);
-    }
+
+
 }

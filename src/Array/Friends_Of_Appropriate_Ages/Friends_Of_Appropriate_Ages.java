@@ -5,8 +5,9 @@ package Array.Friends_Of_Appropriate_Ages;
  */
 public class Friends_Of_Appropriate_Ages {
     public int numFriendRequests(int[] ages) {
-        if(ages == null || ages.length == 0)
+        if(ages == null || ages.length == 0) {
             return 0;
+        }
 
         int[] agecount = new int[121];
         for (int age: ages) {
@@ -17,12 +18,14 @@ public class Friends_Of_Appropriate_Ages {
         for (int i = 0; i < 121; i++) {
             if (agecount[i] > 0) {
                 if (agecount[i] > 1) {
-                    if (i < (i - 7) * 2)
+                    if (i < (i - 7) * 2) {
                         ans += agecount[i] * (agecount[i] - 1);
+                    }
                 }
                 for (int j = 0; j < i; j++) {
-                    if (agecount[j] > 0 && i < (j - 7) * 2)
+                    if (agecount[j] > 0 && i < (j - 7) * 2) {
                         ans += agecount[i] * agecount[j];
+                    }
                 }
             }
         }

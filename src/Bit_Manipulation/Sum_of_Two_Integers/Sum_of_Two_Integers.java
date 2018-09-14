@@ -5,7 +5,9 @@ package Bit_Manipulation.Sum_of_Two_Integers;
  */
 public class Sum_of_Two_Integers {
     public int getSum(int a, int b) {
-        if(a==0) return b;
+        if(a==0) {
+            return b;
+        }
 
         int carry = 0, sum = 0;
         sum = a ^ b;

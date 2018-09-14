@@ -9,8 +9,9 @@ public class Array_Nesting {
     // 最基础的办法是轮流算一下从每个数开始加入，最多能加多少个
     public int arrayNesting(int[] nums)
     {
-        if(nums == null || nums.length == 0)
+        if(nums == null || nums.length == 0) {
             return 0;
+        }
 
         int res = 0;
         for (int i = 0; i < nums.length; i++)
@@ -30,8 +31,9 @@ public class Array_Nesting {
     // 访问数组标记
     public int arrayNesting1(int[] nums)
     {
-        if (nums == null || nums.length == 0)
+        if (nums == null || nums.length == 0) {
             return 0;
+        }
 
         int res = 0;
         boolean[] visited = new boolean[nums.length];

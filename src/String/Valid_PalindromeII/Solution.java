@@ -4,8 +4,9 @@ package String.Valid_PalindromeII;/**
 
 public class Solution{
     public boolean validPalindrome(String s) {
-        if(s == null || s.length() == 0)
+        if(s == null || s.length() == 0) {
             return false;
+        }
 
         int left = -1, right = s.length();
         // 涉及到当字符串长度是奇数，比较到最中间的时候left=right，此时应该返回true
@@ -24,8 +25,9 @@ public class Solution{
     {
         while (begin < end){
             //比较当前值，并自动加减位置。
-            if (s.charAt(begin++) != s.charAt(end--))
+            if (s.charAt(begin++) != s.charAt(end--)) {
                 return false;
+            }
         }
         return true;
     }

@@ -6,8 +6,9 @@ package Array.Longest_Continuous_Increasing_Subsequence;
 public class Longest_Continuous_Increasing_Subsequence {
     public int findLengthOfLCIS(int[] nums)
     {
-        if(nums == null || nums.length == 0)
+        if(nums == null || nums.length == 0) {
             return 0;
+        }
 
         int res = 1, temp = 1;
         for (int i = 1; i < nums.length; i++)
@@ -33,7 +34,9 @@ public class Longest_Continuous_Increasing_Subsequence {
         for (int i = 0; i < nums.length; ++i)
         {
             if (i > 0 && nums[i-1] >= nums[i])    //记录起始位置
+            {
                 anchor = i;
+            }
             ans = Math.max(ans, i - anchor + 1);  //每次更新最大距离
         }
         return ans;

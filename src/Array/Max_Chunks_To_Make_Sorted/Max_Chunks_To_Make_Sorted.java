@@ -5,15 +5,17 @@ package Array.Max_Chunks_To_Make_Sorted;
  */
 public class Max_Chunks_To_Make_Sorted {
     public int maxChunksToSorted(int[] arr) {
-        if(arr == null || arr.length == 0)
+        if(arr == null || arr.length == 0) {
             return 0;
+        }
 
         int res = 1;
         for (int i = 0, maxn = 0; i < arr.length; i++)
         {
             maxn = Math.max(maxn, arr[i]);
-            if(maxn == i)
+            if(maxn == i) {
                 res++;
+            }
         }
         return res;
     }

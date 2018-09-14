@@ -32,14 +32,16 @@ public class Solution{
             while (size-- > 0)
             {
                 TreeNode temp = queue.poll();
-                if(k == K)
+                if(k == K) {
                     ans.add(temp.val);
+                }
                 // 把当前节点相连的未访问的所有节点加进去
                 Iterator<TreeNode> iterator = graph.get(temp).iterator();
                 while ( iterator.hasNext() ) {
                     TreeNode child = iterator.next();
-                    if (visited.contains(child))
+                    if (visited.contains(child)) {
                         continue;
+                    }
                     queue.add(child);
                     visited.add(child);
                 }
@@ -60,10 +62,12 @@ public class Solution{
                 graph.get(parent).add(child);
             }
         }
-        if(child.left != null)
+        if(child.left != null) {
             buildGraph(child, child.left);
-        if(child.right != null)
+        }
+        if(child.right != null) {
             buildGraph(child, child.right);
+        }
     }
 
     List<Integer> ans;
@@ -77,8 +81,9 @@ public class Solution{
     // 如果target不在子树里，返回-1
     public int dis(TreeNode root, TreeNode target, int K)
     {
-        if(root == null)
+        if(root == null) {
             return -1;
+        }
         if(root == target)
         {
             // 如果当前节点就是target，在本节点搜集距离为k的节点
@@ -94,8 +99,9 @@ public class Solution{
         if(l >= 0)
         {
             // target到root.left的距离是k-1 == target到root的距离是K
-            if(l == K - 1)
+            if(l == K - 1) {
                 ans.add(root.val);
+            }
             // target到root.left的距离是l,root.left到root.right距离是2
             // 还需要找到root.right距离是 k - l -2的
             collect(root.right, K - l - 2);
@@ -104,8 +110,9 @@ public class Solution{
 
         if(r >= 0)
         {
-            if(r == K - 1)
+            if(r == K - 1) {
                 ans.add(root.val);
+            }
             collect(root.right, K -r -2);
             return r + 1;
         }
@@ -116,10 +123,12 @@ public class Solution{
     // 递归在子树中寻找
     public void collect(TreeNode root, int k)
     {
-        if(root == null || k < 0)
+        if(root == null || k < 0) {
             return;
-        if(k == 0)
+        }
+        if(k == 0) {
             ans.add(root.val);
+        }
         collect(root.left, k - 1);
         collect(root.right, k - 1);
     }

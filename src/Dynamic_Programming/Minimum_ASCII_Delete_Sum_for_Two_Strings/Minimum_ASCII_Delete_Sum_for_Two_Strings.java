@@ -5,7 +5,9 @@ package Dynamic_Programming.Minimum_ASCII_Delete_Sum_for_Two_Strings;
  */
 public class Minimum_ASCII_Delete_Sum_for_Two_Strings {
     public int minimumDeleteSum(String s1, String s2) {
-        if(s1 == null || s1.isEmpty() || s2 == null || s2.isEmpty()) return s1 == null || s1.isEmpty() ? s2.length() : s1.length();
+        if(s1 == null || s1.isEmpty() || s2 == null || s2.isEmpty()) {
+            return s1 == null || s1.isEmpty() ? s2.length() : s1.length();
+        }
 
         int[][] dp = new int[s1.length() + 1][s2.length() + 1];  //后面的数组下标从1开始
         for (int i = 1; i < dp.length; i++) {

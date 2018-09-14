@@ -10,7 +10,9 @@ import tools.Sort_List;
  */
 public class Reverse_Nodes_in_kGroup {
     public ListNode reverseKGroup1(ListNode head, int k) {
-        if(head==null || head.next == null || k==1) return head;
+        if(head==null || head.next == null || k==1) {
+            return head;
+        }
         ListNode newhead = new ListNode(0), tmp = head, ans = newhead;
         newhead.next = head;
         ListNode front,tail,newtmp;
@@ -30,8 +32,9 @@ public class Reverse_Nodes_in_kGroup {
                 ans.next = tail;
                 ans = newfront;
             }
-            else
+            else {
                 ans.next = front;
+            }
         }
         return newhead.next;
     }
@@ -52,7 +55,9 @@ public class Reverse_Nodes_in_kGroup {
 
     public ListNode reverseKGroup3(ListNode head, int k) {  //先算出来链表的总长度，每k个做一次逆转
         int n = 0;
-        for (ListNode i = head; i != null; n++, i = i.next);
+        for (ListNode i = head; i != null; n++, i = i.next) {
+            ;
+        }
 
         ListNode dmy = new ListNode(0);
         dmy.next = head;
@@ -93,7 +98,9 @@ public class Reverse_Nodes_in_kGroup {
     }
 
     public ListNode reverseKGroup4(ListNode head, int k) {
-        if(head==null || head.next==null) return head;
+        if(head==null || head.next==null) {
+            return head;
+        }
         ListNode cur = head, prehead = null;
 
         int count = 0;
@@ -107,8 +114,9 @@ public class Reverse_Nodes_in_kGroup {
                 prehead = precur;
                 count ++;
             }
-            if(cur != null)
-                head.next = reverseKGroup4(cur,k);
+            if(cur != null) {
+                head.next = reverseKGroup4(cur, k);
+            }
             return prehead;
         }
         return cur;

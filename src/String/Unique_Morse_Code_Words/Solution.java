@@ -10,8 +10,9 @@ import java.util.Set;
 public class Solution{
     public int uniqueMorseRepresentations(String[] words) {
         String[] morse = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."};
-        if(words == null || words.length == 0)
+        if(words == null || words.length == 0) {
             return 0;
+        }
 
         Set<String> set = new HashSet<>();
         for (int i = 0; i < words.length; i++) {

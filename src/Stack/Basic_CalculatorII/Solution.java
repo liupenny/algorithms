@@ -8,8 +8,9 @@ import java.util.Stack;
 
 public class Solution{
     public int calculate(String s) {
-        if(s == null || s.length() == 0)
+        if(s == null || s.length() == 0) {
             return 0;
+        }
         s = s.replace(" ","");
         // 这时候从数字开始处理，针对
         Stack<Integer> stack = new Stack<>();

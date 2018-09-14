@@ -7,14 +7,17 @@ import java.util.Arrays;
  */
 public class Valid_Triangle_Number {
     public int triangleNumber(int[] nums) {
-        if (nums == null || nums.length == 0)
+        if (nums == null || nums.length == 0) {
             return 0;
+        }
 
         Arrays.sort(nums);
         int num = 0;
         for (int i = 0; i < nums.length - 2; i++) {
             for (int j = i + 1, k = i + 2; k < nums.length ; k++) {
-                while (j < k && (nums[i] + nums[j] <= nums[k])) j++;
+                while (j < k && (nums[i] + nums[j] <= nums[k])) {
+                    j++;
+                }
                 num += k - j;
             }
         }

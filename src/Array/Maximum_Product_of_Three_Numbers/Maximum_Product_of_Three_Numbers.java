@@ -8,8 +8,9 @@ import java.util.Arrays;
 public class Maximum_Product_of_Three_Numbers {
     public int maximumProduct(int[] nums)
     {
-        if(nums == null || nums.length == 0)
+        if(nums == null || nums.length == 0) {
             return 0;
+        }
 
         int res = 1;
         if(nums.length <= 3)
@@ -23,18 +24,20 @@ public class Maximum_Product_of_Three_Numbers {
 
         Arrays.sort(nums);
         // 最大的数小于0，全是负数
-        if( nums[nums.length - 1] <= 0)
-            return nums[0]*nums[1]*nums[2];
-        // 有正有负
+        if( nums[nums.length - 1] <= 0) {
+            return nums[0] * nums[1] * nums[2];
+        }// 有正有负
         else
         {
             int maxEnd = 0, maxHead = 0;
             // 最小的两个数都是负数
-            if (nums[0] < 0 && nums[1] < 0)
+            if (nums[0] < 0 && nums[1] < 0) {
                 maxEnd = nums[0] * nums[1];
+            }
             // 最大的后面两个都是正数
-            if(nums[nums.length - 2] > 0 && nums[nums.length - 3] > 0)
+            if(nums[nums.length - 2] > 0 && nums[nums.length - 3] > 0) {
                 maxHead = nums[nums.length - 2] * nums[nums.length - 3];
+            }
             return Math.max(maxEnd, maxHead) * nums[nums.length - 1];
         }
     }

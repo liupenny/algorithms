@@ -13,8 +13,9 @@ import java.util.Stack;
 public class Solution{
     public List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> ans = new ArrayList<>();
-        if(root == null)
+        if(root == null) {
             return ans;
+        }
 
         Stack<TreeNode> stack = new Stack<>();
         stack.push(root);
@@ -22,10 +23,12 @@ public class Solution{
         {
             TreeNode tmp = stack.pop();
             ans.add(tmp.val);
-            if(tmp.right != null)
+            if(tmp.right != null) {
                 stack.push(tmp.right);
-            if(tmp.left != null)
+            }
+            if(tmp.left != null) {
                 stack.push(tmp.left);
+            }
         }
         return ans;
     }

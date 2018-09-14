@@ -9,12 +9,15 @@ import java.util.List;
 public class Word_SearchII {
     public List<String> findWords_likeI(char[][] board, String[] words) {
         List<String> ans = new ArrayList<>();
-        if(board == null || board.length == 0 || words == null || words.length == 0)
+        if(board == null || board.length == 0 || words == null || words.length == 0) {
             return ans;
+        }
 
         for (int i = 0; i < words.length; i++) {
             if (exist_savemem(board, words[i]) == true && !ans.contains(words[i])) //这里注意不添加重复值
+            {
                 ans.add(words[i]);
+            }
         }
         return ans;
     }
@@ -23,16 +26,24 @@ public class Word_SearchII {
         char[] w = word.toCharArray();
         for (int y=0; y<board.length; y++) {
             for (int x=0; x<board[y].length; x++) {
-                if (exist(board, y, x, w, 0)) return true;
+                if (exist(board, y, x, w, 0)) {
+                    return true;
+                }
             }
         }
         return false;
     }
 
     private boolean exist(char[][] board, int y, int x, char[] word, int i) {
-        if (i == word.length) return true;
-        if (y<0 || x<0 || y == board.length || x == board[y].length) return false;
-        if (board[y][x] != word[i]) return false;
+        if (i == word.length) {
+            return true;
+        }
+        if (y<0 || x<0 || y == board.length || x == board[y].length) {
+            return false;
+        }
+        if (board[y][x] != word[i]) {
+            return false;
+        }
         board[y][x] ^= 256;
         boolean exist = exist(board, y, x+1, word, i+1)
                 || exist(board, y, x-1, word, i+1)
@@ -44,8 +55,9 @@ public class Word_SearchII {
 
     public List<String> findWords(char[][] board, String[] words) {
         List<String> ans = new ArrayList<>();
-        if(board == null || board.length == 0 || words == null || words.length == 0)
+        if(board == null || board.length == 0 || words == null || words.length == 0) {
             return ans;
+        }
 
         TrieNode root = buildTrie(words);
         for (int i = 0; i < board.length; i++) {
@@ -59,7 +71,9 @@ public class Word_SearchII {
     public void dfs(char[][] board, int i, int j, TrieNode p, List<String> res)
     {
         char c = board[i][j];
-        if (c == '#' || p.next[c - 'a'] == null) return;    //标记Board这个位置是已经访问过，或者没有以这个字符开头的String
+        if (c == '#' || p.next[c - 'a'] == null) {
+            return;    //标记Board这个位置是已经访问过，或者没有以这个字符开头的String
+        }
         p = p.next[c - 'a'];
         if(p.word != null)   //通过Null来判断，找到一个string
         {
@@ -68,10 +82,18 @@ public class Word_SearchII {
         }
 
         board[i][j] = '#';  //有一个或多个String中的某个字符是board[i][j]
-        if(i > 0) dfs(board, i - 1, j, p, res);
-        if(j > 0) dfs(board, i, j - 1, p, res);
-        if(i < board.length - 1) dfs(board, i + 1, j, p, res);
-        if(i < board[0].length - 1) dfs(board, i, j + 1, p, res);
+        if(i > 0) {
+            dfs(board, i - 1, j, p, res);
+        }
+        if(j > 0) {
+            dfs(board, i, j - 1, p, res);
+        }
+        if(i < board.length - 1) {
+            dfs(board, i + 1, j, p, res);
+        }
+        if(i < board[0].length - 1) {
+            dfs(board, i, j + 1, p, res);
+        }
         board[i][j] = c;
     }
 
@@ -82,8 +104,9 @@ public class Word_SearchII {
             TrieNode p = root;  //所以要插入一个新的word的时候，要从root开始找word的第一个字母
             for (char c: word.toCharArray()) {
                 int i = c - 'a';
-                if(p.next[i] == null)
+                if(p.next[i] == null) {
                     p.next[i] = new TrieNode();
+                }
                 p = p.next[i];
             }
             p.word = word;  //不断往下插，最后的节点的word值是这个word

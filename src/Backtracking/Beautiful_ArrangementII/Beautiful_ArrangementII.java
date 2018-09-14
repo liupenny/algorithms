@@ -15,10 +15,11 @@ public class Beautiful_ArrangementII {
         {
             if(k > 1)  //不能是 >= 1,否则如果k=1，生成的结果k会>1
             {
-                if(k % 2 == 0)
+                if(k % 2 == 0) {
                     ans[cnt] = i++;
-                else
+                } else {
                     ans[cnt] = j--;
+                }
                 k--;
             }
             else  //这一步要考虑到：1-- 原要求k>1,减到剩1，这时候还要从后面取一个，否则结果k少1。 2--原k就是1，逆序从后面取即可
@@ -26,8 +27,9 @@ public class Beautiful_ArrangementII {
                 ans[cnt] = j--;
             }
         }
-        for (int num:ans)
+        for (int num:ans) {
             System.out.print(num + " ");
+        }
         return ans;
     }
 

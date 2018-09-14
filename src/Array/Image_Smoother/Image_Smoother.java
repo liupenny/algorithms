@@ -6,8 +6,9 @@ package Array.Image_Smoother;
 public class Image_Smoother {
     public int[][] imageSmoother(int[][] M)
     {
-        if(M == null || M.length == 0)
+        if(M == null || M.length == 0) {
             return new int[0][0];
+        }
         int row = M.length, col = M[0].length;
         int[][] res = new int[row][col];
 
@@ -81,18 +82,20 @@ public class Image_Smoother {
         int R = M.length, C = M[0].length;
         int[][] ans = new int[R][C];
 
-        for (int r = 0; r < R; ++r)
+        for (int r = 0; r < R; ++r) {
             for (int c = 0; c < C; ++c) {
                 int count = 0;
-                for (int nr = r-1; nr <= r+1; ++nr)
-                    for (int nc = c-1; nc <= c+1; ++nc) {
+                for (int nr = r - 1; nr <= r + 1; ++nr) {
+                    for (int nc = c - 1; nc <= c + 1; ++nc) {
                         if (0 <= nr && nr < R && 0 <= nc && nc < C) {  //这里只要一次判断即可
                             ans[r][c] += M[nr][nc];
                             count++;
                         }
                     }
+                }
                 ans[r][c] /= count;
             }
+        }
         return ans;
     }
 

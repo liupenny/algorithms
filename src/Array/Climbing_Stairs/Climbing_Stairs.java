@@ -6,8 +6,9 @@ package Array.Climbing_Stairs;
 public class Climbing_Stairs {
     //动态规划
     public int climbStairs(int n) {
-        if(n <= 0)
+        if(n <= 0) {
             return 0;
+        }
 
         int[] dp = new int[n+1];
         dp[1] = 1;

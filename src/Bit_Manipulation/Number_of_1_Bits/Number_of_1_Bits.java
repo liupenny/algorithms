@@ -6,11 +6,15 @@ package Bit_Manipulation.Number_of_1_Bits;
 public class Number_of_1_Bits {
     // you need to treat n as an unsigned value
     public int hammingWeight(int n) {
-        if(n==Integer.MAX_VALUE) return 1;
+        if(n==Integer.MAX_VALUE) {
+            return 1;
+        }
         int ans = 0;
         while (n!=0)
         {
-            if((n&1)==1)  ans++;
+            if((n&1)==1) {
+                ans++;
+            }
             n>>>=1;
         }
         return ans;

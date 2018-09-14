@@ -8,8 +8,9 @@ import java.util.*;
 
 public class Solution{
     public String mostCommonWord(String paragraph, String[] banned) {
-        if(paragraph == null || paragraph.length() == 0)
+        if(paragraph == null || paragraph.length() == 0) {
             return "";
+        }
 
         int ans = 0;
         paragraph = paragraph.replaceAll("\\pP","");

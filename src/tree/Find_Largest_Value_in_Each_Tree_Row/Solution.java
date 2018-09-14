@@ -10,8 +10,9 @@ import java.util.Queue;
 public class Solution {
     public List<Integer> largestValues(TreeNode root) {
         List<Integer> ans = new ArrayList<>();
-        if(root == null)
+        if(root == null) {
             return ans;
+        }
 
         LinkedList<TreeNode> queue = new LinkedList<>();
         TreeNode nowEnd = root, nextEnd = null, temp = root;
@@ -39,8 +40,9 @@ public class Solution {
                 nowEnd = nextEnd;
                 max = Integer.MIN_VALUE;
             }
-            else if (temp.val > max)
+            else if (temp.val > max) {
                 max = temp.val;
+            }
         }
         return ans;
     }
@@ -48,8 +50,9 @@ public class Solution {
     // bfs实现的层次遍历
     public List<Integer> largestValues_bfs(TreeNode root) {
         List<Integer> ans = new ArrayList<>();
-        if (root == null)
+        if (root == null) {
             return ans;
+        }
 
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
@@ -59,12 +62,15 @@ public class Solution {
 
             for (int i = 0; i < size; i++) {
                 TreeNode node = queue.poll();
-                if(node.val > max)
+                if(node.val > max) {
                     max = node.val;
-                if(node.left != null)
+                }
+                if(node.left != null) {
                     queue.add(node.left);
-                if(node.right != null)
+                }
+                if(node.right != null) {
                     queue.add(node.right);
+                }
             }
 
             ans.add(max);

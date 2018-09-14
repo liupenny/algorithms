@@ -10,8 +10,9 @@ import java.util.Map;
  */
 public class Kdiff_Pairs_in_an_Array {
     public int findPairs(int[] nums, int k) {
-        if(nums == null || nums.length == 0 || k < 0)
+        if(nums == null || nums.length == 0 || k < 0) {
             return 0;
+        }
 
         Map<Integer, Integer> map = new HashMap<>();
         for (int num: nums) {
@@ -24,33 +25,41 @@ public class Kdiff_Pairs_in_an_Array {
             if(k == 0)
             {
                 if(entry.getValue() >= 2) //不能用hashset，否则k==0的时候没法弄
-                    ans ++;  //只加一是因为不能有重复值
+                {
+                    ans++;  //只加一是因为不能有重复值
+                }
             }
             else
             {
                 if(map.containsKey(entry.getKey() + k))  //对于每一项都是往上找比他大的，所以不会重复计算
-                    ans ++;
+                {
+                    ans++;
+                }
             }
         }
         return ans;
     }
 
     public int findPairs1(int[] nums, int k) { //这里想的有问题，在一开始把重复的过滤掉只是过滤了相同开头的那些，但是第一个开头的可能后面会有重复的子段
-        if(nums == null || nums.length == 0)
+        if(nums == null || nums.length == 0) {
             return 0;
+        }
 
         Arrays.sort(nums);
-        if(nums[nums.length - 1] - nums[0] < k)
+        if(nums[nums.length - 1] - nums[0] < k) {
             return 0;
+        }
         int ans = 0;
         for (int i = 0; i < nums.length - 1; i++) {
-            if(i > 0 && nums[i] == nums[i-1])
+            if(i > 0 && nums[i] == nums[i-1]) {
                 continue;
+            }
             for (int j = i + 1; j < nums.length; j++) {
-                if(nums[j] - nums[i] > k)
+                if(nums[j] - nums[i] > k) {
                     break;
-                else if(nums[j] - nums[i] == k)
+                } else if(nums[j] - nums[i] == k) {
                     ans++;
+                }
             }
         }
         return ans;
@@ -60,20 +69,24 @@ public class Kdiff_Pairs_in_an_Array {
         Arrays.sort(nums);
         int res = 0;
         for(int i=0; i<nums.length-1; i++){
-            for(int j=i+1; j<nums.length; j++)
-                if(nums[j] - nums[i] == k) {
+            for(int j=i+1; j<nums.length; j++) {
+                if (nums[j] - nums[i] == k) {
                     res++;
                     break;
                 }
+            }
             while(i<nums.length-1 && nums[i] == nums[i+1]) //过滤重复值
+            {
                 i++;
+            }
         }
         return res;
     }
 
     public int findPairs3(int[] nums, int k) { //滑动窗口思想，在left -- right间找
-        if (nums == null || nums.length == 0 || k < 0)
+        if (nums == null || nums.length == 0 || k < 0) {
             return 0;
+        }
 
         Arrays.sort(nums);
         int ans = 0, left = 0, right = 1;
@@ -81,11 +94,11 @@ public class Kdiff_Pairs_in_an_Array {
         {
             int first = nums[left];
             int second = nums[right];
-            if(second - first < k)
+            if(second - first < k) {
                 right++;
-            else if(second - first > k)
+            } else if(second - first > k) {
                 left++;
-            else
+            } else
             {  //等于的时候就++，遇到重复的就一直往后移动left , right
                 ans++;
                 while (left<nums.length && nums[left]==first){
@@ -95,8 +108,9 @@ public class Kdiff_Pairs_in_an_Array {
                     right++;
                 }
             }
-            if(right == left)
+            if(right == left) {
                 right++;
+            }
         }
         return ans;
     }

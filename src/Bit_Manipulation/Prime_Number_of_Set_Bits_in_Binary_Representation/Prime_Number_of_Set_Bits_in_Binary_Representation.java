@@ -14,7 +14,9 @@ public class Prime_Number_of_Set_Bits_in_Binary_Representation {
 
         int res = 0;
         for (int i = L; i <= R ; i++) {
-            if(primes.contains(Integer.bitCount(i))) res += 1;
+            if(primes.contains(Integer.bitCount(i))) {
+                res += 1;
+            }
         }
         return res;
     }

@@ -4,8 +4,9 @@ package String.Masking_Personal_Information;/**
 
 public class Solution{
     public String maskPII(String S) {
-        if(S == null || S.length() == 0)
+        if(S == null || S.length() == 0) {
             return "";
+        }
 
         if(S.contains("@"))
         {

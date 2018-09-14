@@ -8,8 +8,9 @@ import java.util.Comparator;
  */
 public class Next_Permutation {
     public void nextPermutation(int[] nums) {
-        if(nums == null || nums.length == 0)
+        if(nums == null || nums.length == 0) {
             return;
+        }
 
         int i = nums.length - 2;
         while (i >= 0 && nums[i+1] <= nums[i])

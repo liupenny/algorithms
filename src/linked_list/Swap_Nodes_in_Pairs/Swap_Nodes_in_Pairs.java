@@ -10,7 +10,9 @@ import tools.ListNode;
 public class Swap_Nodes_in_Pairs {
     public ListNode swapPairs1(ListNode head) {
         if(head==null || head.next==null)  // 排除了0个和1个元素的情况
+        {
             return head;
+        }
         ListNode first,second;
         ListNode newhead = new ListNode(0), current = newhead;
         newhead.next = head;
@@ -28,7 +30,9 @@ public class Swap_Nodes_in_Pairs {
 
     public ListNode swapPairs2(ListNode head) {
         if(head==null || head.next==null)      // 没有节点/只有一个节点:不用交换，直接返回它即可。
+        {
             return head;
+        }
         ListNode tmp = head.next;
         head.next = swapPairs2(tmp.next);  //第三个节点当参数
         tmp.next = head;

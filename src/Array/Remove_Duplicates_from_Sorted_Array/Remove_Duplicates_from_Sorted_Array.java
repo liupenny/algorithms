@@ -6,8 +6,9 @@ package Array.Remove_Duplicates_from_Sorted_Array;
 public class Remove_Duplicates_from_Sorted_Array {
     public int removeDuplicates(int[] nums)
     {
-        if(nums == null || nums.length == 0)
+        if(nums == null || nums.length == 0) {
             return 0;
+        }
 //        if(nums.length == 2)
 //        {
 //            if(nums[0] == nums[1])
@@ -19,8 +20,9 @@ public class Remove_Duplicates_from_Sorted_Array {
         int newNumpos = 0;
         for (int i = 1; i < nums.length; i++)
         {
-            if(nums[i] != nums[newNumpos])
+            if(nums[i] != nums[newNumpos]) {
                 swap(nums, ++newNumpos, i);
+            }
         }
 
         for (int i = 0; i <= newNumpos; i++)

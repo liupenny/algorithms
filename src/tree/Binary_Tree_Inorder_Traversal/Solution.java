@@ -13,8 +13,9 @@ public class Solution{
     // 递归写的
     public List<Integer> inorderTraversal_recursive(TreeNode root) {
         List<Integer> ans = new ArrayList<>();
-        if(root == null)
+        if(root == null) {
             return ans;
+        }
 
         inorder(root, ans);
         return ans;
@@ -22,8 +23,9 @@ public class Solution{
 
     public void inorder(TreeNode root, List<Integer> ans)
     {
-        if(root == null)
+        if(root == null) {
             return;
+        }
 
         inorder(root.left, ans);
         ans.add(root.val);
@@ -32,8 +34,9 @@ public class Solution{
 
     public List<Integer> inorderTraversal_iterative(TreeNode root) {
         List<Integer> ans = new ArrayList<>();
-        if(root == null)
+        if(root == null) {
             return ans;
+        }
 
         inorder(root, ans);
         return ans;

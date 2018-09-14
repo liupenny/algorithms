@@ -9,8 +9,9 @@ import java.util.List;
  */
 public class Triangle {
     public int minimumTotal(List<List<Integer>> triangle) {
-        if(triangle == null || triangle.size() == 0)
+        if(triangle == null || triangle.size() == 0) {
             return 0;
+        }
 
         int size = triangle.get(triangle.size() - 1).size();  //dp数组，长度是三角形最后一行的长度
         int ans = Integer.MAX_VALUE;

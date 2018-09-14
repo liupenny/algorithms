@@ -9,13 +9,17 @@ import java.util.TreeSet;
 public class Contains_DuplicateIII {
     public boolean containsNearbyAlmostDuplicate(int[] nums, int k, int t) {
         //input check
-        if(k<1 || t<0 || nums==null || nums.length<2) return false;
+        if(k<1 || t<0 || nums==null || nums.length<2) {
+            return false;
+        }
 
         SortedSet<Long> set = new TreeSet<Long>();
 
         for(int j=0; j<nums.length; j++) {
             SortedSet<Long> subSet =  set.subSet((long)nums[j]-t, (long)nums[j]+t+1);
-            if(!subSet.isEmpty()) return true;
+            if(!subSet.isEmpty()) {
+                return true;
+            }
 
             if(j>=k) {
                 set.remove((long)nums[j-k]);

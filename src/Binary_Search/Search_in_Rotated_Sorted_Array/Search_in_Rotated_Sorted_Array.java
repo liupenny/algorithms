@@ -9,10 +9,12 @@ public class Search_in_Rotated_Sorted_Array {
     public int search(int[] nums, int target) {
         int pivot=0;
         int left, right, mid;
-        if (nums.length == 0)
+        if (nums.length == 0) {
             return -1;
-        if (nums.length == 1)
-            return nums[0]==target?0:-1;
+        }
+        if (nums.length == 1) {
+            return nums[0] == target ? 0 : -1;
+        }
         for (int i=1; i<nums.length; i++)  //找到分界点pivot
         {
             if(nums[i] < nums[i-1])
@@ -32,18 +34,20 @@ public class Search_in_Rotated_Sorted_Array {
             left = pivot + 1;
             right = nums.length -1;
         }
-        else
+        else {
             return -1;
+        }
 
         while (left <= right)  //当这里是 《 的时候，下面就应该是 mid-1 且 mid+1；如果是 < ,那就是 mid-1 或者 mid+1
         {
             mid = left + (right - left)/2;
-            if (nums[mid] == target)
+            if (nums[mid] == target) {
                 return mid;
-            else if (nums[mid] > target)
+            } else if (nums[mid] > target) {
                 right = mid - 1;
-            else
+            } else {
                 left = mid + 1;
+            }
         }
         return -1;
     }
@@ -53,7 +57,9 @@ public class Search_in_Rotated_Sorted_Array {
         int hi = A.length - 1;
         while (lo < hi) {
             int mid = (lo + hi) / 2;
-            if (A[mid] == target) return mid;
+            if (A[mid] == target) {
+                return mid;
+            }
 
             if (A[lo] <= A[mid]) { //左半部分一定是有序的 子集！
                 if (target >= A[lo] && target < A[mid]) {
@@ -74,7 +80,7 @@ public class Search_in_Rotated_Sorted_Array {
 
     public static void main(String[] algs)
     {
-        int nums[] = {3,4,5,6,1,2};
+        int[] nums = {3, 4, 5, 6, 1, 2};
         int target = 2;
         Search_in_Rotated_Sorted_Array test = new Search_in_Rotated_Sorted_Array();
         System.out.println(test.search(nums,target));

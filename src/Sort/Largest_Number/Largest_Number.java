@@ -11,19 +11,26 @@ public class Largest_Number {
     public String largestNumber(int[] nums)
     {
         if(nums==null || nums.length==0)  // 处理异常情况
+        {
             return "";
-        if(nums.length == 1)
+        }
+        if(nums.length == 1) {
             return Integer.toString(nums[0]);
+        }
 
         String[] numstring = new String[nums.length];
-        for (int i=0; i< nums.length; i++)
+        for (int i=0; i< nums.length; i++) {
             numstring[i] = Integer.toString(nums[i]);
+        }
         Arrays.sort(numstring,new StringCompartor());  //比较排序
         if(numstring[0].charAt(0) == '0')  // 因为已经排好序，所以如果第一个就是0那就没必要了
+        {
             return "0";
+        }
         StringBuilder ans = new StringBuilder();
-        for(String item:numstring)
+        for(String item:numstring) {
             ans.append(item);
+        }
         return ans.toString();
     }
 

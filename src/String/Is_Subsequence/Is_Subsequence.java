@@ -5,21 +5,24 @@ package String.Is_Subsequence;
  */
 public class Is_Subsequence {
     public boolean isSubsequence(String s, String t) {
-        if(s.length() == 0)
+        if(s.length() == 0) {
             return true;
+        }
 
         int index = t.indexOf(s.charAt(0));
         if(index != -1) {
             int j = 0;
             for (j = 1; j < s.length(); j++) {
                 int nextIndex = t.indexOf(s.charAt(j), index + 1); //后一个字符出现的位置总在前一个字符位置之后
-                if (nextIndex == -1)
+                if (nextIndex == -1) {
                     break;
-                else if (nextIndex > index)
+                } else if (nextIndex > index) {
                     index = nextIndex;
+                }
             }
-            if( j == s.length())
+            if( j == s.length()) {
                 return true;
+            }
         }
         return false;
     }

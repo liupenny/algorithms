@@ -6,8 +6,9 @@ package Array.Rotate_Array;
 public class Rotate_Array {
     // 暴力旋转1
     public void rotate(int[] nums, int k) {
-        if(nums == null || nums.length == 0 || k == 0)
+        if(nums == null || nums.length == 0 || k == 0) {
             return;
+        }
 
         int prev;
         for (int i = 0; i < k; i++) { //轮换k次
@@ -38,8 +39,9 @@ public class Rotate_Array {
 
     // 使用额外数组
     public void rotate3(int[] nums, int k) {
-        if (nums == null || nums.length == 0 || k == 0)
+        if (nums == null || nums.length == 0 || k == 0) {
             return;
+        }
 
         int[] num = new int[nums.length];
         for (int i = 0; i < nums.length; i++) { //这里是对旧数组的循环
@@ -70,8 +72,9 @@ public class Rotate_Array {
 
     //  Using Reverse先翻转前n-k个，再反转后面k个，在整体翻转
     public void rotate3_reverse(int[] nums, int k) {
-        if (nums == null || nums.length == 0 || k == 0)
+        if (nums == null || nums.length == 0 || k == 0) {
             return;
+        }
 
         k %= nums.length;
         reverse(nums, 0, nums.length - 1);

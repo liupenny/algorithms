@@ -5,8 +5,9 @@ package Array.Global_and_Local_Inversions;
  */
 public class Global_and_Local_Inversions {
     public boolean isIdealPermutation(int[] A) {
-        if (A == null || A.length <= 1)
+        if (A == null || A.length <= 1) {
             return true;
+        }
 
         return mergeMethod(A);
     }
@@ -15,8 +16,9 @@ public class Global_and_Local_Inversions {
     public boolean indexoffect(int[] array)
     {
         for (int i = 0; i < array.length; i++) {
-            if(Math.abs((i - array[i])) > 1)
+            if(Math.abs((i - array[i])) > 1) {
                 return false;
+            }
         }
         return true;
     }
@@ -31,8 +33,9 @@ public class Global_and_Local_Inversions {
                 array[i - 1] = array[i];
                 array[i] = tmp;
             }
-            else if(array[i - 1] != (i - 1))
+            else if(array[i - 1] != (i - 1)) {
                 return false;
+            }
         }
         return true;
     }
@@ -42,8 +45,9 @@ public class Global_and_Local_Inversions {
     {
         int max = array[0];
         for (int i = 2; i < array.length; i++) {
-            if(array[i] < max)
+            if(array[i] < max) {
                 return false;
+            }
             max = Math.max(max, array[i]);
         }
         return true;
@@ -54,8 +58,9 @@ public class Global_and_Local_Inversions {
     {
         int local = 0;
         for (int i = 1; i < array.length; i++) {
-            if(array[i] < array[i-1])
+            if(array[i] < array[i-1]) {
                 local++;
+            }
         }
         int global = findGlobalInversion(array);
         System.out.println("global:" + global);
@@ -75,8 +80,9 @@ public class Global_and_Local_Inversions {
     // 求全局逆序对
     public int findGlobalInversion(int[] array, int[] copy, int start, int end)
     {
-        if (start == end)
+        if (start == end) {
             return 0;
+        }
         //递归调用自己
         int mid = start + (end - start) / 2;
         int leftAns = findGlobalInversion(copy, array, start, mid);

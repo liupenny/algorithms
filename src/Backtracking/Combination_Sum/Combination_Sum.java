@@ -10,8 +10,9 @@ public class Combination_Sum {
     public List<List<Integer>> combinationSum(int[] candidates, int target)
     {
         List<List<Integer>> res = new ArrayList<>();
-        if(candidates == null || candidates.length == 0)
+        if(candidates == null || candidates.length == 0) {
             return res;
+        }
 
         ArrayList<Integer> temp = new ArrayList<Integer>();
         help(0,target, candidates, temp, res);
@@ -20,8 +21,9 @@ public class Combination_Sum {
 
     public void help(int start, int remain, int[] candidates, ArrayList<Integer> list, List<List<Integer>> res)
     {
-        if (remain < 0)
+        if (remain < 0) {
             return;
+        }
         if (remain == 0)
         {
             res.add(new ArrayList<>(list));

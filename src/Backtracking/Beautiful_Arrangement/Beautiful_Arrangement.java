@@ -8,8 +8,9 @@ public class Beautiful_Arrangement {
     public int countArrangement(int N)  //暴力法
     {
         int[] nums = new int[N];
-        for (int i = 1; i <= N; i++)
-            nums[i-1] = i;
+        for (int i = 1; i <= N; i++) {
+            nums[i - 1] = i;
+        }
         permute(nums,0);
         return count;
     }
@@ -23,8 +24,9 @@ public class Beautiful_Arrangement {
 
     public void calculate(int N, int pos, boolean[] visited) //visited[i]记录数字i是否被访问过
     {
-        if(pos > N)
+        if(pos > N) {
             count++;
+        }
         for (int i = 1; i <= N; i++)
         {
             if(!visited[i] && (pos % i == 0 || i % pos == 0))
@@ -43,8 +45,9 @@ public class Beautiful_Arrangement {
             int i;
             for(i = 1; i <= nums.length; i++)
             {
-                if(nums[i-1] % i != 0 && i % nums[-1] != 0)
+                if(nums[i-1] % i != 0 && i % nums[-1] != 0) {
                     break;
+                }
             }
             if( i == nums.length + 1)
             {

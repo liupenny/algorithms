@@ -6,8 +6,9 @@ package Array.Maximum_Product_Subarray;
 public class Maximum_Product_Subarray {
     public int maxProduct(int[] nums)
     {
-        if(nums == null || nums.length == 0)
+        if(nums == null || nums.length == 0) {
             return 0;
+        }
 
         int maxLast = nums[0], minLast = nums[0];
         int res = nums[0];
@@ -24,8 +25,9 @@ public class Maximum_Product_Subarray {
 
     public int maxProduct1(int[] nums)
     {
-        if(nums == null || nums.length == 0)
+        if(nums == null || nums.length == 0) {
             return 0;
+        }
 
         int maxAll = nums[0];       //global maximum
         int maxLast = nums[0];      //maximum including last element

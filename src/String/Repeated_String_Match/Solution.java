@@ -4,17 +4,21 @@ package String.Repeated_String_Match;/**
 
 public class Solution{
     public int repeatedStringMatch(String A, String B) {
-        if(A == null || A.length() == 0)
+        if(A == null || A.length() == 0) {
             return -1;
+        }
 
         int times = 1;
         StringBuilder stringBuilder = new StringBuilder(A);
-        for(;stringBuilder.length() < B.length();times++)
+        for(;stringBuilder.length() < B.length();times++) {
             stringBuilder.append(A);
-        if(stringBuilder.indexOf(B) >= 0)
+        }
+        if(stringBuilder.indexOf(B) >= 0) {
             return times;
-        if(stringBuilder.append(A).indexOf(B) >= 0)
-            return times+1;
+        }
+        if(stringBuilder.append(A).indexOf(B) >= 0) {
+            return times + 1;
+        }
         return -1;
     }
 

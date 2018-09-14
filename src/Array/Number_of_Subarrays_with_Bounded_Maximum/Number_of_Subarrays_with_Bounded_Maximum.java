@@ -6,8 +6,9 @@ package Array.Number_of_Subarrays_with_Bounded_Maximum;
 public class Number_of_Subarrays_with_Bounded_Maximum {
     public int numSubarrayBoundedMax(int[] A, int L, int R)
     {
-        if(A == null || A.length == 0 || L > R)
+        if(A == null || A.length == 0 || L > R) {
             return 0;
+        }
 
         int head = 0, count = 0, res = 0;
 

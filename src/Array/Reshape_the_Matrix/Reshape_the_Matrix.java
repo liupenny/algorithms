@@ -2,7 +2,9 @@ package Array.Reshape_the_Matrix;
 
 public class Reshape_the_Matrix {
     public int[][] matrixReshape(int[][] nums, int r, int c) {
-        if(r*c != nums.length*nums[0].length) return nums;
+        if(r*c != nums.length*nums[0].length) {
+            return nums;
+        }
 
         int[][] ans = new int[r][c];
         int row = nums.length;

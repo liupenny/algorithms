@@ -10,8 +10,9 @@ import java.util.Set;
 
 public class Solution{
     public String toGoatLatin(String S) {
-        if(S == null || S.length() == 0)
+        if(S == null || S.length() == 0) {
             return S;
+        }
 
         String[] array = S.split(" ");
         Set<Character> set = new HashSet<Character>(Arrays.asList('a','e','i','o','u','A','E','I','O','U'));
@@ -19,8 +20,9 @@ public class Solution{
         StringBuilder res = new StringBuilder();
 
         for (int i = 0; i < array.length; i++) {
-            if (array[i].length() > 1 && !set.contains(array[i].charAt(0)))
-                    array[i] = array[i].substring(1, array[i].length()) + array[i].substring(0,1);
+            if (array[i].length() > 1 && !set.contains(array[i].charAt(0))) {
+                array[i] = array[i].substring(1, array[i].length()) + array[i].substring(0, 1);
+            }
             array[i] += "ma";
             array[i] += a.append("a").toString();
             res.append(" " + array[i]);

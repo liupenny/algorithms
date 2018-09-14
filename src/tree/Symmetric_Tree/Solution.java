@@ -13,8 +13,9 @@ import java.util.Queue;
 
 public class Solution{
     public boolean isSymmetric(TreeNode root) {
-        if(root == null)
+        if(root == null) {
             return true;
+        }
 
         Queue<TreeNode> queue = new LinkedList<>();
         List<String> tmp = new ArrayList<>();
@@ -40,8 +41,9 @@ public class Solution{
 
             int len = tmp.size();
             for (int i = 0; i < len/2; i++) {
-                if(!tmp.get(i).equals(tmp.get(len - 1 - i)))
+                if(!tmp.get(i).equals(tmp.get(len - 1 - i))) {
                     return false;
+                }
             }
             tmp.clear();
         }

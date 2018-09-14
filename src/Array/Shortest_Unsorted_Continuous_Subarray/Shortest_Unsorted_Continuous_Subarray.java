@@ -8,8 +8,9 @@ import java.util.Arrays;
 public class Shortest_Unsorted_Continuous_Subarray {
     // 克隆一个数组，对他进行排序，比较一下
     public int findUnsortedSubarray(int[] nums) {
-        if(nums == null || nums.length == 0)
+        if(nums == null || nums.length == 0) {
             return 0;
+        }
 
         int[] num = nums.clone();  //这里要克隆，不然会修改原来数组
         Arrays.sort(num);
@@ -26,8 +27,9 @@ public class Shortest_Unsorted_Continuous_Subarray {
 
     //利用数组性质，寻找数值本来该在的位置
     public int findUnsortedSubarray1(int[] nums) {
-        if (nums == null || nums.length == 0)
+        if (nums == null || nums.length == 0) {
             return 0;
+        }
 
         int begin = -1, end = -2;
         int min = nums[nums.length - 1], max = nums[0];
@@ -36,10 +38,12 @@ public class Shortest_Unsorted_Continuous_Subarray {
             max = Math.max(max, nums[i]);
             min = Math.min(min, nums[nums.length - 1 - i]);
 
-            if(max > nums[i])
+            if(max > nums[i]) {
                 end = i;
-            if(nums[nums.length - 1 - i] > min)
+            }
+            if(nums[nums.length - 1 - i] > min) {
                 begin = nums.length - 1 - i;
+            }
         }
         return end - begin + 1; //// if array is already in ascending order, -2 - (-1) + 1 = 0
     }
@@ -48,26 +52,32 @@ public class Shortest_Unsorted_Continuous_Subarray {
         int min = Integer.MAX_VALUE, max = Integer.MIN_VALUE;
         boolean flag = false;
         for (int i = 1; i < nums.length; i++) {
-            if (nums[i] < nums[i - 1])
+            if (nums[i] < nums[i - 1]) {
                 flag = true;
-            if (flag)
+            }
+            if (flag) {
                 min = Math.min(min, nums[i]);
+            }
         }
         flag = false;
         for (int i = nums.length - 2; i >= 0; i--) {
-            if (nums[i] > nums[i + 1])
+            if (nums[i] > nums[i + 1]) {
                 flag = true;
-            if (flag)
+            }
+            if (flag) {
                 max = Math.max(max, nums[i]);
+            }
         }
         int l, r;
         for (l = 0; l < nums.length; l++) {
-            if (min < nums[l])
+            if (min < nums[l]) {
                 break;
+            }
         }
         for (r = nums.length - 1; r >= 0; r--) {
-            if (max > nums[r])
+            if (max > nums[r]) {
                 break;
+            }
         }
         return r - l < 0 ? 0 : r - l + 1;
     }

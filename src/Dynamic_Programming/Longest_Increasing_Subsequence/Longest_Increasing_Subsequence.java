@@ -6,8 +6,9 @@ package Dynamic_Programming.Longest_Increasing_Subsequence;
 public class Longest_Increasing_Subsequence {
     public int lengthOfLIS(int[] nums)
     {
-        if(nums == null || nums.length == 0)
+        if(nums == null || nums.length == 0) {
             return 0;
+        }
 
         int[] dp = new int[nums.length];
         int len = 0;
@@ -17,22 +18,25 @@ public class Longest_Increasing_Subsequence {
             while (i != j)
             {
                 int mid = (i + j)/2;
-                if( dp[mid] < num)
+                if( dp[mid] < num) {
                     i = mid + 1;
-                else
+                } else {
                     j = mid;
+                }
             }
             dp[i] = num;
-            if(i == len)
+            if(i == len) {
                 ++len;
+            }
         }
         return len;
     }
 
     public int lengthOfLIS1(int[] nums)
     {
-        if (nums == null || nums.length == 0)
+        if (nums == null || nums.length == 0) {
             return 0;
+        }
 
         int[] dp = new int[nums.length];
         int len = 0;
@@ -42,8 +46,9 @@ public class Longest_Increasing_Subsequence {
             int temp = 0;
             for (int j = 0; j < i; j++)
             {
-                if(nums[i] > nums[j])
+                if(nums[i] > nums[j]) {
                     temp = Math.max(temp, dp[j]);
+                }
             }
             dp[i] = temp + 1;
             len = Math.max(len, dp[i]);

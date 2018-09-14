@@ -4,8 +4,9 @@ package String.To_Lower_Case;/**
 
 public class Solution{
     public String toLowerCase(String str) {
-        if(str == null || str.length() == 0)
+        if(str == null || str.length() == 0) {
             return "";
+        }
 
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < str.length(); i++) {
@@ -15,8 +16,9 @@ public class Solution{
                 // sb不认得 c+32是整数还是字符，所以要指定
                 sb.append((char)(c + 32));
             }
-            else
+            else {
                 sb.append(c);
+            }
         }
         return sb.toString();
     }

@@ -6,8 +6,9 @@ package Array.Best_Time_to_Buy_and_Sell_StockIII;
 public class Best_Time_to_Buy_and_Sell_StockIII {
     public int maxProfit(int[] prices)
     {
-        if (prices == null || prices.length == 0)
+        if (prices == null || prices.length == 0) {
             return 0;
+        }
 
         int[] local = new int[3]; //每一天都算一下当前天数只进行2次交易
         int[] global = new int[3];
@@ -26,8 +27,9 @@ public class Best_Time_to_Buy_and_Sell_StockIII {
 
     public int maxProfit1(int[] prices)
     {
-        if (prices == null || prices.length <= 1)
+        if (prices == null || prices.length <= 1) {
             return 0;
+        }
         int profit = 0;
         int min = prices[0];
         int[] arrFor = new int[prices.length];
@@ -55,8 +57,9 @@ public class Best_Time_to_Buy_and_Sell_StockIII {
 
     public int maxProfit2(int[] prices) 
     {
-        if (prices == null || prices.length <= 1)
+        if (prices == null || prices.length <= 1) {
             return 0;
+        }
         
         int buy1 = Integer.MIN_VALUE, buy2 = Integer.MIN_VALUE;
         int sell1 = 0, sell2 = 0;

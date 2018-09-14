@@ -15,8 +15,9 @@ public class Solution{
     int NN;
 
     public int[] sumOfDistancesInTree(int N, int[][] edges) {
-        if(N == 0 || edges == null || edges.length == 0)
+        if(N == 0 || edges == null || edges.length == 0) {
             return new int[0];
+        }
 
         tree = new ArrayList<>();
         ans = new int[N];
@@ -38,20 +39,22 @@ public class Solution{
     }
 
     public void dfs(int node, int parent) {
-        for (int child: tree.get(node))
+        for (int child: tree.get(node)) {
             if (child != parent) {
                 dfs(child, node);
                 count[node] += count[child];
                 ans[node] += ans[child] + count[child];
             }
+        }
     }
 
     public void dfs2(int node, int parent) {
-        for (int child: tree.get(node))
+        for (int child: tree.get(node)) {
             if (child != parent) {
                 ans[child] = ans[node] - count[child] + NN - count[child];
                 dfs2(child, node);
             }
+        }
     }
 
     public static void main(String[] args)

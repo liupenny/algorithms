@@ -6,8 +6,9 @@ package Binary_Search.Sqrtx;
 public class Sqrtx {
     public int mySqrt(int x) {  //牛顿法
         long r = x;
-        while (r*r > x)
-            r = (r + x/r) / 2;
+        while (r*r > x) {
+            r = (r + x / r) / 2;
+        }
         return (int) r;
     }
 
@@ -32,29 +33,35 @@ public class Sqrtx {
     }
 
     public int mySqrt2(int x) {
-        if(x==0) return 0;
+        if(x==0) {
+            return 0;
+        }
         long left = 0, right = x, mid;
         while (left < right)
         {
             mid = left + (right - left + 1)/2;  //这里用+1会导致mid越界
-            if (x/mid >= mid)
+            if (x/mid >= mid) {
                 left = mid;
-            else
+            } else {
                 right = mid - 1;
+            }
         }
         return right*right<=x?(int)right:(int)left;
     }
 
     public int mySqrt3(int x) {  //最开始自己写的错的
-        if(x==0) return 0;
+        if(x==0) {
+            return 0;
+        }
         int left = 0, right = x, mid;
         while (left + 1 < right)
         {
             mid = left + (right - left)/2;  //这里用+1会导致mid越界
-            if (x/mid >= mid)
+            if (x/mid >= mid) {
                 left = mid;
-            else
+            } else {
                 right = mid - 1;
+            }
         }
         return right;
     }

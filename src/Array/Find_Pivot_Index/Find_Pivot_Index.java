@@ -5,8 +5,9 @@ package Array.Find_Pivot_Index;
  */
 public class Find_Pivot_Index {
     public int pivotIndex(int[] nums) {
-        if(nums == null || nums.length == 0)
+        if(nums == null || nums.length == 0) {
             return -1;
+        }
 
         int sum = 0;
         for (int num:nums) {
@@ -16,12 +17,14 @@ public class Find_Pivot_Index {
         int leftSum = 0;
         for (int i = 0; i < nums.length; i++)
         {
-            if(i == 0)
+            if(i == 0) {
                 leftSum = 0;
-            else
-                leftSum += nums[i-1];
-            if(leftSum == sum - leftSum - nums[i])
+            } else {
+                leftSum += nums[i - 1];
+            }
+            if(leftSum == sum - leftSum - nums[i]) {
                 return i;
+            }
         }
         return -1;
     }

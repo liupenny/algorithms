@@ -5,8 +5,9 @@ package Array.Best_Time_to_Buy_and_Sell_Stock_with_Cooldown;
  */
 public class Best_Time_to_Buy_and_Sell_Stock_with_Cooldown {
     public int maxProfit(int[] prices) {
-        if(prices == null || prices.length == 0)
+        if(prices == null || prices.length == 0) {
             return 0;
+        }
         int T_ik0_pre = 0, T_ik0 = 0, T_ik1 = Integer.MIN_VALUE;
         for (int price: prices)
         {

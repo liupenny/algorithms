@@ -2,7 +2,9 @@ package Dynamic_Programming._2Keys_Keyboard;
 
 public class _2Keys_Keyboard {
     public int minSteps(int n) {
-        if(n<1 || n>1000) return 0;
+        if(n<1 || n>1000) {
+            return 0;
+        }
 
         int res = 0;
         for (int i = 2; i <= n; i++)

@@ -7,7 +7,9 @@ import tools.TreeNode;
 public class Count_Complete_Tree_Nodes {   //root所在的层为1
     public int countNodes(TreeNode root)
     {
-        if(root == null) return 0;
+        if(root == null) {
+            return 0;
+        }
         return bs(root, 1, MostLeftLevel(root,1));
     }
 
@@ -19,11 +21,14 @@ public class Count_Complete_Tree_Nodes {   //root所在的层为1
      * @return
      */
     {
-        if(level == depth) return 1;
-        if(MostLeftLevel(root.right,level+1) == depth)
-            return (1<<(depth - level)) + bs(root.right, level+1, depth);
-        else
-            return (1<<(depth - level - 1)) + bs(root.left, level + 1, depth);
+        if(level == depth) {
+            return 1;
+        }
+        if(MostLeftLevel(root.right,level+1) == depth) {
+            return (1 << (depth - level)) + bs(root.right, level + 1, depth);
+        } else {
+            return (1 << (depth - level - 1)) + bs(root.left, level + 1, depth);
+        }
     }
 
 

@@ -86,8 +86,9 @@ public class Solution{
         //对表达式的解析，
         if (exp.charAt(0) != '(') {
             // just a number or a symbol
-            if (Character.isDigit(exp.charAt(0)) || exp.charAt(0) == '-')
+            if (Character.isDigit(exp.charAt(0)) || exp.charAt(0) == '-') {
                 return Integer.parseInt(exp);
+            }
             return parent.get(exp);
         }
         // create a new scope, add add all the previous values to it
@@ -100,8 +101,9 @@ public class Solution{
         } else if (exp.startsWith("(m")) { // mult
             return eval(tokens.get(0), map) * eval(tokens.get(1), map);
         } else { // 因为是let表达式，所以每隔一位是一个变量，这里i就是遍历，i+1是这个变量的值。map每隔一个都会用val=eval(token(i+1))获取变量的值，然后map(token(i),val)放进去.
-            for (int i = 0; i < tokens.size() - 2; i += 2)
+            for (int i = 0; i < tokens.size() - 2; i += 2) {
                 map.put(tokens.get(i), eval(tokens.get(i + 1), map));
+            }
             //最后一步就是let表达式的返回值。
             return eval(tokens.get(tokens.size() - 1), map);
         }
@@ -114,8 +116,12 @@ public class Solution{
         int par = 0;
         StringBuilder sb = new StringBuilder();
         for (char c: str.toCharArray()) {
-            if (c == '(') par++;
-            if (c == ')') par--;
+            if (c == '(') {
+                par++;
+            }
+            if (c == ')') {
+                par--;
+            }
             if (par == 0 && c == ' ') {
                 res.add(new String(sb));
                 sb = new StringBuilder();
@@ -123,7 +129,9 @@ public class Solution{
                 sb.append(c);
             }
         }
-        if (sb.length() > 0) res.add(new String(sb));
+        if (sb.length() > 0) {
+            res.add(new String(sb));
+        }
         return res;
     }
 

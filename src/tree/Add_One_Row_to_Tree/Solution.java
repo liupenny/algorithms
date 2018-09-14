@@ -11,8 +11,9 @@ import java.util.Queue;
 
 public class Solution{
     public TreeNode addOneRow(TreeNode root, int v, int d) {
-        if(root == null || d < 1)
+        if(root == null || d < 1) {
             return root;
+        }
 
         if (d == 1) {
             TreeNode newroot = new TreeNode(v);
@@ -28,10 +29,12 @@ public class Solution{
             int size = queue.size();
             for (int i = 0; i < size; i++) {
                 TreeNode temp = queue.poll();
-                if (temp.left != null)
+                if (temp.left != null) {
                     queue.add(temp.left);
-                if (temp.right != null)
+                }
+                if (temp.right != null) {
                     queue.add(temp.right);
+                }
             }
             level++;
         }
@@ -64,8 +67,9 @@ public class Solution{
 
     // depth就是当前的深度
     public void insert(int val, TreeNode node, int depth, int d) {
-        if (node == null)
+        if (node == null) {
             return;
+        }
         if (depth == d - 1) {
             TreeNode t = node.left;
             node.left = new TreeNode(val);

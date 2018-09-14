@@ -4,8 +4,9 @@ package String.Add_Binary;/**
 
 public class Solution{
     public String addBinary(String a, String b) {
-        if(a == null || b == null || a.length() == 0 || b.length() == 0)
+        if(a == null || b == null || a.length() == 0 || b.length() == 0) {
             return (a == null || a.length() == 0) ? b : a;
+        }
 
         int carry = 0;
         StringBuilder stringBuilder = new StringBuilder();
@@ -17,8 +18,9 @@ public class Solution{
             stringBuilder.append((aDigit + bDigit + carry)%2);
             carry = (aDigit + bDigit + carry)/2;
         }
-        if(carry > 0)
+        if(carry > 0) {
             stringBuilder.append(carry);
+        }
 
         return stringBuilder.reverse().toString();
     }

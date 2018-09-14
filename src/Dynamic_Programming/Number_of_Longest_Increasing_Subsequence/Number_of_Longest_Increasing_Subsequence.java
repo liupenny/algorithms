@@ -9,8 +9,9 @@ public class Number_of_Longest_Increasing_Subsequence {
     public int findNumberOfLIS(int[] nums)
     {
         int N = nums.length;
-        if(N <= 1)
+        if(N <= 1) {
             return N;
+        }
 
         int[] length = new int[N];  //lengths[i] = 以nums[i]结尾的最长序列的长度
         int[] count = new int[N];   //count[i] = 以nums[i]结尾的最长序列的个数
@@ -42,8 +43,9 @@ public class Number_of_Longest_Increasing_Subsequence {
         }
         for (int i = 0; i < N; i++)  //把这个长度的都加起来
         {
-            if(length[i] == longest)
+            if(length[i] == longest) {
                 ans += count[i];
+            }
         }
         return ans;
     }

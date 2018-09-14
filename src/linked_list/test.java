@@ -21,8 +21,9 @@ public class test {
             int i = 0;
             while (i<lists.length)
             {
-                if (lists[i]!=null)
+                if (lists[i]!=null) {
                     heap.add(lists[i]);
+                }
                 i++;
             }
         }

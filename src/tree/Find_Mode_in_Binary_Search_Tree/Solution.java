@@ -11,8 +11,9 @@ import java.util.*;
 public class Solution{
     int biggest;
     public int[] findMode(TreeNode root) {
-        if(root == null)
+        if(root == null) {
             return new int[0];
+        }
 
         biggest = 0;
         HashMap<Integer, Integer> ans = new HashMap();
@@ -22,8 +23,9 @@ public class Solution{
         while (iterator.hasNext())
         {
             Map.Entry<Integer, Integer> entry = iterator.next();
-            if(entry.getValue().equals(biggest))
+            if(entry.getValue().equals(biggest)) {
                 ret.add(entry.getKey());
+            }
         }
         int[] ints = new int[ret.size()];
         for (int i = 0; i < ret.size(); i++) {
@@ -35,18 +37,20 @@ public class Solution{
 
     public void helper(TreeNode root, HashMap<Integer, Integer> ans)
     {
-        if(root == null)
+        if(root == null) {
             return;
-        else
+        } else
         {
             ans.put(root.val, ans.getOrDefault(root.val, 0) + 1);
             biggest = Math.max(biggest, ans.get(root.val));
         }
 
-        if(root.left != null)
+        if(root.left != null) {
             helper(root.left, ans);
-        if(root.right != null)
+        }
+        if(root.right != null) {
             helper(root.right, ans);
+        }
     }
 
     // 中序遍历，

@@ -4,8 +4,9 @@ package String.Custom_Sort_String;/**
 
 public class Solution{
     public String customSortString(String S, String T) {
-        if(S == null || T == null)
+        if(S == null || T == null) {
             return T;
+        }
 
         // s和t共有的字符串
         StringBuilder common = new StringBuilder();
@@ -28,8 +29,9 @@ public class Solution{
             {
                 common.insert(index, leftT.charAt(i));
             }
-            else
+            else {
                 uncommon.append(leftT.charAt(i));
+            }
         }
 
         return common.toString() + uncommon.toString();

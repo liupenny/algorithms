@@ -41,8 +41,9 @@ public class Unique_PathsII {
         {
             for (int j = 1; j < col; j++)
             {
-                if(obstacleGrid[i][j] != 1)
-                    dp[i][j] = dp[i-1][j] + dp[i][j-1];
+                if(obstacleGrid[i][j] != 1) {
+                    dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
+                }
             }
         }
 

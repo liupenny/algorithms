@@ -20,8 +20,9 @@ public class Find_Right_Interval {
         int[] ans = new int[intervals.length];
         NavigableMap<Integer, Integer> map = new TreeMap<>();
 
-        for (int i = 0; i < intervals.length; i++)
+        for (int i = 0; i < intervals.length; i++) {
             map.put(intervals[i].start, i);   //先将start存起来
+        }
 
         for (int i = 0; i < intervals.length; i++) {
             Map.Entry<Integer, Integer> entry = map.ceilingEntry(intervals[i].end); //ceilingEntry自动找出大于等于的最小值

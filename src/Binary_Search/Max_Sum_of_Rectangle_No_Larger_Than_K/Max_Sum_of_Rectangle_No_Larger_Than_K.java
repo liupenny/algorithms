@@ -29,8 +29,9 @@ public class Max_Sum_of_Rectangle_No_Larger_Than_K {
             int[] colsum = new int[col];
             for (int j=i; j<row; j++)
             {
-                for (int c=0; c<col; c++)
+                for (int c=0; c<col; c++) {
                     colsum[c] += matrix[j][c];  // 这里已经实现了节省空间，只用一个数组变量存储之前的信息了
+                }
                 max = Math.max(max, maxSumOneDemision(colsum,k));
             }
         }
@@ -41,8 +42,9 @@ public class Max_Sum_of_Rectangle_No_Larger_Than_K {
             int[] rowsum = new int[row];
             for (int j=i; j<col; j++)
             {
-                for (int c=0; c<row; c++)
+                for (int c=0; c<row; c++) {
                     rowsum[c] += matrix[c][j];  // 这里已经实现了节省空间，只用一个数组变量存储之前的信息了
+                }
                 max = Math.max(max, maxSumOneDemision(rowsum,k));
             }
         }
@@ -61,7 +63,9 @@ public class Max_Sum_of_Rectangle_No_Larger_Than_K {
             int t = sum + nums[i];
             sum = t;
             Integer gap = s.ceiling(sum - k);
-            if(gap != null) max = Math.max(max, sum - gap);
+            if(gap != null) {
+                max = Math.max(max, sum - gap);
+            }
             s.add(t);
         }
         return max;

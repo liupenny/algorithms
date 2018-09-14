@@ -16,8 +16,9 @@ import java.util.Queue;
 
 class sol {
     public TreeNode constructMaximumBinaryTree(int[] nums) {
-        if(nums == null || nums.length == 0)
+        if(nums == null || nums.length == 0) {
             return null;
+        }
 
         // TreeNode root = new TreeNode(0);
         return generateChild(nums, 0, nums.length - 1);
@@ -25,8 +26,9 @@ class sol {
     }
 
     public TreeNode generateChild(int[] nums, int left, int right){
-        if (left < 0 || right < 0 || left > right || right > nums.length - 1 || left > nums.length - 1)
+        if (left < 0 || right < 0 || left > right || right > nums.length - 1 || left > nums.length - 1) {
             return null;
+        }
 //        if(right - left < 0)
 //            return null;
 
@@ -40,13 +42,15 @@ class sol {
 
     public int getMaxPos(int[] nums, int begin, int end)
     {
-        if(begin == end )
+        if(begin == end ) {
             return begin;
+        }
 
         int ans = begin;
         for (int i = begin; i <= end; i++) {
-            if(nums[i] > nums[ans])
+            if(nums[i] > nums[ans]) {
                 ans = i;
+            }
         }
         return ans;
     }

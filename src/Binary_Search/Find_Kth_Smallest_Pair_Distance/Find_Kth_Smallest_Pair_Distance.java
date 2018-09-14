@@ -15,7 +15,9 @@ public class Find_Kth_Smallest_Pair_Distance {
             int cnt = 0, j = 0, mid = left + (right - left)/2;
             for (int i=0; i<len; ++i)   //这里算出对于数组中数对差《k的一共有多少个
             {
-                while (j < len && nums[j]-nums[i]<=mid) ++j;
+                while (j < len && nums[j]-nums[i]<=mid) {
+                    ++j;
+                }
                 cnt += j - i - 1;
             }
             if(cnt >= k )
@@ -23,7 +25,9 @@ public class Find_Kth_Smallest_Pair_Distance {
                 ans = mid;
                 right = mid - 1;
             }
-            else left = mid + 1;
+            else {
+                left = mid + 1;
+            }
         }
         return ans;
     }

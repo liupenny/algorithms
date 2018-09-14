@@ -10,8 +10,9 @@ public class Combinations {
     public List<List<Integer>> combine(int n, int k)
     {
         List<List<Integer>> res = new ArrayList<>(); // 泛型要一样
-        if(n == 0 || k == 0)
+        if(n == 0 || k == 0) {
             return res;
+        }
         ArrayList<Integer> temp = new ArrayList<Integer>();
         help(temp, k, n, 1, res);
         return res;
@@ -30,8 +31,9 @@ public class Combinations {
         for (int i = start; i <= n; i++)
         {
             list.add(i);
-            if(list.size() + n -start >= k)
-                help(list, k, n, i+1, res);
+            if(list.size() + n -start >= k) {
+                help(list, k, n, i + 1, res);
+            }
             list.remove(list.size() - 1);
             // list.remove() 有两种重载形式，一种参数为对象，另一种参数为下标。
             // 若对象本身是普通类型，如整型，那么java默认将整型看做是下标

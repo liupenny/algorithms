@@ -7,8 +7,9 @@ import java.util.Stack;
  */
 public class Maximal_Rectangle {
     public int maximalRectangle(char[][] matrix) {
-        if(matrix == null || matrix.length == 0)
+        if(matrix == null || matrix.length == 0) {
             return 0;
+        }
 
         int ans = 0;
         int[] height = new int[matrix[0].length];
@@ -22,8 +23,9 @@ public class Maximal_Rectangle {
     }
 
     public int largestRectangleArea_stack(int[] heights) {
-        if (heights == null || heights.length == 0)
+        if (heights == null || heights.length == 0) {
             return 0;
+        }
 
         int maxArea = 0;
         Stack<Integer> stack = new Stack<>();

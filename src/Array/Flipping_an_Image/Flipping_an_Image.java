@@ -7,8 +7,9 @@ public class Flipping_an_Image {
     public int[][] flipAndInvertImage(int[][] A)
     {
 
-        if(A == null || A.length == 0)
+        if(A == null || A.length == 0) {
             return new int[0][0];
+        }
 
         int row = A.length, col = A[0].length;
         for (int i = 0; i < row; i++)

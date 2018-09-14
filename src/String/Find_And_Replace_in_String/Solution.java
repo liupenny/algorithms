@@ -8,16 +8,18 @@ import java.util.Arrays;
 
 public class Solution{
     public String findReplaceString(String S, int[] indexes, String[] sources, String[] targets) {
-        if(S == null || S.length() == 0)
+        if(S == null || S.length() == 0) {
             return S;
+        }
 
         // match[i] = index 记录S中i位置的字符可以替换为targets[index]
         int[] match = new int[S.length()];
         Arrays.fill(match, -1);
         for (int i = 0; i < indexes.length; i++) {
             int index = indexes[i];
-            if(S.indexOf(sources[i], index) == index)
+            if(S.indexOf(sources[i], index) == index) {
                 match[index] = i;
+            }
         }
 
         // 用S.length进行对准，sb在append的时候也能添加原来S中没被替换的数
@@ -28,8 +30,9 @@ public class Solution{
                 sb.append(targets[match[i]]);
                 i += sources[match[i]].length();
             }
-            else
+            else {
                 sb.append(S.charAt(i++));
+            }
         }
         return sb.toString();
     }

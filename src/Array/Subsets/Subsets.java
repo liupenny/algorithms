@@ -10,8 +10,9 @@ public class Subsets {
     public List<List<Integer>> subsets(int[] nums)
     {
         List<List<Integer>> res = new ArrayList<>();
-        if(nums == null || nums.length == 0)
+        if(nums == null || nums.length == 0) {
             return res;
+        }
 
         List<Integer> temp = new ArrayList<>();
         help(res, temp, 0, nums);

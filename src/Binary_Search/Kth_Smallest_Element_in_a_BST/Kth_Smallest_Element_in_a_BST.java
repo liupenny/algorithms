@@ -25,7 +25,9 @@ public class Kth_Smallest_Element_in_a_BST {
                 {
                     root = stack.pop();
                     num++;
-                    if(num==k) return root.val;
+                    if(num==k) {
+                        return root.val;
+                    }
                     root = root.right;
                 }
             }
@@ -35,16 +37,19 @@ public class Kth_Smallest_Element_in_a_BST {
 
     public int kthSmallest2(TreeNode root, int k) {
         int nums = count(root.left);
-        if (k <= nums)
-            return kthSmallest2(root.left,k);
-        else if(k > nums +1)
-            return kthSmallest2(root.right,k - nums - 1);
+        if (k <= nums) {
+            return kthSmallest2(root.left, k);
+        } else if(k > nums +1) {
+            return kthSmallest2(root.right, k - nums - 1);
+        }
         return root.val;
     }
 
     public int count(TreeNode root)
     {
-        if (root==null) return 0;
+        if (root==null) {
+            return 0;
+        }
         return 1 + count(root.left) + count(root.right);
     }
 

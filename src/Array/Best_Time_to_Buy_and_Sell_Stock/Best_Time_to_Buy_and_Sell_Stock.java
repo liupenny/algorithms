@@ -5,8 +5,9 @@ package Array.Best_Time_to_Buy_and_Sell_Stock;
  */
 public class Best_Time_to_Buy_and_Sell_Stock {
     public int maxProfit_burte(int[] prices) {
-        if(prices == null || prices.length == 0)
+        if(prices == null || prices.length == 0) {
             return 0;
+        }
 
         int profit = 0;
         for (int i = 0; i < prices.length; i++)
@@ -22,8 +23,9 @@ public class Best_Time_to_Buy_and_Sell_Stock {
 
     public int maxProfit(int[] prices)
     {
-        if(prices == null || prices.length == 0)
+        if(prices == null || prices.length == 0) {
             return 0;
+        }
 
         int minprice = Integer.MAX_VALUE;
         int maxprofit = 0;

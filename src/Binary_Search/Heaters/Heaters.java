@@ -13,8 +13,9 @@ public class Heaters {
 
         for (int house:houses)
         {
-            while (numheat<heaters.length-1 && heaters[numheat]+heaters[numheat+1] <= house*2)
+            while (numheat<heaters.length-1 && heaters[numheat]+heaters[numheat+1] <= house*2) {
                 numheat++;
+            }
             ans = Math.max(ans,Math.abs(heaters[numheat]-house));
         }
         return ans;
@@ -28,15 +29,19 @@ public class Heaters {
         for (int house:houses)
         {
             int index = Arrays.binarySearch(heaters,house);
-            if(index<0)
-                index = -(index+1);
+            if(index<0) {
+                index = -(index + 1);
+            }
 
-            if(index ==0)
+            if(index ==0) {
                 ans = Math.max(ans, heaters[0] - house);
-            if(index == heaters.length)
-                ans = Math.max(ans, house - heaters[heaters.length-1]);
-            if(index>0 && index<heaters.length)
-                ans = Math.max(ans,Math.min(heaters[index]-house, house-heaters[index-1]));
+            }
+            if(index == heaters.length) {
+                ans = Math.max(ans, house - heaters[heaters.length - 1]);
+            }
+            if(index>0 && index<heaters.length) {
+                ans = Math.max(ans, Math.min(heaters[index] - house, house - heaters[index - 1]));
+            }
         }
         return ans;
     }

@@ -38,21 +38,27 @@ class solu {
 
     // 所以要判断左右孩子，设置孩子为Null
     public TreeNode pruneTree(TreeNode root) {
-        if(root == null)
+        if(root == null) {
             return root;
+        }
 
         return containsOne(root) ? root : null;
     }
 
     public boolean containsOne(TreeNode root)
     {
-        if(root == null)
+        if(root == null) {
             return false;
+        }
 
         boolean isLeftOne = containsOne(root.left);
         boolean isRightOne = containsOne(root.right);
-        if(isLeftOne == false) root.left = null;
-        if(isRightOne == false) root.right = null;
+        if(isLeftOne == false) {
+            root.left = null;
+        }
+        if(isRightOne == false) {
+            root.right = null;
+        }
 
         return isLeftOne || isRightOne || root.val == 1;
     }
@@ -60,29 +66,34 @@ class solu {
 
 class solut {
     public TreeNode pruneTree(TreeNode root) {
-        if(root == null)
+        if(root == null) {
             return root;
+        }
 
         boolean isZeroRoot = isZero(root);
-        if(isZeroRoot == true)
+        if(isZeroRoot == true) {
             return null;
-        else
+        } else {
             return root;
+        }
     }
 
     public boolean isZero(TreeNode root)
     {
-        if(root == null)
+        if(root == null) {
             return true;
+        }
 
         boolean isLeftZero = isZero(root.left);
         boolean isRightZero = isZero(root.right);
 
         // 这里一旦设置了root == null , 下面就没法返回了
-        if(isLeftZero)
+        if(isLeftZero) {
             root.left = null;
-        if(isRightZero)
+        }
+        if(isRightZero) {
             root.right = null;
+        }
 
         return isLeftZero && isRightZero && root.val == 0;
     }

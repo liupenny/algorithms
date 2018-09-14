@@ -9,8 +9,9 @@ import tools.TreeNode;
 public class Solution{
     int ans = Integer.MIN_VALUE;
     public int maxPathSum(TreeNode root) {
-        if(root == null)
+        if(root == null) {
             return 0;
+        }
 
         addSum(root);
         return ans;
@@ -18,8 +19,9 @@ public class Solution{
 
     public int addSum(TreeNode root)
     {
-        if(root == null)
+        if(root == null) {
             return 0;
+        }
 
         int left = Math.max(0, addSum(root.left));
         int right = Math.max(0, addSum(root.right));

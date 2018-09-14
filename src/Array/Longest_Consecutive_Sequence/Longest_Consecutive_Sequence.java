@@ -8,8 +8,9 @@ import java.util.*;
 public class Longest_Consecutive_Sequence {
 
     public int longestConsecutive(int[] nums) {
-        if (nums == null || nums.length <= 1)
+        if (nums == null || nums.length <= 1) {
             return nums.length;
+        }
 
         Set<Integer> numSet = new HashSet<>();
         for (int num : nums) {
@@ -44,8 +45,9 @@ public class Longest_Consecutive_Sequence {
     }
 
     public int longestConsecutive2(int[] nums) {
-        if (nums == null || nums.length <= 1)
+        if (nums == null || nums.length <= 1) {
             return nums.length;
+        }
 
         Set<Integer> numSet = new HashSet<>();
         for (int num : nums) {
@@ -78,12 +80,14 @@ public class Longest_Consecutive_Sequence {
     }
 
     public int longestConsecutive1(int[] num) {
-        if (num == null || num.length == 0)
+        if (num == null || num.length == 0) {
             return 0;
+        }
 
         HashSet<Integer> hs = new HashSet<Integer>();
-        for (int i = 0; i < num.length; i++)
+        for (int i = 0; i < num.length; i++) {
             hs.add(num[i]);
+        }
         int max = 0;
         for (int i = 0; i < num.length; i++) {
             if (hs.contains(num[i])) {
@@ -119,8 +123,9 @@ public class Longest_Consecutive_Sequence {
                 a.remove(temp);
             }
         }
-        for(String s:a)
+        for(String s:a) {
             System.out.println(s);
+        }
     }
 
 

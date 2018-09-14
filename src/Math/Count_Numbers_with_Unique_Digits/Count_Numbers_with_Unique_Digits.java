@@ -2,8 +2,12 @@ package Math.Count_Numbers_with_Unique_Digits;
 
 public class Count_Numbers_with_Unique_Digits {
     public int countNumbersWithUniqueDigits(int n) {
-        if(n==0) return 1;
-        if(n==1) return 10;
+        if(n==0) {
+            return 1;
+        }
+        if(n==1) {
+            return 10;
+        }
 
         int val = 9, sum = 10;
         for (int i = 2; i <= n; i++)

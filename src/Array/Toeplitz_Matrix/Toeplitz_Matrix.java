@@ -3,14 +3,17 @@ package Array.Toeplitz_Matrix;
 // 每个数(i,j)只要和（i+1,j+1）比就行
 public class Toeplitz_Matrix {
     public boolean isToeplitzMatrix(int[][] matrix) {
-        if (matrix == null || matrix.length == 0) return false;
+        if (matrix == null || matrix.length == 0) {
+            return false;
+        }
 
         for (int i = 0; i < matrix.length - 1; i++)
         {
             for (int j = 0; j < matrix[0].length - 1; j++)
             {
-                if(matrix[i][j] != matrix[i+1][j+1])
+                if(matrix[i][j] != matrix[i+1][j+1]) {
                     return false;
+                }
             }
         }
         return true;

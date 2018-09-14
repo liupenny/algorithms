@@ -7,8 +7,9 @@ import java.util.Stack;
  */
 public class Maximal_Square {
     public int maximalSquare(char[][] matrix) {
-        if(matrix == null || matrix.length == 0)
+        if(matrix == null || matrix.length == 0) {
             return 0;
+        }
 
         int ans = 0;
         int[] height = new int[matrix[0].length];
@@ -23,8 +24,9 @@ public class Maximal_Square {
 
     public int area(int[] heights)
     {
-        if (heights == null || heights.length == 0)
+        if (heights == null || heights.length == 0) {
             return 0;
+        }
 
         int maxArea = 0;
         Stack<Integer> stack = new Stack<>();
@@ -49,8 +51,9 @@ public class Maximal_Square {
     }
 
     public int maximalSquare_brute(char[][] matrix) {
-        if (matrix == null || matrix.length == 0)
+        if (matrix == null || matrix.length == 0) {
             return 0;
+        }
 
         int rows = matrix.length, cols = matrix[0].length;
         int maxlen = 0;
@@ -76,11 +79,13 @@ public class Maximal_Square {
                                 break;
                             }
                         }
-                        if(isSquare)
+                        if(isSquare) {
                             sqlen++;
+                        }
                     }
-                    if (maxlen < sqlen)
+                    if (maxlen < sqlen) {
                         maxlen = sqlen;
+                    }
                 }
             }
         }
@@ -88,8 +93,9 @@ public class Maximal_Square {
     }
 
     public int maximalSquare_dp(char[][] matrix) {
-        if (matrix == null || matrix.length == 0)
+        if (matrix == null || matrix.length == 0) {
             return 0;
+        }
 
         int rows = matrix.length, cols = matrix[0].length;
         int maxlen = 0;
@@ -109,8 +115,9 @@ public class Maximal_Square {
     }
 
     public int maximalSquare_betterdp(char[][] matrix) {
-        if (matrix == null || matrix.length == 0)
+        if (matrix == null || matrix.length == 0) {
             return 0;
+        }
 
         int rows = matrix.length, cols = matrix[0].length;
         int maxlen = 0, prev = 0;
@@ -124,8 +131,9 @@ public class Maximal_Square {
                     dp[j] = Math.min(Math.min(dp[j-1], prev), dp[j]) + 1;
                     maxlen = Math.max(maxlen, dp[j]);
                 }
-                else
+                else {
                     dp[j] = 0;
+                }
                 prev = tmp;
             }
         }

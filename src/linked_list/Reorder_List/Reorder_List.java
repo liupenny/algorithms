@@ -11,7 +11,9 @@ import tools.ListNode;
 public class Reorder_List {
     public void reorderList(ListNode head) {
         //Find the middle of the list
-        if(head == null || head.next == null)  return;
+        if(head == null || head.next == null) {
+            return;
+        }
         ListNode fast = head,slow = head;
         while (fast.next != null && fast.next.next != null)  //如果这样判断，是取得了上中位数，可以用下面的方法反转/否则是下中位数，用新加一个null指针的方法反转
         {

@@ -45,8 +45,9 @@ public class Solution{
 //    }
 
     public boolean isPossible(int[] nums) {
-        if(nums == null || nums.length == 0)
+        if(nums == null || nums.length == 0) {
             return false;
+        }
 
         //用来统计num中每个字符和出现次数
         Map<Integer, Integer> count = new HashMap<>();
@@ -57,9 +58,9 @@ public class Solution{
         Map<Integer, Integer> tails = new HashMap<>();
 
         for (int num: nums) {
-            if(count.get(num) <= 0)
+            if(count.get(num) <= 0) {
                 continue;
-                // 已经有一个以num此结尾的,就连起来
+            }// 已经有一个以num此结尾的,就连起来
             else if(tails.getOrDefault(num - 1,0) > 0)
             {
                 tails.put(num - 1, tails.get(num - 1) - 1);
@@ -73,8 +74,9 @@ public class Solution{
                 tails.put(num + 2, tails.getOrDefault(num + 2,0) + 1);
             }
             //都不行，就返回false
-            else
+            else {
                 return false;
+            }
             count.put(num, count.get(num) - 1);
         }
         return true;

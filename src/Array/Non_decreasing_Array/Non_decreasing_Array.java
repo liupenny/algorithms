@@ -5,15 +5,17 @@ package Array.Non_decreasing_Array;
  */
 public class Non_decreasing_Array {
     public boolean checkPossibility(int[] nums) {
-        if(nums == null || nums.length <= 1)
+        if(nums == null || nums.length <= 1) {
             return true;
+        }
 
         Integer pos = null; // pos初始为Null的话，也可以用来记到底有几个这样的位置，如果一直null，证明没有这样的点
         for (int i = 0; i < nums.length; i++) {
             if(nums[i] > nums[i+1])
             {
-                if(pos != null)
+                if(pos != null) {
                     return false;
+                }
                 pos = i;
             }
         }

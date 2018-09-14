@@ -10,8 +10,9 @@ import tools.Sort_List;
  */
 public class Reverse_Linked_List {
     public ListNode reverseList1(ListNode head) {
-        if(head==null || head.next==null)
+        if(head==null || head.next==null) {
             return head;
+        }
         ListNode tail = null;  //只是声明并没有新建，所以不会有额外的空间复杂度
         while (head!=null)
         {
@@ -24,15 +25,17 @@ public class Reverse_Linked_List {
     }
 
     public ListNode reverseList2(ListNode head) {  // 递归版本的是一样的思路，在往下递归之前，先处理当前步骤的，最后到了尾节点，直接返回就行
-        if(head==null || head.next==null)
+        if(head==null || head.next==null) {
             return head;
+        }
         return next(head,null);
     }
 
     public ListNode next(ListNode head,ListNode tail)
     {
-        if(head==null)
+        if(head==null) {
             return tail;
+        }
         ListNode node = head.next;
         head.next = tail;
         return next(node,head);  // 先处理完，返回最后的节点

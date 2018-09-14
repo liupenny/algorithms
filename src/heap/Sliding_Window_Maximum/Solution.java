@@ -9,10 +9,12 @@ import java.util.PriorityQueue;
 
 public class Solution{
     public int[] maxSlidingWindow(int[] nums, int k) {
-        if(nums == null || nums.length < k)
+        if(nums == null || nums.length < k) {
             return null;
-        if(nums.length == 0)
+        }
+        if(nums.length == 0) {
             return new int[0];
+        }
 
         int[] ans = new int[nums.length - k + 1];
         PriorityQueue<Integer> queue = new PriorityQueue<>(Collections.reverseOrder());
@@ -33,10 +35,12 @@ public class Solution{
     }
 
     public int[] maxSlidingWindow_array(int[] nums, int k) {
-        if (nums == null || nums.length < k)
+        if (nums == null || nums.length < k) {
             return null;
-        if (nums.length == 0)
+        }
+        if (nums.length == 0) {
             return new int[0];
+        }
 
         int[] max_left = new int[nums.length];
         int[] max_right = new int[nums.length];

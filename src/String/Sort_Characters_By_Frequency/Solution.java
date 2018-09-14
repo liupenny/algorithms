@@ -8,12 +8,14 @@ import java.util.*;
 
 public class Solution{
     public String frequencySort(String s) {
-        if(s == null || s.length() == 0)
+        if(s == null || s.length() == 0) {
             return s;
+        }
 
         Map<Character, Integer> map = new HashMap<>();
-        for (int i = 0; i < s.length(); i++)
+        for (int i = 0; i < s.length(); i++) {
             map.put(s.charAt(i), map.getOrDefault(s.charAt(i), 0) + 1);
+        }
         List<Map.Entry<Character, Integer>> list = new ArrayList<>(map.entrySet());
         Collections.sort(list, new Comparator<Map.Entry<Character, Integer>>() {
             @Override

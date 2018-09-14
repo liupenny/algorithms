@@ -24,13 +24,15 @@ public class Solution{
 
     public String collect(TreeNode node)
     {
-        if (node == null)
+        if (node == null) {
             return "#";
+        }
 
         String s = node.val + "," + collect(node.left) + "," + collect(node.right);
         count.put(s,count.getOrDefault(s,0) + 1);
-        if(count.get(s) == 2)
+        if(count.get(s) == 2) {
             ans.add(node);
+        }
         return s;
     }
 
@@ -50,14 +52,16 @@ public class Solution{
 
     public int childId(TreeNode node)
     {
-        if(node == null)
+        if(node == null) {
             return 0;
+        }
         String s = node.val + "," + childId(node.left) + "," + childId(node.right);
         // computeIfAbsent函数自己会计算返回值，并执行插入操作，将返回值返回。
         int sid = stringId.computeIfAbsent(s, x->id++);
         countId.putIfAbsent(sid, countId.getOrDefault(sid, 0) + 1);
-        if(countId.get(sid) == 2)
+        if(countId.get(sid) == 2) {
             ans.add(node);
+        }
         return sid;
     }
 

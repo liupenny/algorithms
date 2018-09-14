@@ -17,8 +17,9 @@ class Codec {
     // Encodes a tree to a single string.
     public String serialize(TreeNode root) {
         StringBuilder sb = new StringBuilder();
-        if(root == null)
+        if(root == null) {
             return "";
+        }
 
         seria(root,sb);
         return sb.toString();
@@ -27,9 +28,9 @@ class Codec {
     // 先序遍历存这棵树
     public void seria(TreeNode root, StringBuilder sb)
     {
-        if(root == null)
+        if(root == null) {
             sb.append(NN).append(spliter);
-        else
+        } else
         {
             sb.append(root.val).append(spliter);
             seria(root.left, sb);
@@ -39,8 +40,9 @@ class Codec {
 
     // Decodes your encoded data to tree.
     public TreeNode deserialize(String data) {
-        if(data == null || data == "")
+        if(data == null || data == "") {
             return null;
+        }
 
         Queue<String> queue = new LinkedList<>();
         queue.addAll(Arrays.asList(data.split(spliter)));
@@ -50,9 +52,9 @@ class Codec {
     public TreeNode deseria(Queue<String> queue)
     {
         String val = queue.remove();
-        if(val.equals(NN))
+        if(val.equals(NN)) {
             return null;
-        else
+        } else
         {
             TreeNode node = new TreeNode(Integer.valueOf(val));
             node.left = deseria(queue);
@@ -69,8 +71,9 @@ class Code {
 
     // Encodes a tree to a single string.
     public String serialize(TreeNode root) {
-        if(root == null)
+        if(root == null) {
             return "";
+        }
 
         StringBuilder output = new StringBuilder("");
         Queue<TreeNode> queue = new LinkedList<>();
@@ -93,8 +96,9 @@ class Code {
 
     // Decodes your encoded data to tree.
     public TreeNode deserialize(String data) {
-        if(data == null || data == "")
+        if(data == null || data == "") {
             return null;
+        }
         String[] parts = data.split(spliter);
         TreeNode root = new TreeNode(Integer.parseInt(parts[0]));
         Queue<TreeNode> queue = new LinkedList<>();
@@ -104,8 +108,9 @@ class Code {
         while (!queue.isEmpty())
         {
             TreeNode node = queue.poll();
-            if(index == parts.length)
+            if(index == parts.length) {
                 break;
+            }
 
             index++;
             if(!parts[index].equals(NN))
@@ -114,8 +119,9 @@ class Code {
                 queue.add(node.left);
             }
 
-            if(index == parts.length)
+            if(index == parts.length) {
                 break;
+            }
 
             index++;
             if(!parts[index].equals(NN))

@@ -6,8 +6,9 @@ package Array.Teemo_Attacking;
 public class Teemo_Attacking {
     public int findPoisonedDuration(int[] timeSeries, int duration)
     {
-        if(duration == 0 || timeSeries == null || timeSeries.length == 0)
+        if(duration == 0 || timeSeries == null || timeSeries.length == 0) {
             return 0;
+        }
         int res = duration; //先设置为dur
         for (int i = timeSeries.length - 1; i > 0; i--)
         {
@@ -18,16 +19,18 @@ public class Teemo_Attacking {
 
     public int findPoisonedDuration1(int[] timeSeries, int duration)
     {
-        if(duration == 0 || timeSeries == null || timeSeries.length == 0)
+        if(duration == 0 || timeSeries == null || timeSeries.length == 0) {
             return 0;
+        }
         int res = 0;
         int preEnd = Integer.MIN_VALUE;
         for (int time:timeSeries)
         {
             int currentStart = time;
             int currentEnd = time + duration - 1;
-            if (preEnd >= currentStart)
+            if (preEnd >= currentStart) {
                 currentStart = preEnd + 1;
+            }
             res += (currentEnd - currentStart + 1);
             preEnd = currentEnd;
         }
@@ -39,16 +42,18 @@ public class Teemo_Attacking {
     // 如果时间间隔大于等于duration时间就加上一个完整的duration，
     // 如果小于duration，总的时间就加上时间间隔
     {
-        if(duration == 0 || timeSeries == null || timeSeries.length == 0)
+        if(duration == 0 || timeSeries == null || timeSeries.length == 0) {
             return 0;
+        }
         int res = 0;
 
         for (int i = 0; i < timeSeries.length; i++)
         {
-            if(timeSeries[i+1] - timeSeries[i] >= duration)
+            if(timeSeries[i+1] - timeSeries[i] >= duration) {
                 res += duration;
-            else
-                res += timeSeries[i+1] - timeSeries[i];
+            } else {
+                res += timeSeries[i + 1] - timeSeries[i];
+            }
         }
         return res + duration;
     }

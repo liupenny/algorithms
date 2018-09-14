@@ -32,8 +32,9 @@ public class Sort_List {
         public void addFirstNode(int data)
         {
             first = new ListNode(data);
-            if (now == null)
+            if (now == null) {
                 now = first;
+            }
         }
 
         public void addNode(int data)
@@ -44,8 +45,9 @@ public class Sort_List {
     }
 
     public ListNode sortList(ListNode head) {  //归并排序
-        if(head==null || head.next==null)
+        if(head==null || head.next==null) {
             return head;
+        }
         int sum = 0;
         ListNode cur = head;
         while(cur != null)
@@ -79,8 +81,9 @@ public class Sort_List {
         {
             end = end.next;
         }
-        if(end == null)
+        if(end == null) {
             return null;
+        }
         ListNode tmp = end.next;  //真正结尾的是当前的节点，但是要返回的是下一个节点值，所以要两个node
         end.next = null;
         return tmp;
@@ -118,7 +121,7 @@ public class Sort_List {
 
 
 
-    public static void main(String algs[])
+    public static void main(String[] algs)
     {
         Linklist citations = new Linklist();
         citations.addFirstNode(5);

@@ -11,8 +11,9 @@ import tools.Sort_List;
  */
 public class Remove_Linked_List_Elements {
     public ListNode removeElements1(ListNode head, int val) {
-        if(head==null)
+        if(head==null) {
             return head;
+        }
         ListNode tmp = new ListNode(0), newhead = tmp;
         while (head!=null)
         {
@@ -43,7 +44,9 @@ public class Remove_Linked_List_Elements {
     }
 
     public ListNode removeElements2(ListNode head, int val) {  //也是从后往前判断
-        if(head==null)  return head;
+        if(head==null) {
+            return head;
+        }
         head.next = removeElements2(head.next,val);
         return head.val==val?head.next:head;
 
@@ -59,8 +62,9 @@ public class Remove_Linked_List_Elements {
         //citations2.addNode(1);
         Remove_Linked_List_Elements t = new Remove_Linked_List_Elements();
         ListNode ans = t.removeElements2(citations2.first,1);
-        if(ans==null)
+        if(ans==null) {
             System.out.println("null");
+        }
         while (ans!=null)
         {
             System.out.println(ans.val);

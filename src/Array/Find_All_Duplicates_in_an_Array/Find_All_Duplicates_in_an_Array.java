@@ -11,16 +11,18 @@ public class Find_All_Duplicates_in_an_Array
     public List<Integer> findDuplicates(int[] nums)
     {
         List<Integer> ans = new ArrayList<>();
-        if (nums == null || nums.length == 0)
+        if (nums == null || nums.length == 0) {
             return ans;
+        }
 
         for (int i = 0; i < nums.length; i++)
         {
             int correctPos = Math.abs(nums[i]) - 1;
-            if(nums[correctPos]< 0)
-                ans.add(correctPos+1);
-            else
+            if(nums[correctPos]< 0) {
+                ans.add(correctPos + 1);
+            } else {
                 nums[correctPos] = -nums[correctPos];
+            }
         }
         return ans;
     }
@@ -28,20 +30,23 @@ public class Find_All_Duplicates_in_an_Array
     public List<Integer> findDuplicates1(int[] nums)
     {
         List<Integer> ans = new ArrayList<>();
-        if (nums == null || nums.length == 0)
+        if (nums == null || nums.length == 0) {
             return ans;
+        }
 
         for (int i = 0; i < nums.length;)
         {
-            if(nums[nums[i] - 1] != nums[i])
-                swap(nums, nums[i] -1 , i);
-            else
+            if(nums[nums[i] - 1] != nums[i]) {
+                swap(nums, nums[i] - 1, i);
+            } else {
                 i++;
+            }
         }
         for (int i = 0; i < nums.length; i++)
         {
-            if(nums[i] != i+1)
+            if(nums[i] != i+1) {
                 ans.add(nums[i]);
+            }
         }
         return ans;
     }

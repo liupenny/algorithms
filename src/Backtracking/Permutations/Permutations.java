@@ -11,8 +11,9 @@ public class Permutations {
     public List<List<Integer>> permute(int[] nums)
     {
         List<List<Integer>> res = new ArrayList<List<Integer>>();
-        if (nums == null || nums.length == 0)
+        if (nums == null || nums.length == 0) {
             return res;
+        }
 
         Arrays.sort(nums);
         ArrayList<Integer> temp = new ArrayList<Integer>();
@@ -32,12 +33,16 @@ public class Permutations {
         for (int i = 0; i < nums.length; i++)
         {
             while (i>0 && nums[i] == nums[i-1] && visited[i-1]) //>0是防止i-1溢出，visited[i-1]是已经访问过就过去了
+            {
                 i++;
-            if(i == nums.length)
+            }
+            if(i == nums.length) {
                 return;
+            }
 
-            if(visited[i])
+            if(visited[i]) {
                 continue;
+            }
 
             list.add(nums[i]);
             visited[i] = true;
@@ -51,8 +56,9 @@ public class Permutations {
     public List<List<Integer>> permute1(int[] nums)
     {
         List<List<Integer>> res = new ArrayList<List<Integer>>();
-        if (nums == null || nums.length == 0)
+        if (nums == null || nums.length == 0) {
             return res;
+        }
 
         ArrayList<Integer> temp = new ArrayList<Integer>();
         help1(nums, temp, res);
@@ -69,8 +75,9 @@ public class Permutations {
 
         for (int i = 0; i < nums.length; i++)
         {
-           if(list.contains(nums[i]))
+           if(list.contains(nums[i])) {
                continue;
+           }
 
             list.add(nums[i]);
             help1(nums, list, res);

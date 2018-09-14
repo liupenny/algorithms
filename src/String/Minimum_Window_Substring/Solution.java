@@ -9,10 +9,12 @@ import java.util.Map;
 
 public class Solution{
     public String minWindow(String s, String t) {
-        if(s == null || s.length() == 0 || t == null || t.length() == 0)
+        if(s == null || s.length() == 0 || t == null || t.length() == 0) {
             return s;
-        if(s.length() <= t.length())
+        }
+        if(s.length() <= t.length()) {
             return "";
+        }
 
         // map中存储t中每个字符及他们出现的次数
         Map<Character, Integer> charT = new HashMap<>();
@@ -28,8 +30,9 @@ public class Solution{
             char ch = s.charAt(fast);
             if (charT.containsKey(ch)) {
                 int num = charT.get(ch);
-                if (num > 0)
+                if (num > 0) {
                     match_count--;
+                }
                 charT.put(ch, num - 1);
             }
             //找到满足条件的
@@ -42,8 +45,9 @@ public class Solution{
                 char tmp = s.charAt(slow);
                 if(charT.containsKey(tmp))
                 {
-                    if(charT.get(tmp) == 0)
+                    if(charT.get(tmp) == 0) {
                         match_count++;
+                    }
                     charT.put(tmp, charT.get(tmp) + 1);
                 }
                 slow++;
@@ -70,8 +74,9 @@ public class Solution{
             char ch = s.charAt(i);
             if(charToCount.containsKey(ch)){
                 int prevC = charToCount.get(ch);
-                if(prevC>0)
+                if(prevC>0) {
                     counter--;
+                }
                 charToCount.put(ch, prevC-1);
             }
 
@@ -94,8 +99,9 @@ public class Solution{
             if(temp.containsKey(ch)){
                 if(temp.get(ch)<0){
                     temp.put(ch, temp.get(ch)+1);
-                } else
+                } else {
                     return start;
+                }
             }
             start++;
         }
@@ -119,15 +125,17 @@ public class Solution{
         char[] c_t = t.toCharArray();
 
         // count char in t
-        for (char c : c_t)
+        for (char c : c_t) {
             freq[c]++;
+        }
 
         int i = 0, j = 0;
         while (j < s_len) {
 
             // whether ruler can expand
-            if (freq[c_s[j++]]-- >= 1)
+            if (freq[c_s[j++]]-- >= 1) {
                 ruler--;
+            }
 
             // if ruler == 0, it means all char in t has been contained in window now
             while (ruler == 0) {
@@ -142,8 +150,9 @@ public class Solution{
                 // 下面这个表达式不太好懂：首先i表示slow,先取出s串中slow这个位置的字符，在freq中看这个字符对应的要匹配的次数是否为0，若为0就满足条件，剩余待匹配的个数加一。判断完以后，再给这个字符对应的次数加一。同时slow++,移到下个位置
                 // 这里不管怎么样，slow和对应位置的待匹配个数都要加一
                 // ruler是否加一取决于原来的结果
-                if (freq[c_s[i++]]++ == 0)
+                if (freq[c_s[i++]]++ == 0) {
                     ruler++;
+                }
 
             }
 

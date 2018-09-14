@@ -26,8 +26,9 @@ public class Solution{
 
     int path = 0;
     public int pathSum1(TreeNode root, int sum) {
-        if(root == null)
+        if(root == null) {
             return 0;
+        }
 
         //Integer paths = 0;
         paths1(root, sum, 0);
@@ -38,8 +39,9 @@ public class Solution{
 
     public void paths1(TreeNode node, int sum, int tmpSum)
     {
-        if(node == null)
+        if(node == null) {
             return;
+        }
 
         tmpSum += node.val;
         if(tmpSum == sum)

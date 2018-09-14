@@ -10,10 +10,11 @@ public class Kth_Smallest_Number_in_Multiplication_Table {
         {
             mid = left + (right - left) / 2;
             cou = count(m,n,mid);
-            if(cou >= k)
+            if(cou >= k) {
                 right = mid;
-            else
+            } else {
                 left = mid + 1;
+            }
         }
         return right;
     }
@@ -21,8 +22,9 @@ public class Kth_Smallest_Number_in_Multiplication_Table {
     public int count(int m, int n, int mid)
     {
         int cou = 0;
-        for (int i = 1; i<=m; i++)
-            cou += Math.min(mid/i,n);
+        for (int i = 1; i<=m; i++) {
+            cou += Math.min(mid / i, n);
+        }
         return cou;
     }
 

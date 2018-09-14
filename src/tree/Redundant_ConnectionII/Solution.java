@@ -13,10 +13,9 @@ public class Solution{
         int[] second = {-1,-1};
 
         for (int i = 0; i < edges.length; i++) {
-            if (root[edges[i][1]] == 0)
+            if (root[edges[i][1]] == 0) {
                 root[edges[i][1]] = edges[i][0];
-
-            else {
+            } else {
                 first = new int[]{root[edges[i][1]], edges[i][1]};
                 second = new int[]{edges[i][0], edges[i][1]};
                 edges[i][1] = 0;
@@ -29,19 +28,21 @@ public class Solution{
         }
 
         for (int[] arr : edges) {
-            if(arr[1] == 0)
+            if(arr[1] == 0) {
                 continue;
+            }
 
             int x = getParent(root, arr[0]), y = getParent(root, arr[1]);
             if (x == arr[1]) {
                 //有环，first不存在就是第二种情况
-                if (first[0] == -1)
+                if (first[0] == -1) {
                     return arr;
-                // 存在，是第一种情况,因为一开始遍历了有两个父亲的节点，按照顺序存储了两条父亲边，
+                }// 存在，是第一种情况,因为一开始遍历了有两个父亲的节点，按照顺序存储了两条父亲边，
                     // 此时的遍历到了这一步找到了环，且有first，
                     // 因为形成环，证明该节点的一个父亲是在环里的，那么
-                else
+                else {
                     return first;
+                }
             }
             // 为找回路做准备，找回路就是两个点能通向同一个点，所以root[x]存的x通向的终点。如果存父亲，可能存的那条边不跟回路重合
             root[arr[1]] = arr[0];
@@ -54,8 +55,9 @@ public class Solution{
     }
 
     public int[] findRedundantDirectedConnection(int[][] edges) {
-        if (edges == null || edges.length == 0)
+        if (edges == null || edges.length == 0) {
             return new int[0];
+        }
 
         int[] can1 = {-1, -1};
         int[] can2 = {-1, -1};
@@ -103,8 +105,9 @@ public class Solution{
 
     public int getParent (int[] root, int x)
     {
-        while (x != root[x])
+        while (x != root[x]) {
             x = root[x];
+        }
         return x;
     }
 

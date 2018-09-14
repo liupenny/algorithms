@@ -11,8 +11,9 @@ public class Positions_of_Large_Groups {
     public List<List<Integer>> largeGroupPositions(String S)
     {
         List<List<Integer>> res = new ArrayList<List<Integer>>();
-        if (S == null || S.length() == 0 || S.length() < 3)
+        if (S == null || S.length() == 0 || S.length() < 3) {
             return res;
+        }
 
         char nowLetter = S.charAt(0);
         int nowNum = 1, beginPos = 0, endPos = 0;

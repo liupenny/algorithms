@@ -9,8 +9,9 @@ import tools.Sort_List;
  */
 public class Partition_List {
     public ListNode partition(ListNode head, int x) {
-        if (head==null)
+        if (head==null) {
             return null;
+        }
         ListNode small = new ListNode(0),bigger = new ListNode(0);
         ListNode smallhead = small, biggerhead = bigger;
         while (head!=null)

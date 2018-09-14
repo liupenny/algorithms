@@ -22,8 +22,9 @@ public class Maximum_Gap {
         if(len < 2 || nums==null) {
             return 0;
         }
-        if(len == 2)
-            return (nums[1]-nums[0]);
+        if(len == 2) {
+            return (nums[1] - nums[0]);
+        }
         int big = nums[0],small = nums[0];
         for(int i = 0; i < len; i++)   //计算出整个数组的最大值和最小值
         {
@@ -37,8 +38,9 @@ public class Maximum_Gap {
         int gap = (int)Math.ceil((double) (big - small) / (len -1));
         for(int i = 0; i < len; i++)  //填补桶的最大值和最小值数组
         {
-            if(nums[i] == small || nums[i] == big)
+            if(nums[i] == small || nums[i] == big) {
                 continue;
+            }
             index = (nums[i] - small)/gap;
             bucketMax[index] = Math.max(bucketMax[index], nums[i]);
             bucketMin[index] = Math.min(bucketMin[index], nums[i]);
@@ -47,7 +49,9 @@ public class Maximum_Gap {
         for(int i = 0; i < bucketMin.length; i++)  //不能提前算bucketMin[0] - small，因为bucketMin[0]可能是没修改过的
         {
             if(bucketMax[i] == small && bucketMin[i] == big)    //先不考虑最大值和最小值,一定是当前桶的最大值和下一个桶的最小值相邻，所以算的是这部分
+            {
                 continue;
+            }
             ans = Math.max(bucketMin[i] - previous, ans);
             previous = bucketMax[i];  //变量保存桶中最大值
         }

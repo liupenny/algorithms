@@ -10,8 +10,9 @@ import tools.Sort_List;
  */
 public class Palindrome_Linked_List {
     public boolean isPalindrome(ListNode head) {
-        if(head == null || head.next==null)
+        if(head == null || head.next==null) {
             return true;
+        }
         ListNode fast = head, slow = head;
         while (fast.next != null && fast.next.next !=null)  //这个只有这么判断才会让slow正好在偶数个数的时候处于中间，如果是（fast!=null || fast.next !=null）会多走一步
         {
@@ -25,15 +26,17 @@ public class Palindrome_Linked_List {
             head = head.next;
             slow = slow.next;
         }
-        if(slow == null)
+        if(slow == null) {
             return true;
-        else
+        } else {
             return false;
+        }
     }
 
     public ListNode reverseList(ListNode head) {
-        if(head==null || head.next==null)
+        if(head==null || head.next==null) {
             return head;
+        }
         ListNode tail = null;  //只是声明并没有新建，所以不会有额外的空间复杂度
         while (head!=null)
         {

@@ -6,13 +6,16 @@ package Dynamic_Programming.House_RobberII;
 public class House_RobberII {
     public int rob(int[] nums)
     {
-        if (nums == null || nums.length == 0)
+        if (nums == null || nums.length == 0) {
             return 0;
+        }
 
-        if(nums.length == 1)
+        if(nums.length == 1) {
             return nums[0];
-        if(nums.length == 2)
+        }
+        if(nums.length == 2) {
             return nums[0] > nums[1] ? nums[0] : nums[1];
+        }
 
         return Math.max(rob(nums, 0,nums.length-2), rob(nums, 1,nums.length - 1));
     }

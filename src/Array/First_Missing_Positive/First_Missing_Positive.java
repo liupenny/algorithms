@@ -8,15 +8,17 @@ import java.util.Arrays;
 public class First_Missing_Positive {
     public int firstMissingPositive(int[] nums)
     {
-        if(nums == null || nums.length == 0)
+        if(nums == null || nums.length == 0) {
             return 1;
+        }
 
         int ans = 1;
         Arrays.sort(nums);
         for (int i = 0; i < nums.length; i++)
         {
-            if(nums[i] == ans)
+            if(nums[i] == ans) {
                 ans++;
+            }
         }
         return ans;
     }

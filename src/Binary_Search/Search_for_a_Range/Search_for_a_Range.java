@@ -8,21 +8,28 @@ package Binary_Search.Search_for_a_Range;
 public class Search_for_a_Range {
     public int[] searchRange(int[] nums, int target) {
         int[] ans = {-1,-1}, ansr = {0,0};
-        if(nums.length == 0 || nums==null) return ans;
-        if(nums.length == 1) return nums[0]==target?ansr:ans;
+        if(nums.length == 0 || nums==null) {
+            return ans;
+        }
+        if(nums.length == 1) {
+            return nums[0] == target ? ansr : ans;
+        }
 
         int begin , end , left = 0, right = nums.length-1, mid=0;
         while (left <= right)   //先找出等于的位置
         {
             mid = left + (right - left)/2;
-            if(nums[mid] == target)
+            if(nums[mid] == target) {
                 break;
-            else if (nums[mid] < target)
+            } else if (nums[mid] < target) {
                 left = mid + 1;
-            else if (nums[mid] > target)
+            } else if (nums[mid] > target) {
                 right = mid - 1;
+            }
         }
-        if(nums[mid]!=target) return ans;
+        if(nums[mid]!=target) {
+            return ans;
+        }
         begin = searchleft(nums, left, mid -1 , target);
         end = searchright(nums, mid + 1, right, target);
         ans[0] = nums[begin]==target?begin:mid;
@@ -32,30 +39,36 @@ public class Search_for_a_Range {
 
     public int searchleft(int[] nums, int begin, int end, int target)   //在左半部分找第一个=target
     {
-        if(begin == end) return begin;
+        if(begin == end) {
+            return begin;
+        }
         int left = begin, right = end, mid;
         while (left<right)
         {
             mid = left + (right - left)/2;
-            if(nums[mid] < target)
+            if(nums[mid] < target) {
                 left = mid + 1;
-            else
+            } else {
                 right = mid;
+            }
         }
         return nums[left]==target?left:right;
     }
 
     public int searchright(int[] nums, int begin, int end, int target)   //在右半部分找最后一个=target
     {
-        if(begin == end) return begin;
+        if(begin == end) {
+            return begin;
+        }
         int left = begin, right = end, mid;
         while (left<right)
         {
             mid = left + (right - left + 1)/2;
-            if(nums[mid] > target)
+            if(nums[mid] > target) {
                 right = mid - 1;
-            else
+            } else {
                 left = mid;
+            }
         }
         return nums[right]==target?right:left;
     }
@@ -93,8 +106,9 @@ public class Search_for_a_Range {
             int low = 0;
             int[] rs = new int[2];
             // base case
-            if(nums == null || nums.length == 0)
-                return new int[]{-1, -1 };
+            if(nums == null || nums.length == 0) {
+                return new int[]{-1, -1};
+            }
 
             //left side
             while(low < hi){

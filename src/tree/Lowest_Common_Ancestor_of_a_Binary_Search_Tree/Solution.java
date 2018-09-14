@@ -8,8 +8,9 @@ import tools.TreeNode;
 
 public class Solution{
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        if(root == null)
+        if(root == null) {
             return null;
+        }
 
         int small = p.val < q.val ? p.val : q.val;
         int big = p.val < q.val ? q.val : p.val;
@@ -17,12 +18,13 @@ public class Solution{
         TreeNode ans = root;
         while (ans != null)
         {
-            if(ans.val >= small && ans.val <= big)
+            if(ans.val >= small && ans.val <= big) {
                 return ans;
-            else if(ans.val < small)
+            } else if(ans.val < small) {
                 ans = ans.right;
-            else
+            } else {
                 ans = ans.left;
+            }
         }
         return null;
     }

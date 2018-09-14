@@ -5,7 +5,9 @@ package Dynamic_Programming.Decode_Ways;
  */
 public class Decode_Ways {
     public int numDecodings(String s) {
-        if (s == null || s.length() == 0) return 0;
+        if (s == null || s.length() == 0) {
+            return 0;
+        }
         if(s.charAt(0)=='0') {
             return 0;
         }
@@ -19,15 +21,18 @@ public class Decode_Ways {
             int second = Integer.valueOf(s.substring(i-1,i));
             if (second == 0)  //如果当前位置是0，就考虑前面一个数，前面只能是1/2，不然就是非法数据
             {
-                if(s.charAt(i-2)=='0' || s.charAt(i-2) - '0' > 2)
+                if(s.charAt(i-2)=='0' || s.charAt(i-2) - '0' > 2) {
                     return 0;
-                else
-                    dp[i] = dp[i-2];
+                } else {
+                    dp[i] = dp[i - 2];
+                }
                 continue;
             }  //当前不是0，先考虑单独一个数字，继承前面的结果
             dp[i] = dp[i-1];
             if (first > 10 && first <= 26)  //如果能跟前面构成组合的数，再加上前面的
-                dp[i] += dp[i-2];
+            {
+                dp[i] += dp[i - 2];
+            }
         }
         return dp[len];
     }
@@ -47,15 +52,18 @@ public class Decode_Ways {
             int second = Integer.valueOf(s.substring(i-1,i));
             if (second == 0)  //如果当前位置是0，就考虑前面一个数，前面只能是1/2，不然就是非法数据
             {
-                if(s.charAt(i-2)=='0' || s.charAt(i-2) - '0' > 2)
+                if(s.charAt(i-2)=='0' || s.charAt(i-2) - '0' > 2) {
                     return 0;
-                else
+                } else {
                     res = res1;
+                }
                 continue;
             }  //当前不是0，先考虑单独一个数字，继承前面的结果
             res = res2;
             if (first > 10 && first <= 26)  //如果能跟前面构成组合的数，再加上前面的
+            {
                 res += res1;
+            }
         }
         return res;
     }

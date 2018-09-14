@@ -11,8 +11,9 @@ import java.util.*;
 public class Solution{
     int highfreq = 0;
     public int[] findFrequentTreeSum(TreeNode root) {
-        if(root == null)
+        if(root == null) {
             return new int[0];
+        }
 
         Map<Integer,Integer> map = new HashMap<>();
         freq(root,map);
@@ -20,8 +21,9 @@ public class Solution{
         List<Integer> ans = new ArrayList<>();
         for (Integer key : map.keySet())
         {
-            if(map.get(key) == highfreq)
+            if(map.get(key) == highfreq) {
                 ans.add(key);
+            }
         }
 
         int[] ret = new int[ans.size()];
@@ -37,8 +39,9 @@ public class Solution{
     public int freq(TreeNode root, Map<Integer,Integer> map)
     {
         int frequen = 0;
-        if(root == null)
+        if(root == null) {
             return 0;
+        }
 
         int left = freq(root.left, map);
         int right = freq(root.right, map);
@@ -46,8 +49,9 @@ public class Solution{
         int sum = left + right + root.val;
         map.put(sum, frequen = map.getOrDefault(sum,0) + 1);
 
-        if(frequen > highfreq)
+        if(frequen > highfreq) {
             highfreq = frequen;
+        }
 
         return sum;
     }

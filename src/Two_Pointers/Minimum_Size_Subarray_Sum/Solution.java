@@ -8,18 +8,21 @@ import java.util.Arrays;
 
 public class Solution{
     public int minSubArrayLen(int s, int[] nums) {
-        if(nums == null || nums.length == 0 || s == 0)
+        if(nums == null || nums.length == 0 || s == 0) {
             return 0;
+        }
 
         int[] sum = new int[nums.length + 1];
         for (int i = 1; i < sum.length; i++) {
             sum[i] = sum[i-1] + nums[i - 1];
         }
 
-        if(sum[sum.length-1] < s)
+        if(sum[sum.length-1] < s) {
             return 0;
-        if(sum[sum.length-1] == s)
+        }
+        if(sum[sum.length-1] == s) {
             return nums.length;
+        }
 
         int res = Integer.MAX_VALUE, tmpSum = 0;
         for (int i = 0; i < sum.length; i++) {
@@ -27,10 +30,11 @@ public class Solution{
             int target = Arrays.binarySearch(sum, i, sum.length, tmpSum + s);
             if(target < 0)
             {
-                if(target == - sum.length - 1)
+                if(target == - sum.length - 1) {
                     continue;
-                else
+                } else {
                     target = -target - 1;
+                }
             }
             res = Math.min(res, target - i);
         }

@@ -6,8 +6,9 @@ package Array.Minimum_Path_Sum;
 public class Minimum_Path_Sum {
     public int minPathSum(int[][] grid)
     {
-        if(grid == null || grid.length == 0)
+        if(grid == null || grid.length == 0) {
             return 0;
+        }
 
         int row = grid.length, col = grid[0].length;
         int[][] dp = new int[row][col];

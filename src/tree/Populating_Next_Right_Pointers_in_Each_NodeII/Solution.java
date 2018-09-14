@@ -11,8 +11,9 @@ import java.util.Queue;
 
 public class Solution{
     public void connect_constant_space(TreeLinkNode root) {
-        if(root == null || (root.left == null && root.right == null))
+        if(root == null || (root.left == null && root.right == null)) {
             return;
+        }
 
         while (root != null)
         {
@@ -42,8 +43,9 @@ public class Solution{
     }
 
     public void connect_queue(TreeLinkNode root) {
-        if (root == null || (root.left == null && root.right == null))
+        if (root == null || (root.left == null && root.right == null)) {
             return;
+        }
         Queue<TreeLinkNode> queue = new LinkedList<>();
         queue.add(root);
         while (queue.isEmpty())
@@ -54,26 +56,32 @@ public class Solution{
                 queue.poll();
                 // 在拿出某一个的时候就把当前节点的next赋值好；
                 // 而不是保存当前的，在拿出下一个的时候将当前的next赋给下一个。
-                if(i < size - 1)
+                if(i < size - 1) {
                     temp.next = queue.peek();
-                if(temp.left != null)
+                }
+                if(temp.left != null) {
                     queue.add(temp.left);
-                if(temp.right != null)
+                }
+                if(temp.right != null) {
                     queue.add(temp.right);
+                }
             }
         }
     }
 
     public void preorder(TreeLinkNode root)
     {
-        if(root.next == null)
+        if(root.next == null) {
             System.out.println("" + root.val + "->: null");
-        else
-            System.out.println( "" + root.val + "->: " + root.next.val);
-        if(root.left != null)
+        } else {
+            System.out.println("" + root.val + "->: " + root.next.val);
+        }
+        if(root.left != null) {
             preorder(root.left);
-        if(root.right != null)
+        }
+        if(root.right != null) {
             preorder(root.right);
+        }
     }
 
     public static void main(String[] args)

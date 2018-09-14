@@ -8,8 +8,9 @@ import java.util.ArrayList;
 public class Permutation_Sequence {
     public String getPermutation(int n, int k)
     {
-        if (n == 0)
+        if (n == 0) {
             return "";
+        }
 
         k--;  //这里先--是为了后面算除数和取模的时候，算出来的结果和数组角标对应0-（n-1）
         ArrayList<Integer> list = new ArrayList<>(); //用list把所有数字存起来，后面遍历的时候用过一个就删除一个
@@ -39,8 +40,9 @@ public class Permutation_Sequence {
     }
 
     public String getPermutation1(int n, int k) {
-        if(n<=0)
+        if(n<=0) {
             return "";
+        }
         k--;
         StringBuilder res = new StringBuilder();
         int factorial = 1;
@@ -60,8 +62,9 @@ public class Permutation_Sequence {
             k %= factorial;
             res.append(nums.get(index));
             nums.remove(index);
-            if(round>0)
+            if(round>0) {
                 factorial /= round;
+            }
             round--;
         }
         return res.toString();

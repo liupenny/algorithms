@@ -10,8 +10,9 @@ import java.util.List;
 public class Solution{
     public List<String> addOperators(String num, int target) {
         List<String> ans = new ArrayList<>();
-        if(num == null || num.length() == 0)
+        if(num == null || num.length() == 0) {
             return ans;
+        }
 
         // char[] numChar = num.toCharArray();
         //String temp = new String();
@@ -24,19 +25,21 @@ public class Solution{
     {
         if(index == num.length())
         {
-            if(sum == target)
+            if(sum == target) {
                 ans.add(temp);
+            }
             return;
         }
         // 这里的循环就是在字符中填空格，使两个字符连接起来，其成为一个新的更大的数
         for (int i = index; i < num.length(); i++) {
             // 03是不合法的，直接退出
-            if(i != index && num.charAt(index) == '0')
+            if(i != index && num.charAt(index) == '0') {
                 break;
+            }
             long cur = Long.parseLong(num.substring(index, i + 1));
-            if(index == 0)
+            if(index == 0) {
                 isSum(ans, num, temp + cur, target, i + 1, cur, cur);
-            else
+            } else
             {
                 isSum(ans,num,temp + '+' + cur, target, i + 1, sum + cur, cur);
                 isSum(ans,num,temp + '-' + cur, target, i + 1, sum - cur, -cur);

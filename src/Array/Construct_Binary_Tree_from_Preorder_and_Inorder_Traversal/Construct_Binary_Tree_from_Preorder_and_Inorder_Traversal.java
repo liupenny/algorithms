@@ -10,8 +10,9 @@ import java.util.*;
 public class Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal {
     // 递归做
     public TreeNode buildTree(int[] preorder, int[] inorder) {
-        if(preorder == null || preorder.length == 0 || inorder == null || inorder.length == 0)
+        if(preorder == null || preorder.length == 0 || inorder == null || inorder.length == 0) {
             return null;
+        }
 
         TreeNode root = buildTree(preorder, 0, preorder.length - 1, inorder, 0, inorder.length - 1);
         int[][] tree = root.printTree(root);
@@ -26,8 +27,9 @@ public class Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal {
 
     public TreeNode buildTree(int[] preorder, int preStart, int preEnd, int[] inorder, int inStart, int inEnd)
     {
-        if(preStart > preEnd || inStart > inEnd)
+        if(preStart > preEnd || inStart > inEnd) {
             return null;
+        }
 
         TreeNode root = new TreeNode(preorder[preStart]);
         for (int i = inStart; i <= inEnd; i++) {
@@ -44,15 +46,20 @@ public class Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal {
 
     // 存在Map里
     public TreeNode buildTree_map(int[] preorder, int[] inorder) {
-        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
-        for(int i = 0; i < inorder.length; i++)
+        Map<Integer, Integer> map = new HashMap<>(16);
+        for(int i = 0; i < inorder.length; i++) {
             map.put(inorder[i], i);
+        }
         return build(preorder, 0, preorder.length - 1, inorder, 0, inorder.length - 1, map);
     }
     private TreeNode build(int[] preorder, int ps, int pe, int[] inorder, int is, int ie, Map<Integer, Integer> map)
     {
-        if(ps > pe || is > ie) return null;
-        if(pe >= preorder.length || ie >= inorder.length) return null;
+        if(ps > pe || is > ie) {
+            return null;
+        }
+        if(pe >= preorder.length || ie >= inorder.length) {
+            return null;
+        }
         int rootVal = preorder[ps];
 
         int index = map.get(rootVal);
@@ -65,8 +72,9 @@ public class Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal {
 
     // 堆栈做
     public TreeNode buildTree_stack(int[] preorder, int[] inorder) {
-        if (preorder == null || preorder.length == 0 || inorder == null || inorder.length == 0)
+        if (preorder == null || preorder.length == 0 || inorder == null || inorder.length == 0) {
             return null;
+        }
 
         Stack<TreeNode> stk = new Stack<>();
         TreeNode result = new TreeNode(preorder[0]);

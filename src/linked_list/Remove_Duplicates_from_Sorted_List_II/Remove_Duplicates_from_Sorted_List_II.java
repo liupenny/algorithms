@@ -12,33 +12,40 @@ import tools.ListNode;
  */
 public class Remove_Duplicates_from_Sorted_List_II {
     public ListNode deleteDuplicates1(ListNode head) {
-        if(head == null || head.next ==null)
+        if(head == null || head.next ==null) {
             return head;
+        }
         ListNode newhead = new ListNode(0), pre=newhead,cur=head;
         newhead.next = head;
         while (cur!=null)
         {
             while (cur.next != null && cur.val == cur.next.val)  //重点在这里，当cur往前走的时候，pre并没有往前走，所以pre一直保留着上一个位置
+            {
                 cur = cur.next;
-            if (pre.next == cur)
+            }
+            if (pre.next == cur) {
                 pre = pre.next;
-            else
+            } else {
                 pre.next = cur.next;
+            }
             cur = cur.next;
         }
         return newhead.next;
     }
 
     public ListNode deleteDuplicates2(ListNode head) {
-        if(head == null)
+        if(head == null) {
             return head;
+        }
         if(head!=null && head.val==head.next.val) {
-            while (head.next != null && head.val == head.next.val)
+            while (head.next != null && head.val == head.next.val) {
                 head = head.next;
+            }
             return deleteDuplicates2(head.next);
         }
-        else
+        else {
             head.next = deleteDuplicates2(head.next);
+        }
         return head;
     }
 

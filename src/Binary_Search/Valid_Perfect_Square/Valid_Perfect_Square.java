@@ -13,12 +13,13 @@ public class Valid_Perfect_Square {
         {
             mid = lo + (hi - lo)/2;
             res = mid * mid;
-            if(num > res)
+            if(num > res) {
                 lo = (int) mid + 1;  //注意这里类型转换
-            else if(num == res)
+            } else if(num == res) {
                 return true;
-            else
-                hi = (int)mid - 1;   //mid -1
+            } else {
+                hi = (int) mid - 1;   //mid -1
+            }
         }
         return false;
     }

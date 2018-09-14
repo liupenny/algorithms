@@ -8,8 +8,9 @@ import java.util.Arrays;
 public class onebit_and_twobit_Characters {
     public boolean isOneBitCharacter(int[] bits)
     {
-        if(bits == null || bits.length == 0 || bits.length == 1)
+        if(bits == null || bits.length == 0 || bits.length == 1) {
             return true;
+        }
         // 挨个判断即可
         int i;
         for (i = 0; i + 1 < bits.length;)
@@ -25,10 +26,11 @@ public class onebit_and_twobit_Characters {
                 continue;
             }
         }
-        if(i == bits.length - 1 && bits[i] == 0)
+        if(i == bits.length - 1 && bits[i] == 0) {
             return true;
-        else
+        } else {
             return false;
+        }
     }
 
     // 当前数是0，一定是由1位数组成；

@@ -10,8 +10,9 @@ public class Solution {
     // 初始版本，比较简单
     public List<String> letterCombinations(String digits) {
         LinkedList<String> ans = new LinkedList<>();
-        if (digits == null || digits.length() == 0)
+        if (digits == null || digits.length() == 0) {
             return ans;
+        }
 
         Map<Character, List<Character>> map = new HashMap<>();
         map.put('1', Arrays.asList());
@@ -34,8 +35,9 @@ public class Solution {
         if(index == 0)
         {
             List<Character> tmp = map.get(digits.charAt(index));
-            for (Character c : tmp)
+            for (Character c : tmp) {
                 ans.add(String.valueOf(c));
+            }
             return ans;
         }
 
@@ -57,8 +59,9 @@ public class Solution {
 
     public List<String> letterCombinations_str(String digits) {
         List<String> ans = new ArrayList<>();
-        if(digits == null || digits.length() == 0)
+        if(digits == null || digits.length() == 0) {
             return ans;
+        }
         String cur = "";
         combine(ans, digits, 0, cur);
         return ans;

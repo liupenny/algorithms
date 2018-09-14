@@ -23,8 +23,9 @@ public class SubsetsII {
 
         for (int i = start; i < nums.length; i++)
         {
-            if(i > start && nums[i] == nums[i-1])
+            if(i > start && nums[i] == nums[i-1]) {
                 continue;
+            }
             temp.add(nums[i]);
             help(res, temp, nums, i+1);
             temp.remove(temp.size() - 1);

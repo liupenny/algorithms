@@ -29,15 +29,17 @@ Output:
  ["", "", "4", "", "", "", ""]]
      */
     public void printTree_format(TreeNode root) {
-        if (root == null)
+        if (root == null) {
             return;
+        }
 
         // 获取树的深度和宽度
         int depth = getDepth(root);
         int width = (int) Math.pow(2, depth) - 1;
         String[][] ans = new String[depth][width];
-        for (String[] arr : ans)
+        for (String[] arr : ans) {
             Arrays.fill(arr, "");
+        }
 
         fill(root, ans, 0, 0, width - 1);
         List<List<String>> ret = new ArrayList<>();
@@ -58,8 +60,9 @@ Output:
     }
 
     public void fill(TreeNode root, String[][] ans, int level, int begin, int end) {
-        if (begin > end || root == null)
+        if (begin > end || root == null) {
             return;
+        }
 
         ans[level][(begin + end) / 2] = "" + root.val;
         fill(root.left, ans, level + 1, begin, (begin + end) / 2 - 1);
@@ -124,8 +127,9 @@ Output:
 
     // 将一棵树转换成数组保存，打印的时候要先获取树的深度，再根据深度每行打印2^i个
     public static Object[] treeNodeToIntegerArray(TreeNode root) {
-        if (root == null)
+        if (root == null) {
             return new Object[0];
+        }
 
         int depth = getDepth(root);
         double num = Math.pow(2.0, depth + 0.0);
@@ -141,8 +145,9 @@ Output:
     }
 
     private static void insert(TreeNode root, Object[] output, int index) {
-        if (root == null)
+        if (root == null) {
             return;
+        }
 
         output[index] = root.val;
         insert(root.left, output, 2 * index + 1);
@@ -154,8 +159,9 @@ Output:
 
     // 获取树的深度
     public static int getDepth(TreeNode root) {
-        if (root == null)
+        if (root == null) {
             return 0;
+        }
 
         int left = getDepth(root.left);
         int right = getDepth(root.right);

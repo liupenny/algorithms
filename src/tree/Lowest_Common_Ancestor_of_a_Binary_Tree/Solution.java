@@ -9,9 +9,9 @@ import tools.TreeNode;
 public class Solution{
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         // 走到底或者找到了其中一个就返回当前的节点
-        if(root == null || root == p || root == q)
+        if(root == null || root == p || root == q) {
             return root;
-
+        }
         // 没到底，也没找到p,q就继续在左边和右边找
         TreeNode left = lowestCommonAncestor(root.left, p, q);
         TreeNode right = lowestCommonAncestor(root.right, p, q);

@@ -9,16 +9,18 @@ import java.util.Set;
 public class Contains_Duplicate {
     public boolean containsDuplicate(int[] nums)
     {
-        if(nums == null || nums.length == 0)
+        if(nums == null || nums.length == 0) {
             return false;
+        }
 
         Set<Integer> map = new HashSet<>();
         for (int num: nums)
         {
-            if(map.contains(num) == false)
+            if(map.contains(num) == false) {
                 map.add(num);
-            else
+            } else {
                 return true;
+            }
         }
         return false;
     }

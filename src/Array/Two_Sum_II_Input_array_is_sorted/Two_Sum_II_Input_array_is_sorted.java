@@ -14,10 +14,11 @@ public class Two_Sum_II_Input_array_is_sorted {
         int lo = 0, hi = numbers.length-1;
         while (numbers[lo] + numbers[hi] != target)  //在不等于的情况下循环
         {
-            if(numbers[lo] + numbers[hi]>target)
+            if(numbers[lo] + numbers[hi]>target) {
                 hi--;
-            else if(numbers[lo] + numbers[hi]<target)
+            } else if(numbers[lo] + numbers[hi]<target) {
                 lo++;
+            }
         }
         ans[0] = lo+1; //题目中要求从1开始
         ans[1] = hi+1;

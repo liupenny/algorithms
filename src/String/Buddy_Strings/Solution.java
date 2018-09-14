@@ -10,8 +10,9 @@ import java.util.Set;
 public class Solution{
     public boolean buddyStrings(String A, String B) {
         // A.B长度不等时，一定是false
-        if(A == null || A.length() == 0 || B == null || B.length() == 0 || A.length() != B.length())
+        if(A == null || A.length() == 0 || B == null || B.length() == 0 || A.length() != B.length()) {
             return false;
+        }
 
         // 当A和B相等，需要A中包含至少两个相同的元素
        if(A.equals(B))
@@ -29,14 +30,16 @@ public class Solution{
         int num = 0;
         for (int i = 0; i < A.length(); i++) {
             if(A.charAt(i) != B.charAt(i)) {
-                if (num == 2)
+                if (num == 2) {
                     return false;
+                }
                 index[num++] = i;
             }
         }
 
-        if(num == 2 && A.charAt(index[0]) == B.charAt(index[1]) && A.charAt(index[1]) == B.charAt(index[0]))
+        if(num == 2 && A.charAt(index[0]) == B.charAt(index[1]) && A.charAt(index[1]) == B.charAt(index[0])) {
             return true;
+        }
         return false;
     }
 

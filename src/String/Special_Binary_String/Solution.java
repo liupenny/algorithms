@@ -11,18 +11,20 @@ import java.util.List;
 public class Solution{
     public String makeLargestSpecial(String S) {
         // 到最里面就是"()"，这时候返回
-        if(S == null || S.length() == 0 || S.length() == 2)
+        if(S == null || S.length() == 0 || S.length() == 2) {
             return S;
+        }
 
         // begin从0开始
         int begin = 0, cnt = 0;
         // 每次进入循环都会重新建一个list
         List<String> res = new ArrayList<>();
         for (int i = 0; i < S.length(); i++) {
-            if(S.charAt(i) == '1')
+            if(S.charAt(i) == '1') {
                 cnt++;
-            else
+            } else {
                 cnt--;
+            }
 
             if(cnt == 0) {
                 // 这里截取了 [begin + 1, i) 之前的子串，因为begin,i是一定知道的，所以对里面的进行排序

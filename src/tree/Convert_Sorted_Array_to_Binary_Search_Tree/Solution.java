@@ -8,10 +8,12 @@ import tools.TreeNode;
 
 public class Solution{
     public TreeNode sortedArrayToBST(int[] nums) {
-        if(nums == null || nums.length == 0)
+        if(nums == null || nums.length == 0) {
             return null;
-        if(nums.length == 1)
+        }
+        if(nums.length == 1) {
             return new TreeNode(nums[0]);
+        }
 
         int len = nums.length;
         return build(nums, 0, len - 1);
@@ -19,8 +21,9 @@ public class Solution{
 
     public TreeNode build(int[] nums, int begin, int end)
     {
-        if(begin > end)
+        if(begin > end) {
             return null;
+        }
 
         int mid = begin + (end - begin)/2;
         TreeNode root = new TreeNode(nums[mid]);

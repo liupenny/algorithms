@@ -5,7 +5,9 @@ package Dynamic_Programming.Arithmetic_Slices;
  */
 public class Arithmetic_Slices {
     public int numberOfArithmeticSlices(int[] A) {
-        if(A == null || A.length <3) return 0;
+        if(A == null || A.length <3) {
+            return 0;
+        }
 
         int[][] dp = new int[A.length][A.length];  //dp[i][j]标明A[i]到A[j]是不是递增序列，是=1，不是=0
         int ans = 0;
@@ -27,14 +29,18 @@ public class Arithmetic_Slices {
 
     public int numberOfArithmeticSlices1(int[] A)   //只用一维数组表示，遍历一次
     {
-        if(A == null || A.length <3) return 0;
+        if(A == null || A.length <3) {
+            return 0;
+        }
 
         int[] dp = new int[A.length];
         int res=0;
         for (int i=2; i<A.length; i++)
         {
             if(A[i] - A[i-1] == A[i-1] - A[i-2])  //如果是连续的等差数列，dp[i] = dp[i-1] + 1是算上了所有长度的，如果中间有一个不等就变为0，所以不会错过
-                dp[i] = dp[i-1] + 1;  //dp[i-1]代表以i-1为结尾的等差数列的个数，那加上i位置一定也是等差数列，所以再加上后面三个构成了新的
+            {
+                dp[i] = dp[i - 1] + 1;  //dp[i-1]代表以i-1为结尾的等差数列的个数，那加上i位置一定也是等差数列，所以再加上后面三个构成了新的
+            }
             res += dp[i];
         }
         return res;

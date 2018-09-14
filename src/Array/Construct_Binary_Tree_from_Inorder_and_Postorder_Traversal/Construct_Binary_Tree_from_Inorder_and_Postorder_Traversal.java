@@ -11,16 +11,18 @@ import java.util.Stack;
  */
 public class Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal {
     public TreeNode buildTree(int[] inorder, int[] postorder) {
-        if(postorder == null || postorder.length == 0 || inorder == null || inorder.length == 0)
+        if(postorder == null || postorder.length == 0 || inorder == null || inorder.length == 0) {
             return null;
+        }
 
         TreeNode root = buildTree(postorder, 0, postorder.length - 1, inorder, 0, inorder.length - 1);
         return root;
     }
 
     public TreeNode buildTree(int[] postorder, int postStart, int postEnd, int[] inorder, int inStart, int inEnd) {
-        if(postStart > postEnd || inStart > inEnd)
+        if(postStart > postEnd || inStart > inEnd) {
             return null;
+        }
 
         TreeNode root = new TreeNode(postorder[postEnd]);
         for (int i = inStart; i <= inEnd ; i++) {
@@ -38,7 +40,7 @@ public class Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal {
             return null;
         }
 
-        Map<Integer, Integer> order = new HashMap<>();
+        Map<Integer, Integer> order = new HashMap<>(16);
         for (int i = 0; i < inorder.length; i ++) {
             order.put(inorder[i], i);
         }
@@ -66,7 +68,9 @@ public class Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal {
 
     public TreeNode buildTree_stack(int[] inorder, int[] postorder) {
 
-        if( inorder.length == 0 ) return null;
+        if( inorder.length == 0 ) {
+            return null;
+        }
         // last element in the postorder is the root of the tree
         TreeNode root = new TreeNode(postorder[postorder.length-1]);
         Stack<TreeNode> st = new Stack<>();

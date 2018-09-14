@@ -9,8 +9,9 @@ public class Surrounded_Regions {
 
     public void solve(char[][] board)
     {
-        if(board == null || board.length <= 1 || board[0].length <= 1)
+        if(board == null || board.length <= 1 || board[0].length <= 1) {
             return;
+        }
         for (int i = 0; i < board[0].length; i++)
         {
             fill(board, 0, i); //上边缘
@@ -25,10 +26,11 @@ public class Surrounded_Regions {
         {
             for (int j = 0; j < board[0].length; j++)
             {
-                if(board[i][j]=='O')
+                if(board[i][j]=='O') {
                     board[i][j] = 'X';
-                else if(board[i][j] == '#')
+                } else if(board[i][j] == '#') {
                     board[i][j] = 'O';
+                }
             }
         }
 
@@ -44,8 +46,9 @@ public class Surrounded_Regions {
 
     public void fill(char[][] board, int i, int j)
     {
-        if(board[i][j] != 'O')
+        if(board[i][j] != 'O') {
             return;
+        }
         board[i][j] = '#';
         LinkedList<Integer> queue = new LinkedList<>();
         int pos = i * board[0].length + j;

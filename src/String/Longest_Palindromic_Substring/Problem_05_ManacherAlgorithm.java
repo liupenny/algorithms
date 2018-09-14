@@ -24,9 +24,9 @@ public class Problem_05_ManacherAlgorithm {
 		for (int i = 0; i != charArr.length; i++) {
 			pArr[i] = R > i ? Math.min(pArr[2 * index - i], R - i) : 1;   //当R>i,给出起码拥有的回文右边界,便于后续尝试;
 			while (i + pArr[i] < charArr.length && i - pArr[i] > -1) {
-				if (charArr[i + pArr[i]] == charArr[i - pArr[i]])
-					pArr[i]++;
-				else {
+				if (charArr[i + pArr[i]] == charArr[i - pArr[i]]) {
+                    pArr[i]++;
+                } else {
 					break;
 				}
 			}
@@ -51,9 +51,9 @@ public class Problem_05_ManacherAlgorithm {
 		for (int i = 0; i != charArr.length; i++) {
 			pArr[i] = pR > i ? Math.min(pArr[2 * index - i], pR - i) : 1;
 			while (i + pArr[i] < charArr.length && i - pArr[i] > -1) {
-				if (charArr[i + pArr[i]] == charArr[i - pArr[i]])
-					pArr[i]++;
-				else {
+				if (charArr[i + pArr[i]] == charArr[i - pArr[i]]) {
+                    pArr[i]++;
+                } else {
 					break;
 				}
 			}

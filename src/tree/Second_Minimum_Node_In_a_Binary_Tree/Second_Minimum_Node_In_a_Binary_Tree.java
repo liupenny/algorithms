@@ -7,14 +7,18 @@ import tools.TreeNode;
  */
 public class Second_Minimum_Node_In_a_Binary_Tree {
     public int findSecondMinimumValue(TreeNode root) {
-        if(root==null || root.left==null) return -1;
+        if(root==null || root.left==null) {
+            return -1;
+        }
 
         int left = root.left.val, right = root.right.val;
 
-        if(left == root.val)
+        if(left == root.val) {
             left = findSecondMinimumValue(root.left);     //此函数的意义就是找到与根节点不同的数，没有就返回-1，所以下面直接判断即可
-        if(right == root.val)
+        }
+        if(right == root.val) {
             right = findSecondMinimumValue(root.right);
+        }
 
         if (left != -1 && right != -1) {
             return Math.min(left, right);

@@ -60,21 +60,25 @@ public class Split_Array_Largest_Sum {
         int n = nums.length;
         int[][] dp = new int[m+1][n+1];
         int[] sum = new int[n+1];
-        for(int i=0; i<m+1; i++)
-            for (int j=0; j<n+1; j++)
+        for(int i=0; i<m+1; i++) {
+            for (int j = 0; j < n + 1; j++) {
                 dp[i][j] = Integer.MAX_VALUE;
+            }
+        }
         dp[0][0] = 0;
         sum[0] = 0;
-        for (int i=1; i<=n; i++)
-            sum[i]= sum[i-1] + nums[i-1];
+        for (int i=1; i<=n; i++) {
+            sum[i] = sum[i - 1] + nums[i - 1];
+        }
 
-        for (int i=1; i<=m; ++i)
-            for (int j=1; j<=n; ++j)
-                for (int k=i-1; k<j; ++k)
-                {
-                    int val=Math.max(dp[i-1][k],sum[j]-sum[k]);   //因为最后要求dp[m][n],需要的是n那一列，那一列的数值由那一行之前的挨个比较得出
-                    dp[i][j] = Math.min(dp[i][j],val);
+        for (int i=1; i<=m; ++i) {
+            for (int j = 1; j <= n; ++j) {
+                for (int k = i - 1; k < j; ++k) {
+                    int val = Math.max(dp[i - 1][k], sum[j] - sum[k]);   //因为最后要求dp[m][n],需要的是n那一列，那一列的数值由那一行之前的挨个比较得出
+                    dp[i][j] = Math.min(dp[i][j], val);
                 }
+            }
+        }
         return dp[m][n];
     }
 
@@ -103,12 +107,14 @@ public class Split_Array_Largest_Sum {
         int L = nums.length;
         int[] S = new int[L+1];
         S[0]=0;
-        for(int i=0; i<L; i++)
-            S[i+1] = S[i]+nums[i];
+        for(int i=0; i<L; i++) {
+            S[i + 1] = S[i] + nums[i];
+        }
 
         int[] dp = new int[L];
-        for(int i=0; i<L; i++)
-            dp[i] = S[L]-S[i];
+        for(int i=0; i<L; i++) {
+            dp[i] = S[L] - S[i];
+        }
 
         for(int s=1; s<m; s++)
         {
@@ -118,10 +124,11 @@ public class Split_Array_Largest_Sum {
                 for(int j=i+1; j<=L-s; j++)
                 {
                     int t = Math.max(dp[j], S[j]-S[i]);
-                    if(t<=dp[i])
-                        dp[i]=t;
-                    else
+                    if(t<=dp[i]) {
+                        dp[i] = t;
+                    } else {
                         break;
+                    }
                 }
             }
         }
@@ -138,15 +145,18 @@ public class Split_Array_Largest_Sum {
             sum += num;
         }
 
-        if(m==1)  return (int)sum;
+        if(m==1) {
+            return (int) sum;
+        }
         long left = max, right = sum;
         while (left <= right)  //注意 =
         {
             long mid = left + (right - left)/2;
-            if(valid(mid, nums, m))
+            if(valid(mid, nums, m)) {
                 right = mid - 1;  //注意这里的 -1 和下面的 +1
-            else
+            } else {
                 left = mid + 1;
+            }
         }
         return (int)left;
     }
@@ -162,8 +172,9 @@ public class Split_Array_Largest_Sum {
             {
                 total = num;  //如果加和值大于规定值，就开始重新加和
                 count++;
-                if (count > m)
+                if (count > m) {
                     return false;
+                }
             }
         }
         return true;

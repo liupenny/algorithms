@@ -5,8 +5,9 @@ package Array.Subarray_Product_Less_Than_K;
  */
 public class Subarray_Product_Less_Than_K {
     public int numSubarrayProductLessThanK(int[] nums, int k) {
-        if(nums == null || nums.length == 0)
+        if(nums == null || nums.length == 0) {
             return 0;
+        }
 
         int res = 0;
         for (int i = 0; i < nums.length; i++)
@@ -15,19 +16,24 @@ public class Subarray_Product_Less_Than_K {
             for (int j = i; j < nums.length; j++)
             {
                 sum *= nums[j];
-                if(sum < k)
+                if(sum < k) {
                     res++;
+                }
             }
         }
         return res;
     }
 
     public int numSubarrayProductLessThanK1(int[] nums, int k) {
-        if (k <= 1) return 0;
+        if (k <= 1) {
+            return 0;
+        }
         int prod = 1, ans = 0, left = 0;
         for (int right = 0; right < nums.length; right++) {
             prod *= nums[right];
-            while (prod >= k) prod /= nums[left++]; //除完，left自动增加
+            while (prod >= k) {
+                prod /= nums[left++]; //除完，left自动增加
+            }
             ans += right - left + 1;
         }
         return ans;

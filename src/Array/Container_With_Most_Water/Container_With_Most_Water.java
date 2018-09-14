@@ -5,29 +5,33 @@ package Array.Container_With_Most_Water;
  */
 public class Container_With_Most_Water {
     public int maxArea(int[] height) {
-        if(height == null || height.length < 2)
+        if(height == null || height.length < 2) {
             return 0;
+        }
 
         int len = height.length, ans = 0;
         for (int i = 0; i < len - 1; i++) {
-            for (int j = i + 1; j < len; j++)
-                    ans = Math.max(ans, Math.min(height[i], height[j]) * (j - i));
+            for (int j = i + 1; j < len; j++) {
+                ans = Math.max(ans, Math.min(height[i], height[j]) * (j - i));
+            }
         }
         return ans;
     }
 
     public int maxArea_pointer(int[] height) {
-        if (height == null || height.length < 2)
+        if (height == null || height.length < 2) {
             return 0;
+        }
 
         int maxarea = 0, left = 0, right = height.length - 1;
         while (left < right)
         {
             maxarea = Math.max(maxarea, Math.min(height[left], height[right]) * (right - left));
-            if(height[left] < height[right])
+            if(height[left] < height[right]) {
                 left++;
-            else
+            } else {
                 right--;
+            }
         }
         return maxarea;
     }

@@ -7,8 +7,9 @@ import tools.ListNode;
  */
 public class Linked_List_Cycle_II {  //详细证明看左神笔记，或者上网看
     public ListNode detectCycle(ListNode head) {
-        if(head == null || head.next == null)
+        if(head == null || head.next == null) {
             return null;
+        }
         ListNode fast=head,slow=head,encounter=null;
         while (fast.next!=null && fast.next.next!=null)
         {
@@ -20,8 +21,9 @@ public class Linked_List_Cycle_II {  //详细证明看左神笔记，或者上�
                 break;
             }
         }
-        if(encounter==null)
+        if(encounter==null) {
             return null;
+        }
         while (head!=encounter)
         {
             head = head.next;

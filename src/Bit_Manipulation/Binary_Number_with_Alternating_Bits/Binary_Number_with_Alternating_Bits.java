@@ -5,19 +5,25 @@ package Bit_Manipulation.Binary_Number_with_Alternating_Bits;
  */
 public class Binary_Number_with_Alternating_Bits {
     public boolean hasAlternatingBits(int n) {
-        if(n <= 1) return true;
+        if(n <= 1) {
+            return true;
+        }
 
         int bit = -1;
         while (n>0)
         {
             if((n&1) == 1)
             {
-                if(bit == 1) return false;
+                if(bit == 1) {
+                    return false;
+                }
                 bit = 1;
             }
             else
             {
-                if(bit == 0) return false;
+                if(bit == 0) {
+                    return false;
+                }
                 bit = 0;
             }
             n>>=1;

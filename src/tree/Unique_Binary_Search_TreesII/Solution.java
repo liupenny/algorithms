@@ -43,7 +43,9 @@ public class Solution{
     }
 
     static TreeNode clone(TreeNode node, int offset){
-        if(node == null) return null;
+        if(node == null) {
+            return null;
+        }
         TreeNode newNode = new TreeNode(node.val + offset);
         newNode.left = clone(node.left, offset);
         newNode.right = clone(node.right, offset);

@@ -8,11 +8,13 @@ import java.util.LinkedList;
 public class Flood_Fill {
     public int[][] floodFill(int[][] image, int sr, int sc, int newColor) 
     {
-        if (image == null || image.length == 0 || sr < 0 || sr > image.length || sc < 0 || sc > image[0].length)
+        if (image == null || image.length == 0 || sr < 0 || sr > image.length || sc < 0 || sc > image[0].length) {
             return image;
+        }
         int oldColor = image[sr][sc];
-        if(oldColor == newColor)
+        if(oldColor == newColor) {
             return image;
+        }
         LinkedList<Integer> queue = new LinkedList<>();
         int pos = sr * image[0].length + sc;
         image[sr][sc] = newColor;

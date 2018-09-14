@@ -17,8 +17,9 @@ public class Coin_Change {
     //需要用的硬币数逐渐向上加，最后返回的minCost是正确的。但是会超时
     public int coinChange(int idxCoin, int[] coins, int amount)
     {
-        if(amount == 0)
+        if(amount == 0) {
             return 0;
+        }
         if(idxCoin < coins.length && amount > 0)
         {
             int maxVal = amount/coins[idxCoin];
@@ -28,8 +29,9 @@ public class Coin_Change {
                 if (amount >= x * coins[idxCoin])
                 {
                     int res = coinChange(idxCoin+1, coins, amount - x * coins[idxCoin]);
-                    if(res != -1)
-                        minCost = Math.min(minCost,res + x);
+                    if(res != -1) {
+                        minCost = Math.min(minCost, res + x);
+                    }
                 }
             }
             return (minCost == Integer.MAX_VALUE)? -1: minCost;
@@ -40,15 +42,22 @@ public class Coin_Change {
     // 从上往下，但是一下子就到最底部，从下面的挨个算上来，就得到的最后的结果
     public int coinChange(int[] coins, int rem, int[] count)
     {
-        if(rem < 0) return -1;
-        if(rem == 0) return 0;
-        if(count[rem-1] != 0) return count[rem-1];
+        if(rem < 0) {
+            return -1;
+        }
+        if(rem == 0) {
+            return 0;
+        }
+        if(count[rem-1] != 0) {
+            return count[rem - 1];
+        }
         int min = Integer.MAX_VALUE;
         for (int coin: coins)
         {
             int res = coinChange(coins,rem - coin,count);
-            if(res >= 0 && res < min)
+            if(res >= 0 && res < min) {
                 min = 1 + res;
+            }
         }
         count[rem-1] = (min == Integer.MAX_VALUE) ? -1 : min;
         return count[rem-1];

@@ -37,7 +37,9 @@ public class Code_03_Print_All_Subsquences {
 	// res是之前收到的结果
 	{
 		if(i==chs.length)  //到末尾了，就打印收集的结果
-			printList(res);
+        {
+            printList(res);
+        }
 		List<Character> resKeep = copyList(res);  //保留当前字符
 		resKeep.add(chs[i]);
 		process1(chs, i, resKeep);   //要

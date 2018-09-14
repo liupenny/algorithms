@@ -8,8 +8,9 @@ import tools.*;
  */
 public class Remove_Nth_Node_From_End_of_List {
     public ListNode removeNthFromEnd(ListNode head, int n) {  //通过快慢指针确定要删除的元素，因为没法从后往前数
-        if(head.next == null || head == null)
+        if(head.next == null || head == null) {
             return null;
+        }
         ListNode fast = head, slow = head;
         for (int i = 1; i <= n; i++)
         {
@@ -20,10 +21,11 @@ public class Remove_Nth_Node_From_End_of_List {
             fast = fast.next;
             slow = slow.next;
         }
-        if(fast==null)
+        if(fast==null) {
             return head.next;
-        else
+        } else {
             slow.next = slow.next.next;
+        }
         return head;
     }
 

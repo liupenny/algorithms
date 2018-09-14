@@ -12,7 +12,9 @@ import java.util.Arrays;
  */
 public class Longest_Increasing_Subsequence {
     public int lengthOfLIS(int[] nums) {
-        if(nums.length == 1) return 1;
+        if(nums.length == 1) {
+            return 1;
+        }
         int[] help = new int[nums.length]; //help数组存的是对应每个位置的元素，加上该元素共有多少个组成递增序列
 
         for (int i=0; i<nums.length; i++)
@@ -20,34 +22,37 @@ public class Longest_Increasing_Subsequence {
             help[i] = 1;
             for (int j=0; j<i; j++)
             {
-                if(nums[i] > nums[j])
-                    help[i] = Math.max(help[i],help[j]+1);  //+1就是加上自己
+                if(nums[i] > nums[j]) {
+                    help[i] = Math.max(help[i], help[j] + 1);  //+1就是加上自己
+                }
             }
         }
 
 
         int ans=0;
-        for (int i=0; i<help.length; i++)
-            ans = Math.max(ans,help[i]);
+        for (int i=0; i<help.length; i++) {
+            ans = Math.max(ans, help[i]);
+        }
 
         return ans;
     }
 
-    public int CeilIndex(int A[], int l, int r, int key)
+    public int CeilIndex(int[] A, int l, int r, int key)
     {
         while (r - l > 1)
         {
             int m = l + (r - l)/2;
-            if (A[m]>=key)
+            if (A[m]>=key) {
                 r = m;
-            else
+            } else {
                 l = m;
+            }
         }
 
         return r;
     }
 
-    public  int lengthOfLIS1(int A[])  //跟lengthOfLIS2一样的思路
+    public  int lengthOfLIS1(int[] A)  //跟lengthOfLIS2一样的思路
     {
         // Add boundary case, when array size is one
 
@@ -61,16 +66,18 @@ public class Longest_Increasing_Subsequence {
         {
             if (A[i] < tailTable[0])
                 // new smallest value
+            {
                 tailTable[0] = A[i];
-
-            else if (A[i] > tailTable[len-1])
+            } else if (A[i] > tailTable[len-1])
                 // A[i] wants to extend largest subsequence
+            {
                 tailTable[len++] = A[i];
-
-            else
+            } else
                 // A[i] wants to be current end candidate of an existing
                 // subsequence. It will replace ceil value in tailTable
-                tailTable[CeilIndex(tailTable, -1, len-1, A[i])] = A[i];
+            {
+                tailTable[CeilIndex(tailTable, -1, len - 1, A[i])] = A[i];
+            }
         }
 
         return len;
@@ -82,9 +89,13 @@ public class Longest_Increasing_Subsequence {
 
         for(int x : nums) {
             int i = Arrays.binarySearch(dp, 0, len, x);  //如果key在数组中，则返回搜索值的索引；否则返回-1或“-（插入点）“。插入点是索引键将要插入数组的那一点，即第一个大于该键的元素的索引。
-            if(i < 0) i = -(i + 1);
+            if(i < 0) {
+                i = -(i + 1);
+            }
             dp[i] = x; //在这里会直接将原来位置上的元素替换掉，一开始2在dp[0],后来1过来了，1在dp[0]
-            if(i == len) len++;
+            if(i == len) {
+                len++;
+            }
         }
 
         return len;

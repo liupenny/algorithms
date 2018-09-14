@@ -7,8 +7,9 @@ import tools.TreeNode;
  */
 public class House_RobberIII {
     public int rob(TreeNode root) {
-        if (root == null)
+        if (root == null) {
             return 0;
+        }
 
         int[] res = getMoney(root);
         return Math.max(res[0], res[1]);
@@ -17,8 +18,9 @@ public class House_RobberIII {
     public int[] getMoney(TreeNode root)
     {
         int[] res = new int[2];
-        if (root == null)
+        if (root == null) {
             return res;
+        }
         int[] lres = getMoney(root.left);
         int[] rres = getMoney(root.right);
         // 下标0表示要root节点，1表示不要

@@ -7,8 +7,9 @@ import java.util.*;
 
 public class Solution {
     public List<Double> averageOfLevels(TreeNode root) {
-        if (root == null)
+        if (root == null) {
             return Arrays.asList(0.0);
+        }
 
         Queue<TreeNode> queue = new LinkedList<>();
         List<Double> ans = new ArrayList<>();

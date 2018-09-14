@@ -11,20 +11,24 @@ public class Find_All_Numbers_Disappeared_in_an_Array
     public List<Integer> findDisappearedNumbers(int[] nums)
     {
         List<Integer> ans = new ArrayList<>();
-        if (nums == null || nums.length == 0)
+        if (nums == null || nums.length == 0) {
             return ans;
+        }
 
         for (int i = 0; i < nums.length;)
         {
-            if(nums[i] != nums[nums[i]-1])
+            if(nums[i] != nums[nums[i]-1]) {
                 swap(nums, i, nums[i] - 1);
-            else  //这里不能把i++写在上面，因为换完以后i位置本身的数可能还要进行调整。（双指针）
+            } else  //这里不能把i++写在上面，因为换完以后i位置本身的数可能还要进行调整。（双指针）
+            {
                 i++;
+            }
         }
         for (int i = 0; i < nums.length; i++)
         {
-            if(nums[i] != i+1)
-                ans.add(i+1);
+            if(nums[i] != i+1) {
+                ans.add(i + 1);
+            }
         }
         return ans;
     }

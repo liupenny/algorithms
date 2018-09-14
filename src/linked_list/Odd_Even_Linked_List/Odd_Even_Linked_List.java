@@ -10,8 +10,9 @@ import tools.Sort_List;
  */
 public class Odd_Even_Linked_List {
     public ListNode oddEvenList1(ListNode head) {  //
-        if(head == null || head.next == null || head.next.next == null)
+        if(head == null || head.next == null || head.next.next == null) {
             return head;
+        }
         ListNode odd = head, even = head.next, second = even;
         head = head.next.next;
         int n =3;
@@ -36,8 +37,9 @@ public class Odd_Even_Linked_List {
     }
 
     public ListNode oddEvenList2(ListNode head) {
-        if(head == null || head.next == null || head.next.next == null)
+        if(head == null || head.next == null || head.next.next == null) {
             return head;
+        }
         ListNode odd = head, even = head.next, evenhead = even;
         while (even!=null && even.next!=null)  // 没有判断even.next.next，是因为可以是null。只要even.next不是Null就行
         {

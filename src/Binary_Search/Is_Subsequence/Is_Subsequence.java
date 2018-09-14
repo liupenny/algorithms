@@ -5,8 +5,11 @@ package Binary_Search.Is_Subsequence;
  */
 public class Is_Subsequence {
     public boolean isSubsequence1(String s, String t) {
-        if (t=="" && s=="" || s=="") return true;
-        else if (t=="" && s!="") return false;
+        if (t=="" && s=="" || s=="") {
+            return true;
+        } else if (t=="" && s!="") {
+            return false;
+        }
 
         int lens = s.length(), lent = t.length();
         int i=0,j=0;
@@ -17,17 +20,24 @@ public class Is_Subsequence {
                 i++;
                 j++;
             }
-            else j++;
+            else {
+                j++;
+            }
         }
-        if(i==lens) return true;
-        else return false;
+        if(i==lens) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public boolean isSubsequence2(String s, String t) { //快很多
         int index = -1;
         for (int i = 0; i < s.length(); i++) {
             index = t.indexOf(s.charAt(i), index + 1); //feed back as the next offset
-            if (index == -1) return false;
+            if (index == -1) {
+                return false;
+            }
         }
         return true;
     }

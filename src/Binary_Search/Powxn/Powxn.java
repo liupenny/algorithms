@@ -5,12 +5,16 @@ package Binary_Search.Powxn;
  */
 public class Powxn {
     public double myPow(double x, int n) {
-        if(x==0) return 0;
+        if(x==0) {
+            return 0;
+        }
         double ans = 1;
         long absn = Math.abs((long) n);
         while (absn > 0)
         {
-            if((absn&1) == 1) ans *= x;   //移位后的absn如果当前位置是1就×
+            if((absn&1) == 1) {
+                ans *= x;   //移位后的absn如果当前位置是1就×
+            }
             absn >>= 1;   //absn向右移位，就是/2
             x *= x;   //计算x^i的值
         }
@@ -18,7 +22,9 @@ public class Powxn {
     }
 
     public double myPow1(double x, int n) {
-        if(n==0) return 1;
+        if(n==0) {
+            return 1;
+        }
         if(n<0)
         {
             n = -n;

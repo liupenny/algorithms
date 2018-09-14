@@ -10,8 +10,9 @@ import static tools.TreeNode.treeNodeToString;
 
 class solu {
 	public TreeNode trimBST(TreeNode root, int L, int R) {
-		if(root == null || L > R)
-			return root;
+		if(root == null || L > R) {
+            return root;
+        }
 
 		if (root.val < L) {
 			return trimBST(root.right, L, R);

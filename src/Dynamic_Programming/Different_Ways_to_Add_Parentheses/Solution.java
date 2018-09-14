@@ -13,16 +13,18 @@ public class Solution{
     Map<String, List<Integer>> map = new HashMap<>();
     public List<Integer> diffWaysToCompute(String input) {
         List<Integer> ans = new ArrayList<>();
-        if(input == null || input.length() == 0)
+        if(input == null || input.length() == 0) {
             return ans;
+        }
         return compute(input);
     }
 
     public List<Integer> compute(String input)
     {
         List<Integer> res = map.get(input);
-        if(res != null)
+        if(res != null) {
             return res;
+        }
 
         res = new ArrayList<>();
         for (int i = 0; i < input.length(); i++) {
@@ -46,8 +48,9 @@ public class Solution{
             }
         }
         // 此时input就是一个单独的数，直接添加即可
-        if(res.isEmpty())
+        if(res.isEmpty()) {
             res.add(Integer.valueOf(input));
+        }
         map.put(input, res);
         return res;
     }

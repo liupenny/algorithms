@@ -6,14 +6,17 @@ package Array.Remove_Duplicates_from_Sorted_ArrayII;
 public class Remove_Duplicates_from_Sorted_ArrayII {
     public int removeDuplicates(int[] nums)
     {
-        if(nums == null || nums.length == 0)
+        if(nums == null || nums.length == 0) {
             return 0;
+        }
 
         int i = 0;
         for (int num:nums)
         {
             if (i<2 || num > nums[i-2])  //利用数组有序的特性
+            {
                 nums[i++] = num;
+            }
         }
         return i;
     }

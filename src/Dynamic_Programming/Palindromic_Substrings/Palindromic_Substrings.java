@@ -5,7 +5,9 @@ package Dynamic_Programming.Palindromic_Substrings;
  */
 public class Palindromic_Substrings {
     public int countSubstrings(String s) {
-        if(s.length() == 0 || s.length()==1) return s.length();
+        if(s.length() == 0 || s.length()==1) {
+            return s.length();
+        }
         int[][] dp = new int[s.length()][s.length()];    //dp[i]=从i到结尾有多少个重复序列
         int res = 0;
 
@@ -27,18 +29,22 @@ public class Palindromic_Substrings {
 
     public int countSubstrings1(String s)
     {
-        if(s.length() == 0 || s.length()==1) return s.length();
+        if(s.length() == 0 || s.length()==1) {
+            return s.length();
+        }
         int ans = 0;
-        for (int i=0; i<s.length(); i++)
-            ans += count(s,i,i) + count(s,i,i+1);
+        for (int i=0; i<s.length(); i++) {
+            ans += count(s, i, i) + count(s, i, i + 1);
+        }
         return ans;
     }
 
     public int count(String s, int left, int right)
     {
         int num = 0;
-        while (left>=0 && right<s.length() && s.charAt(left--) == s.charAt(right++))
+        while (left>=0 && right<s.length() && s.charAt(left--) == s.charAt(right++)) {
             num++;
+        }
         return num;
     }
 

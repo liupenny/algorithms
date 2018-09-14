@@ -7,13 +7,19 @@ package Binary_Search.Search_a_2D_Matrix_II;
  */
 public class Search_a_2D_Matrix_II {
     public boolean searchMatrix(int[][] matrix, int target) {
-        if(matrix.length==0) return false;
+        if(matrix.length==0) {
+            return false;
+        }
         int row = matrix.length-1, column = matrix[0].length-1;
         for (int i=0, j=column; i<=row && j>=0;)
         {
-            if(target==matrix[i][j])  return true;
-            else if(target>matrix[i][j]) i++;
-            else if(target<matrix[i][j]) j--;
+            if(target==matrix[i][j]) {
+                return true;
+            } else if(target>matrix[i][j]) {
+                i++;
+            } else if(target<matrix[i][j]) {
+                j--;
+            }
         }
         return false;
     }

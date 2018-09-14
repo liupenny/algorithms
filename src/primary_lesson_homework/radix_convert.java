@@ -44,7 +44,9 @@ public class radix_convert {
         int radix = sc.nextInt();
         String s = "0123456789ABCDEF";
         boolean negative = false;
-        if(num<0)  negative = true;
+        if(num<0) {
+            negative = true;
+        }
         StringBuilder sb = new StringBuilder();
         num = Math.abs(num);
         while(num>=radix)

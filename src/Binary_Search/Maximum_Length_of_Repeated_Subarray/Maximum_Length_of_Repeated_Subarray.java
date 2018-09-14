@@ -12,18 +12,18 @@ public class Maximum_Length_of_Repeated_Subarray {
         int lenB = B.length;
         int max=0;
         int[][] ans = new int[lenA+1][lenB+1];
-        for (int i=0; i<=lenA; i++)
-            for (int j=0; j<=lenB; j++)
-            {
-                if(i==0 || j==0)
+        for (int i=0; i<=lenA; i++) {
+            for (int j = 0; j <= lenB; j++) {
+                if (i == 0 || j == 0) {
                     ans[i][j] = 0;
-                else
-                {
-                    if(A[i-1]==B[j-1])
-                        ans[i][j] = ans[i-1][j-1] + 1;
-                    max = Math.max(max,ans[i][j]);
+                } else {
+                    if (A[i - 1] == B[j - 1]) {
+                        ans[i][j] = ans[i - 1][j - 1] + 1;
+                    }
+                    max = Math.max(max, ans[i][j]);
                 }
             }
+        }
         return max;
     }
 
@@ -32,13 +32,14 @@ public class Maximum_Length_of_Repeated_Subarray {
         int lenB = B.length;
         int max=0;
         int[] ans = new int[lenB+1];
-        for (int i=1; i<=lenA; i++)
-            for (int j=1; j<=lenB; j++)
-            {
-                    if(A[i-1] == B[j-1])
-                        ans[j] = ans[j-1]+1;
-                    max = Math.max(max,ans[j]);
+        for (int i=1; i<=lenA; i++) {
+            for (int j = 1; j <= lenB; j++) {
+                if (A[i - 1] == B[j - 1]) {
+                    ans[j] = ans[j - 1] + 1;
+                }
+                max = Math.max(max, ans[j]);
             }
+        }
         return max;
     }
 

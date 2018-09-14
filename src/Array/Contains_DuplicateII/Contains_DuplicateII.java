@@ -8,8 +8,9 @@ import java.util.*;
 public class Contains_DuplicateII {
     public boolean containsNearbyDuplicate(int[] nums, int k)
     {
-        if(nums == null || nums.length == 0)
+        if(nums == null || nums.length == 0) {
             return false;
+        }
 
         Map<Integer, List<Integer>> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++)
@@ -26,8 +27,9 @@ public class Contains_DuplicateII {
                 List poss = map.get(nums[i]);
                 for (int j = 0; j < poss.size(); j++)
                 {
-                    if(i - (int)poss.get(j) <= k)
+                    if(i - (int)poss.get(j) <= k) {
                         return true;
+                    }
                 }
                 poss.add(i);
                 map.put(nums[i], poss);
@@ -40,8 +42,12 @@ public class Contains_DuplicateII {
     public boolean containsNearbyDuplicate1(int[] nums, int k) {
         Set<Integer> set = new HashSet<Integer>();
         for(int i = 0; i < nums.length; i++){
-            if(i > k) set.remove(nums[i-k-1]); // 把离nums[i]的距离>k的全删掉
-            if(!set.add(nums[i])) return true; //目前这些元素都是距离nums[i]<=k的，所以如果没有添加成功，就证明已经存在这个数了
+            if(i > k) {
+                set.remove(nums[i - k - 1]); // 把离nums[i]的距离>k的全删掉
+            }
+            if(!set.add(nums[i])) {
+                return true; //目前这些元素都是距离nums[i]<=k的，所以如果没有添加成功，就证明已经存在这个数了
+            }
         }
         return false;
     }

@@ -7,8 +7,9 @@ import java.util.List;
  */
 public class Maximum_Swap {
     public int maximumSwap(int num) {
-        if(num <= 10)
+        if(num <= 10) {
             return num;
+        }
 
         char[] digits = Integer.toString(num).toCharArray(); //记录num中的每一位
         int[] buckets = new int[10];

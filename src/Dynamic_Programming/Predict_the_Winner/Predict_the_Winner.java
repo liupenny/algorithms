@@ -2,8 +2,12 @@ package Dynamic_Programming.Predict_the_Winner;
 
 public class Predict_the_Winner {
     public boolean PredictTheWinner(int[] nums) {
-        if(nums==null || nums.length==0) return false;
-        if(nums.length == 1) return true;
+        if(nums==null || nums.length==0) {
+            return false;
+        }
+        if(nums.length == 1) {
+            return true;
+        }
 
         int[] sum = new int[nums.length];  //算出0-i位置的数组和
         sum[0] = nums[0];
@@ -17,7 +21,9 @@ public class Predict_the_Winner {
         for (int i = nums.length - 1; i >= 0; i--) //1选择0位置
         {
             dp[i][i] = nums[i];
-            if (i == nums.length - 1) continue;
+            if (i == nums.length - 1) {
+                continue;
+            }
             for (int j = i + 1; j < nums.length - 1; j++)
             {
                 if(j == i+1)
@@ -38,7 +44,9 @@ public class Predict_the_Winner {
 
     public int winner1(int[] nums, int start, int end, int turn)
     {
-        if(start == end) return turn*nums[start];  //很多地方都乘以turn，不要忘了
+        if(start == end) {
+            return turn * nums[start];  //很多地方都乘以turn，不要忘了
+        }
         int first = nums[start]*turn + winner1(nums, start+1, end, -turn);
         int last = nums[end]*turn + winner1(nums, start, end - 1, -turn);
         return turn*Math.max(turn*first,turn*last);  //外面和里面都要乘以turn
@@ -52,10 +60,12 @@ public class Predict_the_Winner {
 
     public int winner2(int[] nums, int s, int e, Integer[][] memo) //返回选择首尾后，1和2差值大的那一个
     {
-        if (s == e)
+        if (s == e) {
             return nums[s];
-        if (memo[s][e] != null)
+        }
+        if (memo[s][e] != null) {
             return memo[s][e];
+        }
         int a = nums[s] - winner2(nums, s + 1, e, memo);
         int b = nums[e] - winner2(nums, s, e - 1, memo);
         memo[s][e] = Math.max(a, b);

@@ -9,8 +9,9 @@ import java.util.*;
 public class Solution{
     public List<Integer> topKFrequent(int[] nums, int k) {
         List<Integer> ans = new ArrayList<>();
-        if(nums == null || nums.length == 0)
+        if(nums == null || nums.length == 0) {
             return ans;
+        }
 
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
@@ -27,8 +28,9 @@ public class Solution{
         );
         priorityQueue.addAll(map.entrySet());
 
-        for (int i = 0; i < k; i++)
+        for (int i = 0; i < k; i++) {
             ans.add(priorityQueue.poll().getKey());
+        }
         return ans;
     }
 

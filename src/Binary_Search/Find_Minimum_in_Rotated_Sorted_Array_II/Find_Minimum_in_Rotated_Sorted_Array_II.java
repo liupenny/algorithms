@@ -9,14 +9,18 @@ public class Find_Minimum_in_Rotated_Sorted_Array_II {
         while (left <= right)  //加=是因为有可能 right就判断不到了
         {
             if (nums[left] < nums[right] || left==right)  //在这里跳出是因为可能 left=right就一直死循环
+            {
                 return nums[left];
+            }
             mid = left + (right - left)/2;
-            if (nums[mid] > nums[right])
+            if (nums[mid] > nums[right]) {
                 left = mid + 1;
-            else if (nums[mid] == nums[right])  //e.g. 3 3 1 3 / 3 1 3 3 这两种情况下没法判断该去哪，所以right-1
+            } else if (nums[mid] == nums[right])  //e.g. 3 3 1 3 / 3 1 3 3 这两种情况下没法判断该去哪，所以right-1
+            {
                 right--;
-            else
+            } else {
                 right = mid;
+            }
         }
         return nums[right];
     }
@@ -24,7 +28,7 @@ public class Find_Minimum_in_Rotated_Sorted_Array_II {
 
     public static void main(String[] algs)
     {
-        int nums[] = {3,1,3};
+        int[] nums = {3, 1, 3};
         Find_Minimum_in_Rotated_Sorted_Array_II test = new Find_Minimum_in_Rotated_Sorted_Array_II();
         System.out.println(test.findMin(nums));
     }

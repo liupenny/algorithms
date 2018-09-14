@@ -5,8 +5,12 @@ package Binary_Search.Divide_Two_Integers;
  */
 public class Divide_Two_Integers {
     public int divide(int dividend, int divisor) {
-        if(divisor == 0 || dividend==Integer.MIN_VALUE && divisor==-1) return Integer.MAX_VALUE;
-        if(divisor == 1 || divisor == -1) return divisor==-1? -dividend: dividend;
+        if(divisor == 0 || dividend==Integer.MIN_VALUE && divisor==-1) {
+            return Integer.MAX_VALUE;
+        }
+        if(divisor == 1 || divisor == -1) {
+            return divisor == -1 ? -dividend : dividend;
+        }
 
         int sign = ((dividend<0)^(divisor<0)) ? -1:1;
 

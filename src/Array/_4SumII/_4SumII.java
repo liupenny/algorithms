@@ -1,4 +1,4 @@
-package Binary_Search._4SumII;
+package Array._4SumII;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -10,15 +10,19 @@ import java.util.Map;
  */
 public class _4SumII {
     public int fourSumCount(int[] A, int[] B, int[] C, int[] D) {
-        Map<Integer,Integer> map = new HashMap<Integer, Integer>();
-        for (int i = 0; i < A.length ; i++)
-            for (int j = 0; j < B.length; j++)
-                map.put(A[i] + B[j],map.getOrDefault(A[i] + B[j], 0) + 1);  //map.getOrDefault(key,defaultval)返回map键对应的map值，如果不存在map键，返回默认值.+1是要把对应的个数也存起来
+        Map<Integer,Integer> map = new HashMap<>(16);
+        for (int i = 0; i < A.length ; i++) {
+            for (int j = 0; j < B.length; j++) {
+                map.put(A[i] + B[j], map.getOrDefault(A[i] + B[j], 0) + 1);  //map.getOrDefault(key,defaultval)返回map键对应的map值，如果不存在map键，返回默认值.+1是要把对应的个数也存起来
+            }
+        }
 
         int res = 0;
-        for (int i = 0; i < C.length ; i++)
-            for (int j = 0; j < D.length; j++)
-                res += map.getOrDefault(-1 * (C[i]+D[j]), 0); //直接取相反数的个数即可
+        for (int i = 0; i < C.length ; i++) {
+            for (int j = 0; j < D.length; j++) {
+                res += map.getOrDefault(-1 * (C[i] + D[j]), 0); //直接取相反数的个数即可
+            }
+        }
 
         return res;
     }

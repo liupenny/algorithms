@@ -31,8 +31,9 @@ public class Solution{
 //    }
 
     public int compress(char[] chars) {
-        if(chars == null || chars.length == 0)
+        if(chars == null || chars.length == 0) {
             return 0;
+        }
 
         // 两个index,i去读,j去写。i，j都从0开始
         int j = 0;

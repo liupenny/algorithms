@@ -11,8 +11,9 @@ import java.util.Queue;
 
 public class Solution{
     public int findBottomLeftValue(TreeNode root) {
-        if(root == null)
+        if(root == null) {
             return 0;
+        }
 
         Queue<TreeNode> queue = new LinkedList<>();
         int ans = 0, size = 0;
@@ -24,12 +25,15 @@ public class Solution{
 
             for (int i = 0; i < size; i++) {
                 TreeNode temp = queue.poll();
-                if (temp.left != null)
+                if (temp.left != null) {
                     queue.add(temp.left);
-                if (temp.right != null)
+                }
+                if (temp.right != null) {
                     queue.add(temp.right);
-                if(i == 0)
+                }
+                if(i == 0) {
                     ans = temp.val;
+                }
             }
         }
         return ans;

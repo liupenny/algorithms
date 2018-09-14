@@ -8,18 +8,20 @@ import tools.TreeNode;
 
 public class Solution{
     public boolean isSameTree(TreeNode p, TreeNode q) {
-        if(p == null && q == null)
+        if(p == null && q == null) {
             return true;
-        else if(p == null || q == null)
+        } else if(p == null || q == null) {
             return false;
+        }
 
         boolean left = isSameTree(p.left, q.left);
         boolean right = isSameTree(p.right, q.right);
 
-        if(left == true && right == true && p.val == q.val)
+        if(left == true && right == true && p.val == q.val) {
             return true;
-        else
+        } else {
             return false;
+        }
     }
 
     public static void main(String[] args) {

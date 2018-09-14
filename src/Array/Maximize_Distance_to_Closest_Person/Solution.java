@@ -6,8 +6,9 @@ package Array.Maximize_Distance_to_Closest_Person;
 
 public class Solution {
     public int maxDistToClosest(int[] seats) {
-        if(seats == null || seats.length == 0)
+        if(seats == null || seats.length == 0) {
             return 0;
+        }
 
         int ans = 0;
         int begin = 0, end = seats.length - 1;
@@ -46,14 +47,16 @@ public class Solution {
 
     public int maxDistToClosest_more_decent(int[] seats) {
         int max = 0;
-        for(int left = -1, right = 0; right <= seats.length; ++right)
-            if(right == seats.length || seats[right] == 1) {
-                if(left == -1 || right == seats.length)
+        for(int left = -1, right = 0; right <= seats.length; ++right) {
+            if (right == seats.length || seats[right] == 1) {
+                if (left == -1 || right == seats.length) {
                     max = Math.max(right - left - 1, max);
-                else
+                } else {
                     max = Math.max((right - left) / 2, max);
+                }
                 left = right;
             }
+        }
         return max;
     }
 

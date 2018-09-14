@@ -13,7 +13,9 @@ public class Max_Consecutive_Ones {
                 count++;
                 result = Math.max(count, result);
             }
-            else count = 0;
+            else {
+                count = 0;
+            }
         }
 
         return result;
@@ -21,8 +23,9 @@ public class Max_Consecutive_Ones {
 
     public int findMaxConsecutiveOnes2(int[] nums) {
         int maxHere = 0, max = 0;
-        for (int n : nums)
+        for (int n : nums) {
             max = Math.max(max, maxHere = n == 0 ? 0 : maxHere + 1);
+        }
         return max;
     }
 

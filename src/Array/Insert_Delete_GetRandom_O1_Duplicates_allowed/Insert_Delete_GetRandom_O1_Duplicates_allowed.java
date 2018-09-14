@@ -27,8 +27,9 @@ public class Insert_Delete_GetRandom_O1_Duplicates_allowed {
 
         /** Removes a value from the collection. Returns true if the collection contained the specified element. */
         public boolean remove(int val) {
-            if(!valueToPosition.containsKey(val))
+            if(!valueToPosition.containsKey(val)) {
                 return false;
+            }
             int currentPos = valueToPosition.get(val).iterator().next();
 
             // 在nums中将val的最后一个位置存储nums里最后一个数
@@ -44,8 +45,9 @@ public class Insert_Delete_GetRandom_O1_Duplicates_allowed {
             // 在Nums表里删除
             nums.remove(nums.size()-1);
             // 如果这个数已经不存在了要删除，否则下一次要删除的时候会判断失误
-            if(valueToPosition.get(val).size() == 0)
+            if(valueToPosition.get(val).size() == 0) {
                 valueToPosition.remove(val);
+            }
 
             return true;
         }

@@ -10,8 +10,9 @@ public class Can_Place_Flowers {
     // 对于第一个和最后一个元素，我们不需要分别检查前一个和下一个相邻位置。
     public boolean canPlaceFlowers(int[] flowerbed, int n)
     {
-        if (flowerbed == null || flowerbed.length == 0)
+        if (flowerbed == null || flowerbed.length == 0) {
             return false;
+        }
 
         int res = 0;
         for (int i = 0; i < flowerbed.length; i++)
@@ -30,8 +31,9 @@ public class Can_Place_Flowers {
     // 可以优化的地方：在遍历过程中，一旦res==n，就返回true
     public boolean canPlaceFlowers1(int[] flowerbed, int n)
     {
-        if (flowerbed == null || flowerbed.length == 0)
+        if (flowerbed == null || flowerbed.length == 0) {
             return false;
+        }
 
 
         int res = 0;
@@ -44,8 +46,9 @@ public class Can_Place_Flowers {
                 flowerbed[i] = 1; //可以填充
                 res++;
             }
-            if(res == n)
+            if(res == n) {
                 return true;
+            }
         }
         return false;
     }

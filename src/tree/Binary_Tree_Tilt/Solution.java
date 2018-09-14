@@ -8,8 +8,9 @@ import tools.TreeNode;
 
 public class Solution{
     public int findTilt(TreeNode root) {
-        if(root == null)
+        if(root == null) {
             return 0;
+        }
 
         int left = findTilt(root.left);
         int right = findTilt(root.right);
@@ -19,8 +20,9 @@ public class Solution{
 
     public int sumSubtree(TreeNode root)
     {
-        if(root == null)
+        if(root == null) {
             return 0;
+        }
         return root.val + sumSubtree(root.left) + sumSubtree(root.right);
     }
 

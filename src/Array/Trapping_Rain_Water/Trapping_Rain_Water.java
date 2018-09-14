@@ -7,8 +7,9 @@ package Array.Trapping_Rain_Water;
 public class Trapping_Rain_Water {
     public int trap(int[] height)
     {
-        if (height == null || height.length <= 2)
+        if (height == null || height.length <= 2) {
             return 0;
+        }
 
         int maxLeft = height[0], maxRight = height[height.length - 1];
         int sum = 0, l = 1, r = height.length - 2;

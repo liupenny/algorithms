@@ -6,8 +6,9 @@ package Array.Trapping_Rain_WaterII;
 public class Trapping_Rain_WaterII {
     public int trapRainWater(int[][] heightMap)
     {
-        if(heightMap == null || heightMap.length <=2 || heightMap[0].length <=2)
+        if(heightMap == null || heightMap.length <=2 || heightMap[0].length <=2) {
             return 0;
+        }
         int[][] max = new int[heightMap.length][heightMap[0].length];
         for (int i = 1; i < heightMap[0].length - 1; i++) //列
         {

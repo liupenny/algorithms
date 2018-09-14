@@ -14,8 +14,9 @@ import java.util.Set;
 public class Solution{
     // 暴力法，并没有用到BST有序的性质
     public boolean findTarget(TreeNode root, int k) {
-        if(root == null)
+        if(root == null) {
             return false;
+        }
 
         Set<Integer> set = new HashSet<>();
         return find(root, k , set);
@@ -23,11 +24,13 @@ public class Solution{
 
     public boolean find(TreeNode root, int k, Set<Integer> set)
     {
-        if(root == null)
+        if(root == null) {
             return false;
+        }
 
-        if(set.contains(k - root.val))
+        if(set.contains(k - root.val)) {
             return true;
+        }
         set.add(root.val);
         return find(root.left, k, set) || find(root.right, k, set);
     }
@@ -39,18 +42,21 @@ public class Solution{
         int l = 0, r = list.size() - 1;
         while (l < r) {
             int sum = list.get(l) + list.get(r);
-            if (sum == k)
+            if (sum == k) {
                 return true;
-            if (sum < k)
+            }
+            if (sum < k) {
                 l++;
-            else
+            } else {
                 r--;
+            }
         }
         return false;
     }
     public void inorder(TreeNode root, List < Integer > list) {
-        if (root == null)
+        if (root == null) {
             return;
+        }
         inorder(root.left, list);
         list.add(root.val);
         inorder(root.right, list);

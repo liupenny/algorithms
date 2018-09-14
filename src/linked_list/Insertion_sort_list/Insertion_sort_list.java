@@ -8,8 +8,9 @@ import tools.ListNode;
  */
 public class Insertion_sort_list {
     public ListNode insertionSortList(ListNode head) {
-        if (head == null || head.next == null)
+        if (head == null || head.next == null) {
             return head;
+        }
         ListNode now = head;
         ListNode next = head;
         ListNode helper = new ListNode(0);
@@ -18,8 +19,9 @@ public class Insertion_sort_list {
         while(now != null)
         {
             next = now.next;
-            while(pre.next != null && now.val >= pre.next.val)
+            while(pre.next != null && now.val >= pre.next.val) {
                 pre = pre.next;
+            }
 
             now.next = pre.next;
             pre.next = now;

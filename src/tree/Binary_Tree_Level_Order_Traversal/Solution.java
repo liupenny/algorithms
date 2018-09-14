@@ -17,8 +17,9 @@ public class Solution{
         LinkedList<TreeNode> queue = new LinkedList<>();
         List<List<Integer>> res = new ArrayList<>();
 
-        if(root == null)
+        if(root == null) {
             return res;
+        }
 
         // now表示现在正在访问的节点，默认是null；nextlast表示下一层的最后一个节点，默认是null;nowlast表示这一层的结尾
         TreeNode temp = root;

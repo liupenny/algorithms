@@ -21,10 +21,12 @@ import tools.ListNode;
  */
 public class Convert_Sorted_List_to_Binary_Search_Tree {
     public TreeNode sortedListToBST(ListNode head) {
-        if(head == null)
+        if(head == null) {
             return null;
-        if(head.next == null)
+        }
+        if(head.next == null) {
             return new TreeNode(head.val);
+        }
         ListNode fast = head;
         ListNode slow = head;
         ListNode preMid = null;

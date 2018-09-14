@@ -11,24 +11,32 @@ import tools.ListNode;
  */
 public class Intersection_of_Two_Linked_Lists {
     public ListNode getIntersectionNode1(ListNode headA, ListNode headB) {
-        if(headA == null || headB == null) return null;
+        if(headA == null || headB == null) {
+            return null;
+        }
         int lengthA = 0, lengthB = 0;
         ListNode listA = headA, listB = headB;
 
         // 先计算出两个链表的长度
-        for (ListNode tmpA = headA; tmpA != null; lengthA++, tmpA = tmpA.next);
-        for (ListNode tmpB = headB; tmpB != null; lengthB++, tmpB = tmpB.next);
+        for (ListNode tmpA = headA; tmpA != null; lengthA++, tmpA = tmpA.next) {
+            ;
+        }
+        for (ListNode tmpB = headB; tmpB != null; lengthB++, tmpB = tmpB.next) {
+            ;
+        }
 
         // 长的先走一点，让两个表长度相等，然后两个表同时走
         if(lengthA >= lengthB)
         {
-            for (int i = lengthA-lengthB; i>0; i--)
+            for (int i = lengthA-lengthB; i>0; i--) {
                 listA = listA.next;
+            }
         }
         else
         {
-            for (int i = lengthB-lengthA; i>0; i--)
+            for (int i = lengthB-lengthA; i>0; i--) {
                 listB = listB.next;
+            }
         }
 
         // 判断对象是否相等，使用 == 即可
@@ -38,14 +46,17 @@ public class Intersection_of_Two_Linked_Lists {
             listB = listB.next;
         }
 
-        if(listA==null || listB==null)
+        if(listA==null || listB==null) {
             return null;
-        else
+        } else {
             return listA;
+        }
     }
 
     public ListNode getIntersectionNode2(ListNode headA, ListNode headB) {
-        if(headA == null || headB == null) return null;
+        if(headA == null || headB == null) {
+            return null;
+        }
         ListNode tmpA = headA, tmpB = headB;
 
         while (tmpA!=tmpB)
@@ -82,8 +93,9 @@ public class Intersection_of_Two_Linked_Lists {
         Intersection_of_Two_Linked_Lists t = new Intersection_of_Two_Linked_Lists();
         // t.reverse(a2,a5);
         ListNode ans = t.getIntersectionNode1(a1,b1);
-        if(ans == null)
+        if(ans == null) {
             System.out.println("null");
+        }
         while (ans!=null)
         {
             System.out.println(ans.val);

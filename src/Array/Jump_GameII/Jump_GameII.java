@@ -8,17 +8,18 @@ import java.util.Map;
  */
 public class Jump_GameII {
     public int jump_brute(int[] nums) { //从后往前比较，依次选择走的步数较少的，超时
-        if(nums == null || nums.length == 0)
+        if(nums == null || nums.length == 0) {
             return 0;
+        }
 
         int[] dp = new int[nums.length];
         Arrays.fill(dp, -1);
         dp[nums.length - 1] = 0;
         for (int i = nums.length - 2; i >= 0; i--) {
             int lastPos = i + nums[i];
-            if(lastPos >= nums.length - 1)
+            if(lastPos >= nums.length - 1) {
                 dp[i] = 1;
-            else {
+            } else {
                 for (int j = i; j <= i + nums[i]; j++) {
                     if (dp[j] != -1) {
                         dp[i] = dp[i] == -1 ? dp[j] + 1: Math.min(dp[i], dp[j] + 1);
@@ -30,8 +31,9 @@ public class Jump_GameII {
     }
 
     public int jump(int[] nums) { //从后往前比较，依次选择走的步数较少的，超时
-        if (nums == null || nums.length == 0)
+        if (nums == null || nums.length == 0) {
             return 0;
+        }
 
         int step = 0, possibleEnd = 0, lastPos = 0; //possibleEnd是走step步最远可能到达的index
         for (int i = 0; i < nums.length - 1; i++) { //lastPos是从 0 -- i 能走的最远距离

@@ -10,10 +10,10 @@ import java.util.regex.Pattern;
  * Created by PennyLiu on 2018/5/14.
  */
 public class Letter_Case_Permutation {
+    private static Pattern pattern = Pattern.compile("[0-9]*");
     public List<String> letterCasePermutation(String S)
     {
         List<String> res = new ArrayList<>();
-        Pattern pattern = Pattern.compile("[0-9]*");
         if(pattern.matcher(S).matches())
         {
             res.add(new String(S));

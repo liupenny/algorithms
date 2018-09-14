@@ -11,8 +11,9 @@ public class PermutationsII {
     public List<List<Integer>> permuteUnique(int[] nums)
     {
         List<List<Integer>> res = new ArrayList<>();
-        if(nums == null || nums.length == 0)
+        if(nums == null || nums.length == 0) {
             return res;
+        }
 
         Arrays.sort(nums);
         List<Integer> temp = new ArrayList<>();
@@ -35,7 +36,9 @@ public class PermutationsII {
 //            if ( i > 0 && nums[i] == nums[i-1] && visited[i-1]) //不加visited[i]会导致再次进入循环时从i=0开始
 //                continue;
             if ( visited[i] || i > 0 && nums[i] == nums[i-1] && !visited[i-1]) //这个条件能确保重复数字的第一个一定是访问过的，所以后面再遇到重复的就跳过了，而第一个写法是通过个数来判断，用这个
+            {
                 continue;
+            }
 
             visited[i] = true;
             list.add(nums[i]);

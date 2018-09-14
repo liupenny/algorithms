@@ -9,8 +9,9 @@ import tools.*;
  */
 public class Merge_Two_Sorted_Lists {
     public ListNode mergeTwoLists1(ListNode l1, ListNode l2) {
-        if(l1 == null || l2== null)
-            return l1==null?l2:l1;
+        if(l1 == null || l2== null) {
+            return l1 == null ? l2 : l1;
+        }
         ListNode newhead = new ListNode(0),tmp = newhead; // 声明newhead要新建一个节点，不能给成l1或者l2.否则会循环进去
         while (l1!=null && l2!=null)
         {
@@ -31,8 +32,9 @@ public class Merge_Two_Sorted_Lists {
     }
 
     public ListNode mergeTwoLists2(ListNode l1, ListNode l2) {
-        if(l1 == null || l2== null)
-            return l1==null?l2:l1;
+        if(l1 == null || l2== null) {
+            return l1 == null ? l2 : l1;
+        }
         ListNode newhead = new ListNode(0); // 声明newhead要新建一个节点，不能给成l1或者l2.否则会循环进去
         newhead.next = getNext(l1,l2,newhead);
         return newhead.next;
@@ -40,8 +42,9 @@ public class Merge_Two_Sorted_Lists {
 
     public ListNode getNext(ListNode l1,ListNode l2, ListNode head)
     {
-        if (l1==null || l2==null)
-            return l1==null?l2:l1;
+        if (l1==null || l2==null) {
+            return l1 == null ? l2 : l1;
+        }
         if (l1.val<=l2.val)
         {
             head.next = l1;

@@ -9,8 +9,9 @@ import java.util.*;
 public class Solution{
     public List<String> topKFrequent(String[] words, int k) {
         List<String> ans = new ArrayList<>();
-        if(words == null || words.length == 0)
+        if(words == null || words.length == 0) {
             return ans;
+        }
 
         Map<String, Integer> map = new HashMap<>();
         for (int i = 0; i < words.length; i++) {
@@ -21,10 +22,11 @@ public class Solution{
                 new Comparator<Map.Entry<String, Integer>>() {
                     @Override
                     public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2) {
-                        if(o2.getValue() == o1.getValue())
+                        if(o2.getValue() == o1.getValue()) {
                             return o1.getKey().compareTo(o2.getKey());
-                        else
+                        } else {
                             return o2.getValue() - o1.getValue();
+                        }
                     }
                 }
         );

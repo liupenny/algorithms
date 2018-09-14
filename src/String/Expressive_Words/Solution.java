@@ -6,8 +6,9 @@ package String.Expressive_Words;
 
 public class Solution{
     public int expressiveWords(String S, String[] words) {
-        if (S == null || S.length() == 0 || words == null || words.length == 0)
+        if (S == null || S.length() == 0 || words == null || words.length == 0) {
             return 0;
+        }
 
         int ans = 0;
         for (String word : words) {
@@ -17,10 +18,12 @@ public class Solution{
                 // 这两个index表示S和word重复子串的index,从下一位开始比较，所以在计算相同字符长度的时候是
                 // indexS - i 而不是 indexS - i + 1
                 int indexS = i + 1, indexWord = j + 1;
-                while (indexS < S.length() && S.charAt(indexS) == S.charAt(i))
+                while (indexS < S.length() && S.charAt(indexS) == S.charAt(i)) {
                     indexS++;
-                while (indexWord < word.length() && word.charAt(indexWord) == word.charAt(j))
+                }
+                while (indexWord < word.length() && word.charAt(indexWord) == word.charAt(j)) {
                     indexWord++;
+                }
 
                 // 这里先判断两个字符串还没到末尾
                 if(i < S.length() && j < word.length() && S.charAt(i) == word.charAt(j) && ((indexS - i >= 3 && indexS - i >= indexWord - j) || (indexS - i== indexWord - j)))
@@ -28,12 +31,14 @@ public class Solution{
                     i = indexS;
                     j = indexWord;
                 }
-                else
+                else {
                     break;
+                }
             }
             // 这里要判断两个都到了末尾
-            if(j == word.length() && i == S.length())
+            if(j == word.length() && i == S.length()) {
                 ans++;
+            }
         }
         return ans;
     }

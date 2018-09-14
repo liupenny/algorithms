@@ -26,8 +26,9 @@ public class Merge_k_Sorted_Lists {
             int i = 0;
             while (i<lists.length)
             {
-                if (lists[i]!=null)
+                if (lists[i]!=null) {
                     heap.add(lists[i]);
+                }
                 i++;
             }
         }
@@ -37,10 +38,12 @@ public class Merge_k_Sorted_Lists {
         {
             for(int i=2*n; i<=m; i*=2)
             {
-                if (i<m && heap.get(i).val > heap.get(i+1).val)
+                if (i<m && heap.get(i).val > heap.get(i+1).val) {
                     i++;
-                if (heap.get(i).val >= heap.get(n).val)
+                }
+                if (heap.get(i).val >= heap.get(n).val) {
                     break;
+                }
                 //exch(heap.get(i),heap.get(n));
                 {
                     ListNode tmp = heap.get(i);
@@ -52,26 +55,30 @@ public class Merge_k_Sorted_Lists {
         }
 
         public void creatMinHeap() {
-            for (int i = getLimit() / 2; i > 0; --i)
+            for (int i = getLimit() / 2; i > 0; --i) {
                 heapAdjust(i, getLimit());
+            }
         }
 
         public ListNode getsmall()
         {
-            if(heap.size() == 1 || heap.get(1)==null) return null;
+            if(heap.size() == 1 || heap.get(1)==null) {
+                return null;
+            }
             ListNode ans ;
             ans = heap.get(1);
-            if(heap.get(1).next!=null)
-                heap.set(1,heap.get(1).next);  //java要求函数返回值只能给变量，所以前面的heap.get(1)是错的。
-            else
+            if(heap.get(1).next!=null) {
+                heap.set(1, heap.get(1).next);  //java要求函数返回值只能给变量，所以前面的heap.get(1)是错的。
+            } else
             {
                 ListNode tmp = heap.get(1);
                 heap.set(1,heap.get(heap.size()-1));
                 heap.set(heap.size()-1,tmp);
                 heap.remove(heap.size()-1);
             }
-            if(heap.size()!=1)
-                heapAdjust(1,getLimit());
+            if(heap.size()!=1) {
+                heapAdjust(1, getLimit());
+            }
             return ans;
         }
 
@@ -81,7 +88,9 @@ public class Merge_k_Sorted_Lists {
     }
 
     public ListNode mergeKLists(ListNode[] lists) {
-        if(lists==null || lists.length==0) return null;
+        if(lists==null || lists.length==0) {
+            return null;
+        }
         Heap h = new Heap(lists);
         h.creatMinHeap();
         ListNode ans = new  ListNode(0), newhead = ans;
@@ -95,33 +104,39 @@ public class Merge_k_Sorted_Lists {
     }
 
     public ListNode mergeKLists2(ListNode[] lists) {
-        if (lists==null||lists.length==0) return null;
+        if (lists==null||lists.length==0) {
+            return null;
+        }
 
         PriorityQueue<ListNode> queue= new PriorityQueue<ListNode>(lists.length,new Comparator<ListNode>(){ //优先队列
             @Override
             public int compare(ListNode o1,ListNode o2){
-                if (o1.val<o2.val)
+                if (o1.val<o2.val) {
                     return -1;
-                else if (o1.val==o2.val)
+                } else if (o1.val==o2.val) {
                     return 0;
-                else
+                } else {
                     return 1;
+                }
             }
         });
 
         ListNode dummy = new ListNode(0);
         ListNode tail=dummy;
 
-        for (ListNode node:lists)
-            if (node!=null)
+        for (ListNode node:lists) {
+            if (node != null) {
                 queue.add(node);
+            }
+        }
 
         while (!queue.isEmpty()){
             tail.next=queue.poll();
             tail=tail.next;
 
-            if (tail.next!=null)
+            if (tail.next!=null) {
                 queue.add(tail.next);
+            }
         }
         return dummy.next;
     }
