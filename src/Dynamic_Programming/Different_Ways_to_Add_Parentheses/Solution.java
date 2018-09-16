@@ -42,6 +42,7 @@ public class Solution{
                             case '+': res.add(l + r); break;
                             case '-': res.add(l - r); break;
                             case '*': res.add(l * r); break;
+                            default:break;
                         }
                     }
                 }

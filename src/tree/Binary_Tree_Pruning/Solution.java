@@ -8,63 +8,8 @@ import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
 
-class solu {
-    // 一开始是想根据有没有0去判断，但是如果左右孩子都有0，自己也是0，就要在循环里直接设置root = null, 就会直接跳出去。
-//    public TreeNode pruneTree(TreeNode root) {
-//        if(root == null)
-//            return root;
-//
-//        boolean isZeroRoot = isZero(root);
-//        if(isZeroRoot == true)
-//            return null;
-//        else
-//            return root;
-//    }
-//
-//    public boolean isZero(TreeNode root)
-//    {
-//        if(root == null)
-//            return true;
-//
-//        boolean isLeftZero = isZero(root.left);
-//        boolean isRightZero = isZero(root.right);
-//
-//        // 这里一旦设置了root == null , 下面就没法返回了
-//        if(isLeftZero && isRightZero && root.val == 0)
-//            root = null;
-//
-//        return isLeftZero && isRightZero && root.val == 0;
-//    }
 
-    // 所以要判断左右孩子，设置孩子为Null
-    public TreeNode pruneTree(TreeNode root) {
-        if(root == null) {
-            return root;
-        }
-
-        return containsOne(root) ? root : null;
-    }
-
-    public boolean containsOne(TreeNode root)
-    {
-        if(root == null) {
-            return false;
-        }
-
-        boolean isLeftOne = containsOne(root.left);
-        boolean isRightOne = containsOne(root.right);
-        if(isLeftOne == false) {
-            root.left = null;
-        }
-        if(isRightOne == false) {
-            root.right = null;
-        }
-
-        return isLeftOne || isRightOne || root.val == 1;
-    }
-}
-
-class solut {
+class Solut {
     public TreeNode pruneTree(TreeNode root) {
         if(root == null) {
             return root;
@@ -123,7 +68,7 @@ public class Solution {
 
             item = parts[index++];
             item = item.trim();
-            if (!item.equals("null")) {
+            if (!"null".equals(item)) {
                 int leftNumber = Integer.parseInt(item);
                 node.left = new TreeNode(leftNumber);
                 nodeQueue.add(node.left);
@@ -135,7 +80,7 @@ public class Solution {
 
             item = parts[index++];
             item = item.trim();
-            if (!item.equals("null")) {
+            if (!"null".equals(item)) {
                 int rightNumber = Integer.parseInt(item);
                 node.right = new TreeNode(rightNumber);
                 nodeQueue.add(node.right);
@@ -172,11 +117,8 @@ public class Solution {
         String line;
         if((line = in.readLine()) != null) {
             TreeNode root = stringToTreeNode(line);
-
-            TreeNode ret = new solut().pruneTree(root);
-
+            TreeNode ret = new Solut().pruneTree(root);
             String out = treeNodeToString(ret);
-
             System.out.print(out);
         }
     }

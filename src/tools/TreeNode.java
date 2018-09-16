@@ -235,7 +235,7 @@ Output:
 
             item = parts[index++];
             item = item.trim();
-            if (!item.equals("null")) {
+            if (!"null".equals(item)) {
                 int leftNumber = Integer.parseInt(item);
                 node.left = new TreeNode(leftNumber);
                 nodeQueue.add(node.left);
@@ -247,7 +247,7 @@ Output:
 
             item = parts[index++];
             item = item.trim();
-            if (!item.equals("null")) {
+            if (!"null".equals(item)) {
                 int rightNumber = Integer.parseInt(item);
                 node.right = new TreeNode(rightNumber);
                 nodeQueue.add(node.right);
