@@ -14,7 +14,8 @@ public class Add_Two_Numbers {
         ListNode end = new ListNode(0), ans = end;
         while (l1!= null || l2!=null || carry!=0)
         {
-            sum = ( l1==null?0:l1.val ) + ( l2==null?0:l2.val ) + carry;  //因为可能会有1+9999的情况，所以在这里每次都对两个链表进行判断
+            //因为可能会有1+9999的情况，所以在这里每次都对两个链表进行判断
+            sum = ( l1==null?0:l1.val ) + ( l2==null?0:l2.val ) + carry;
             carry = sum/10;
             sum = sum%10;
             ListNode tmp = new ListNode(sum);
