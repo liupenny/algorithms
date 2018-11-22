@@ -15,7 +15,7 @@ public class Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal {
         }
 
         TreeNode root = buildTree(preorder, 0, preorder.length - 1, inorder, 0, inorder.length - 1);
-        int[][] tree = root.printTree(root);
+        int[][] tree = TreeNode.printTree(root);
         for (int i = 0; i < tree.length; i++) {
             for (int j = 0; j < tree[i].length; j++) {
                 System.out.print(tree[i][j] + " ");
