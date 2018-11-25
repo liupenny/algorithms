@@ -11,7 +11,7 @@ import java.util.Stack;
  */
 
 class Codec {
-    private static final String spliter = ",";
+    private static final String SPLITER = ",";
     private static final String NN = "#";
 
     // Encodes a tree to a single string.
@@ -26,7 +26,7 @@ class Codec {
         while (!stack.empty())
         {
             TreeNode node = stack.pop();
-            output.append(node.val + spliter);
+            output.append(node.val + SPLITER);
             if(node.right != null) {
                 stack.push(node.right);
             }
@@ -39,10 +39,10 @@ class Codec {
 
     // Decodes your encoded data to tree.
     public TreeNode deserialize(String data) {
-        if(data == null || data.equals("")) {
+        if(data == null || "".equals(data)) {
             return null;
         }
-        String[] parts = data.split(spliter);
+        String[] parts = data.split(SPLITER);
         Queue<Integer> queue = new LinkedList<>();
         for (String part: parts) {
             queue.add(Integer.parseInt(part));

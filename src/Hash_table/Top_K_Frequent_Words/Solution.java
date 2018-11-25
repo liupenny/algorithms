@@ -22,7 +22,7 @@ public class Solution{
                 new Comparator<Map.Entry<String, Integer>>() {
                     @Override
                     public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2) {
-                        if(o2.getValue().equals(o1.getValue())) {
+                        if(Objects.equals(o2.getValue(), o1.getValue())) {
                             return o1.getKey().compareTo(o2.getKey());
                         } else {
                             return o2.getValue() - o1.getValue();

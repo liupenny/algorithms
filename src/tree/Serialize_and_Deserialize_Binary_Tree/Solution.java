@@ -11,7 +11,7 @@ import java.util.Queue;
  */
 
 class Codec {
-    private static final String spliter = ",";
+    private static final String SPLITER = ",";
     private static final String NN = "#";
 
     // Encodes a tree to a single string.
@@ -29,10 +29,10 @@ class Codec {
     public void seria(TreeNode root, StringBuilder sb)
     {
         if(root == null) {
-            sb.append(NN).append(spliter);
+            sb.append(NN).append(SPLITER);
         } else
         {
-            sb.append(root.val).append(spliter);
+            sb.append(root.val).append(SPLITER);
             seria(root.left, sb);
             seria(root.right,sb);
         }
@@ -45,7 +45,7 @@ class Codec {
         }
 
         Queue<String> queue = new LinkedList<>();
-        queue.addAll(Arrays.asList(data.split(spliter)));
+        queue.addAll(Arrays.asList(data.split(SPLITER)));
         return deseria(queue);
     }
 
@@ -66,7 +66,7 @@ class Codec {
 
 // 用leetcode本身的方式写的，层次遍历
 class Code {
-    private static final String spliter = ",";
+    private static final String SPLITER = ",";
     private static final String NN = "null";
 
     // Encodes a tree to a single string.
@@ -83,11 +83,11 @@ class Code {
             TreeNode node = queue.poll();
             if(node == null)
             {
-                output.append(NN).append(spliter);
+                output.append(NN).append(SPLITER);
                 continue;
             }
 
-            output.append(node.val + spliter);
+            output.append(node.val + SPLITER);
             queue.add(node.left);
             queue.add(node.right);
         }
@@ -99,7 +99,7 @@ class Code {
         if(data == null || data == "") {
             return null;
         }
-        String[] parts = data.split(spliter);
+        String[] parts = data.split(SPLITER);
         TreeNode root = new TreeNode(Integer.parseInt(parts[0]));
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
