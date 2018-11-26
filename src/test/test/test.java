@@ -41,3 +41,39 @@ public class test {
     }
 
 }
+
+class Dup{
+    private static int findDup(int[] arr) {
+        if (arr == null || arr.length <= 0) {
+            return -1;
+        }
+
+        int start = 0, end = arr.length - 1;
+        while (start <= end) {
+            int mid = start + (end - start)/2;
+            int count = countNum(arr, start, mid);
+            if (start == end) {
+                if (count > 1)
+                    return start;
+                else
+                    break;
+            }
+            if (count <= (mid - start + 1)) {
+                start = mid + 1;
+            } else {
+                end = mid;
+            }
+        }
+        return -1;
+    }
+
+    private static int countNum(int[] arr, int start, int end) {
+        int count = 0;
+        for (int a:arr) {
+            if (a>=start && a<=end) {
+                count++;
+            }
+        }
+        return count;
+    }
+}
