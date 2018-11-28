@@ -68,12 +68,14 @@ public class Solution{
         }
     }
 
+
     public static void main(String[] args)
     {
         Solution s = new Solution();
-        TreeNode treeNode1 = TreeNode.stringToTreeNode("[3,4,5,1,2,null,null,null,null,0]");
-        TreeNode treeNode2 = TreeNode.stringToTreeNode("[4,1,2]");
+        TreeNode treeNode1 = TreeNode.stringToTreeNode("[8,8,7,9,2,null,null,null,null,4,7]");
+        TreeNode treeNode2 = TreeNode.stringToTreeNode("[8,9,2]");
         System.out.println(s.isSubtree(treeNode1,treeNode2));
         System.out.println(s.isSubtree_serialize(treeNode1,treeNode2));
+
     }
 }

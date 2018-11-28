@@ -60,6 +60,29 @@ public class Merge_Two_Sorted_Lists {
         return head;
     }
 
+    public ListNode Merge(ListNode list1,ListNode list2) {
+        if (list1 == null) {
+            return list2;
+        }
+        if (list2 == null) {
+            return list1;
+        }
+
+        ListNode head = null, ret = head;
+        while (list1 != null && list2 != null) {
+            if (list1.val <= list2.val) {
+                head.next = list1;
+                list1 = list1.next;
+            } else {
+                head.next = list2;
+                list2 = list2.next;
+            }
+            head = head.next;
+        }
+        head.next = list1 == null ? list2 : list1;
+        return ret.next;
+    }
+
     public static void main(String[] algs)
     {
         tools.Sort_List.Linklist citations1 = new tools.Sort_List.Linklist();
@@ -76,6 +99,7 @@ public class Merge_Two_Sorted_Lists {
         citations2.addNode(10);
         Merge_Two_Sorted_Lists t = new Merge_Two_Sorted_Lists();
         ListNode ans = t.mergeTwoLists2(citations1.first,citations2.first);
+        t.Merge(citations1.first,citations2.first);
         while (ans!=null)
         {
             System.out.println(ans.val);

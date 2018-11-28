@@ -26,11 +26,27 @@ public class Find_Minimum_in_Rotated_Sorted_Array {
         return nums[lo];
     }
 
+    public int findmin(int[] nums) {
+        int lo = 0, hi = nums.length-1, mid;
+        while (lo < hi) {
+            if (nums[lo] < nums[hi]) {
+                return lo;
+            }
+            mid = lo + (hi - lo)/2;
+            if (nums[mid] > nums[lo]) {
+                lo = mid + 1;
+            } else {
+                hi = mid;
+            }
+        }
+        return lo;
+    }
+
     public static void main(String[] algs)
     {
         Find_Minimum_in_Rotated_Sorted_Array t = new Find_Minimum_in_Rotated_Sorted_Array();
         int[] A = {3, 4, 5, 6, 1, 2};
-        int ans = t.findMin(A);
+        int ans = t.findmin(A);
         System.out.println(ans);
 
     }
