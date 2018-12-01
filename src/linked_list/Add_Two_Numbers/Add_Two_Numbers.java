@@ -8,6 +8,7 @@ import tools.Sort_List;
  *
  * 思路：要有进位、求和；有可能某个链表只有一个数字还要判断数位
  */
+@SuppressWarnings("ALL")
 public class Add_Two_Numbers {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         int carry = 0, sum = 0;   //进位、求和

@@ -41,6 +41,21 @@ public class Reverse_Linked_List {
         return next(node,head);  // 先处理完，返回最后的节点
     }
 
+    public ListNode ReverseList(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+
+        ListNode next = null, cur = head, pre = null;
+        while (cur != null) {
+            next = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = next;
+        }
+        return cur.next;
+    }
+
     public static void main(String[] algs)
     {
         Sort_List.Linklist citations2 = new Sort_List.Linklist();
@@ -50,7 +65,7 @@ public class Reverse_Linked_List {
         citations2.addNode(4);
         citations2.addNode(5);
         Reverse_Linked_List t = new Reverse_Linked_List();
-        ListNode ans = t.reverseList2(citations2.first);
+        ListNode ans = t.ReverseList(citations2.first);
         while (ans!=null)
         {
             System.out.println(ans.val);

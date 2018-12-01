@@ -20,10 +20,22 @@ public class Number_of_1_Bits {
         return ans;
     }
 
+    public int hammingWeight1(int n) {
+        int count = 0;
+        int flag = 1;
+        while (flag != 0) {
+            if ((n & flag) != 0) {
+                count++;
+            }
+            flag = flag << 1;
+        }
+        return count;
+    }
+
     public static void main(String[] algs)
     {
         int n=214748364;
         Number_of_1_Bits t = new Number_of_1_Bits();
-        System.out.println(t.hammingWeight(n));
+        System.out.println(t.hammingWeight1(n));
     }
 }
