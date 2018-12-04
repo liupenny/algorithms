@@ -83,30 +83,68 @@ public class Copy_List_with_Random_Pointer {
         return map.get(head);
     }
 
+    public RandomListNode Clone(RandomListNode pHead)
+    {
+        if (pHead == null || pHead.next == null) {
+            return pHead;
+        }
+        clone(pHead);
+        connectSib(pHead);
+        return reconnect(pHead);
+    }
+
+    public void clone(RandomListNode pHead) {
+        RandomListNode node = pHead;
+        while (node != null) {
+            RandomListNode tmp = new RandomListNode(node.label);
+            tmp.next = node.next;
+            node.next = tmp;
+            node = tmp.next;
+        }
+    }
+
+    public void connectSib(RandomListNode pHead) {
+        RandomListNode node = pHead;
+        while (node != null) {
+            if (node.random != null) {
+                node.next.random = node.random.next;
+            }
+            node = node.next.next;
+        }
+    }
+
+
+    public RandomListNode reconnect(RandomListNode pHead){
+        RandomListNode cloneHead = pHead.next;
+        RandomListNode cloneNode = pHead.next;
+        RandomListNode node = pHead.next.next;
+        while (node != null) {
+            cloneNode.next = node.next;
+            cloneNode = cloneNode.next;
+            node.next = cloneNode.next;
+            node = node.next;
+        }
+        return cloneHead;
+    }
+
     public static void main(String[] algs)
     {
         RandomListNode a1 = new RandomListNode(2);
         RandomListNode a2 = new RandomListNode(4);
         RandomListNode a3 = new RandomListNode(5);
         RandomListNode a4 = new RandomListNode(9);
-        RandomListNode a5 = new RandomListNode(19);
-        RandomListNode a6 = new RandomListNode(21);
-        RandomListNode a7 = new RandomListNode(33);
         a1.next = a2;
         a1.random = a3;
         a2.next = a3;
         a2.random = a4;
         a3.next = a4;
         a3.random = null;
-        a4.next = a5;
+        a4.next = null;
         a4.random = a1;
-        a5.next = a6;
-        a5.random = a3;
-        a6.next = a7;
-        a6.random = a1;
         Copy_List_with_Random_Pointer t = new Copy_List_with_Random_Pointer();
         // t.reverse(a2,a5);
-        RandomListNode ans = t.copyRandomList(a1);
+        //RandomListNode ans = t.copyRandomList(a1);
+        RandomListNode ans = t.Clone(a1);
         while (ans!=null)
         {
             System.out.println(ans.label);

@@ -43,13 +43,31 @@ public class Solution{
         return hasPathSum_3line(root.left, sum - root.val) || hasPathSum_3line(root.right, sum - root.val);
     }
 
+    int ans = 0;
+    public boolean hasPathSum1(TreeNode root, int sum) {
+        if (root == null) {
+            return false;
+        }
+        ans = ans + root.val;
+        if (root.left == null && root.right == null) {
+            if (ans == sum) {
+                return true;
+            } else {
+                ans = ans - root.val;
+                return false;
+            }
+        }
+
+        return hasPathSum1(root.left, sum) || hasPathSum1(root.right, sum);
+    }
+
     public static void main(String[] args)
     {
         Solution s = new Solution();
-        String line = "[1,2]";
+        String line = "[1,-2,-3,1,3,-2,null,-1]";
         // String line = "[5,4,8,11,null,13,4,7,2,null,null,null,1]";
         TreeNode root = TreeNode.stringToTreeNode(line);
-        boolean ans = s.hasPathSum(root,1);
+        boolean ans = s.hasPathSum1(root,3);
         System.out.println(ans);
     }
 }
