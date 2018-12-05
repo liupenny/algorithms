@@ -212,6 +212,7 @@ Output:
     }
 
     // string ---> TreeNode
+    // string like "[2,2,2,2,2,2,2]"
     public static TreeNode stringToTreeNode(String input) {
         input = input.trim();
         input = input.substring(1, input.length() - 1);
