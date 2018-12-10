@@ -10,7 +10,7 @@ import java.util.List;
  * @date 2018/12/7
  */
 public class Solution {
-    public List<String> wordBreak(String s, List<String> wordDict) {
-
-    }
+//    public List<String> wordBreak(String s, List<String> wordDict) {
+//
+//    }
 }
