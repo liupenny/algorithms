@@ -23,10 +23,28 @@ public class Maximum_Subarray {
         return max;
     }
 
+    public int maxSubArraydp(int[] nums){
+        int res = 0, cur = 0;
+        if (nums == null || nums.length <= 0) {
+            return res;
+        }
+
+        for (int i = 0; i < nums.length - 1; i++) {
+           if (i == 0 || cur <= 0) {
+               cur = nums[i];
+           } else if (i != 0 && cur > 0) {
+               cur += nums[i];
+               res = Math.max(res,cur);
+           }
+        }
+        return res;
+    }
+
     public static void main(String[] args)
     {
         Maximum_Subarray t = new Maximum_Subarray();
         int[] nums = {-2,1,-3,4,-1,2,1,-5,4};
         System.out.println(t.maxSubArray(nums));
+        System.out.println(t.maxSubArraydp(nums));
     }
 }
