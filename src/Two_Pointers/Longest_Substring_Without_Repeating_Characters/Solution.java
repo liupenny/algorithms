@@ -23,7 +23,7 @@ public class Solution{
                 ans = Math.max(ans, right - left);
             }
             else {
-                set.remove(left++);
+                set.remove(s.charAt(left++));
             }
         }
         return ans;
@@ -50,13 +50,37 @@ public class Solution{
         return ans;
     }
 
+    public int lengthOfLongestSubstring2(String s) {
+        if (s == null || s.length() == 0) {
+            return 0;
+        }
+        HashSet<Character> hashSet = new HashSet<>();
+        int ans = 0, begin = 0, end = 0;
+        while (end < s.length()) {
+            Character c = s.charAt(end);
+            if (!hashSet.contains(c)) {
+                hashSet.add(c);
+            } else {
+                ans = Math.max(ans, end - begin);
+                while (s.charAt(begin) != c) {
+                    hashSet.remove(s.charAt(begin));
+                    begin++;
+                }
+                begin++;
+            }
+            end++;
+        }
+        ans = Math.max(ans, end - begin);
+        return ans;
+    }
+
     public static void main(String[] args)
     {
         Solution s  = new Solution();
-        String a = "p";
-        // System.out.println(s.reorganizeString(a));
+        String a = "arabcafr";
+        System.out.println(s.lengthOfLongestSubstring(a));
         // System.out.println(s.reorganizeString_sort(a));
         // s.isPalindrome1(a);
-        System.out.println(s.lengthOfLongestSubstring(a));
+        System.out.println(s.lengthOfLongestSubstring2(a));
     }
 }
