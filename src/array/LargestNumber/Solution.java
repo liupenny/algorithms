@@ -24,11 +24,19 @@ public class Solution {
         }
         return Integer.parseInt(s.toString());
     }
+
+    public static void main(String[] args) {
+        Solution s = new Solution();
+        int[] arr = {3,5,1,4,2};
+        System.out.println(s.bigNum(arr));
+    }
 }
 
 class NumComparator implements Comparator<Integer> {
     @Override
     public int compare(Integer o, Integer b) {
-        return String.valueOf(o).compareTo(String.valueOf(b));
+        String a1 = String.valueOf(o) + String.valueOf(b);
+        String a2 = String.valueOf(b) + String.valueOf(o);
+        return a1.compareTo(a2);
     }
 }
