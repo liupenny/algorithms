@@ -97,9 +97,87 @@ public class Decode_Ways {
         return number[s.length()];
     }
 
+    public int numDecodings3(String s) {
+        if (s == null || s.length() <= 0 || s.charAt(0) == '0') {
+            return 0;
+        }
+        int len = s.length();
+        if (len == 1) {
+            return 1;
+        }
+        int[] dp = new int[len + 1];
+        dp[len] = 1;
+        dp[len - 1] = s.charAt(len - 1) == '0' ? 0 : 1;
+        for (int i = len - 2; i >= 0; i--) {
+            if (s.charAt(i) == '0') {
+                dp[i] = 0;
+            } else {
+                dp[i] = dp[i + 1] + isPair(s, i, i + 1) * dp[i + 2];
+            }
+        }
+        return dp[0];
+    }
+
+    public int isPair(String s, int i, int j) {
+        if(s.charAt(i) == '0') {
+            return 0;
+        } else {
+            String tmp = s.substring(i,j+1);
+            int digit = Integer.valueOf(tmp);
+            if (digit <= 26) {
+                return 1;
+            } else {
+                return 0;
+            }
+        }
+    }
+
+    public int numDecodings4(String s) {
+        if(s == null || s.length() == 0) {
+            return 0;
+        }
+        int n = s.length();
+        int[] dp = new int[n+1];
+        dp[0] = 1;
+        dp[1] = s.charAt(0) != '0' ? 1 : 0;
+        for(int i = 2; i <= n; i++) {
+            int first = Integer.valueOf(s.substring(i-1, i));
+            int second = Integer.valueOf(s.substring(i-2, i));
+            if(first >= 1 && first <= 9) {
+                dp[i] += dp[i-1];
+            }
+            if(second >= 10 && second <= 26) {
+                dp[i] += dp[i-2];
+            }
+        }
+        return dp[n];
+    }
+
+    public int numDecodings5(String s) {
+        if (s == null || s.length() == 0 || s.charAt(0) == '0') {
+            return 0;
+        }
+        int pp = 1, p = 1;
+        for (int i = 2; i <= s.length(); i++) {
+            int ways = 0;
+            int digit2 = s.charAt(i - 1) - '0';
+            if (digit2 != 0) {
+                ways += p;
+            }
+            int digit1 = s.charAt(i - 2) - '0';
+            int num = digit1 * 10 + digit2;
+            if (num >= 10 && num <= 26) {
+                ways += pp;
+            }
+            pp = p;
+            p = ways;
+        }
+        return p;
+    }
+
     public static void main(String[] args) {
         Decode_Ways a = new Decode_Ways();
-        System.out.println(a.numDecodings( "110"));
-        System.out.println(a.numDecodings1("110"));
+        System.out.println(a.numDecodings5( "50"));
+        //System.out.println(a.numDecodings3("50"));
     }
 }
