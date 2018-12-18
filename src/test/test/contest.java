@@ -14,9 +14,28 @@ public class contest {
 
 
     private static void test(){
-        int[] a = {1,1,1,2,2,2};
+        int[] a = {1,0,0,1,0,0,1,0};
         contest t = new contest();
-        System.out.println(t.canReorderDoubled(a));
+        System.out.println(Arrays.toString(prisonAfterNDays(a,1000000000)));
+    }
+
+    public static int[] prisonAfterNDays(int[] cells, int N) {
+        if (cells == null || cells.length == 0 || N <= 0) {
+            return cells;
+        }
+        int before = 0, tmp = 0;
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < cells.length; j++) {
+                tmp = cells[j];
+                if (j == 0 || j == cells.length - 1) {
+                    cells[j] = 0;
+                } else {
+                    cells[j] = ~(before ^ cells[j + 1]) & 1;
+                }
+                before = tmp;
+            }
+        }
+        return cells;
     }
 
     boolean[] used;
