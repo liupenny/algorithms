@@ -29,6 +29,30 @@ public class Remove_Nth_Node_From_End_of_List {
         return head;
     }
 
+    public ListNode removeNthFromEnd1(ListNode head, int n){
+        if (head == null) {
+            return null;
+        }
+        int i = 1;
+        ListNode dummyHead = new ListNode(0), tmp = dummyHead;
+        dummyHead.next = head;
+        while (tmp != null && i <= n) {
+            tmp = tmp.next;
+            i++;
+        }
+        if (tmp == null) {
+            return head;
+        }
+
+        ListNode slow = dummyHead;
+        while (tmp.next != null) {
+            tmp = tmp.next;
+            slow = slow.next;
+        }
+        slow.next = slow.next.next;
+        return dummyHead.next;
+    }
+
     public static void main(String[] algs)
     {
         tools.Sort_List.Linklist citations2 = new tools.Sort_List.Linklist();
