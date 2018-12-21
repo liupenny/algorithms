@@ -1,4 +1,4 @@
-package array.Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal;
+package tree.Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal;
 
 import tools.TreeNode;
 

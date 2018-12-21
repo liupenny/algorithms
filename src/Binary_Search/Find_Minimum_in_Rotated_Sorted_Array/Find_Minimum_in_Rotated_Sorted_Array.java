@@ -42,6 +42,22 @@ public class Find_Minimum_in_Rotated_Sorted_Array {
         return lo;
     }
 
+    public int findMin1(int[] nums) {
+        int lo = 0, hi = nums.length - 1, mid;
+        if (nums[0] < nums[hi]) {
+            return nums[0];
+        }
+        while(lo < hi) {
+            mid = lo + (hi - lo)/2;
+            if (nums[mid] >= nums[0]) {
+                lo = mid + 1;
+            } else {
+                hi = mid;
+            }
+        }
+        return nums[lo];
+    }
+
     public static void main(String[] algs)
     {
         Find_Minimum_in_Rotated_Sorted_Array t = new Find_Minimum_in_Rotated_Sorted_Array();
