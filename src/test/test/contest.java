@@ -14,9 +14,39 @@ public class contest {
 
 
     private static void test(){
-        int[] a = {1,0,0,1,0,0,1,0};
-        contest t = new contest();
-        System.out.println(Arrays.toString(prisonAfterNDays(a,1000000000)));
+        int[] a = {6,0,8,2,1,5};
+        //contest t = new contest();
+        System.out.println(maxWidthRamp(a));
+    }
+
+    public static int maxWidthRamp(int[] A) {
+        if (A == null || A.length == 0) {
+            return 0;
+        }
+        int n = A.length;
+        int[] rightMaxPos = new int[n];
+        rightMaxPos[n-1] = n-1;
+        // 从后往前记录下每个位置i右边最大的数
+        for (int i = n - 2; i >= 0 ; i--) {
+            if (A[i] > A[rightMaxPos[i+1]]) {
+                rightMaxPos[i] = i;
+            } else {
+                rightMaxPos[i] = rightMaxPos[i+1];
+            }
+        }
+        int ans = 0, i = 0, j = 0;
+        while (j < n) {
+            j = rightMaxPos[j];
+            if(A[j] >= A[i]) {
+                if (j - i> ans) {
+                    ans = j - i;
+                }
+                j++;
+            } else {
+                i++;
+            }
+        }
+        return ans;
     }
 
     public static int[] prisonAfterNDays(int[] cells, int N) {
